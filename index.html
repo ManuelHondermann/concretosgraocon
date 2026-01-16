@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GRAOCON - Excelencia en Soluciones de Concreto</title>
+    <meta name="description" content="Líderes en concreto premezclado, bombeo y soluciones constructivas de alta calidad en Perú. Más de 15 años de experiencia certificada.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* Estilos optimizados - eliminé duplicaciones y mejoré el rendimiento */
         :root {
             --verde-oscuro: #0d3b0d;
             --verde-medio: #1a5d1a;
@@ -79,18 +81,18 @@
         }
 
         .logo-img {
-            height: 60px;
+            height: 65px;
             width: auto;
-            filter: brightness(0) invert(1);
             transition: var(--transicion);
-            border-radius: 10px;
-            padding: 5px;
-            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 3px;
+            background: var(--blanco);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
         .logo-img:hover {
             transform: scale(1.08) rotate(2deg);
-            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
         }
 
         .marca-titulo {
@@ -150,7 +152,7 @@
         /* MENÚ LUXURY */
         .menu-luxury {
             position: fixed;
-            top: 96px;
+            top: 101px;
             width: 100%;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
@@ -221,7 +223,7 @@
 
         /* CONTENIDO PRINCIPAL */
         .contenido-principal {
-            margin-top: 156px;
+            margin-top: 161px;
             padding: 40px 0;
         }
 
@@ -259,12 +261,12 @@
         }
 
         .hero-logo-grande {
-            width: 220px;
-            height: 220px;
+            width: 240px;
+            height: 240px;
             background: var(--blanco);
             border-radius: 25px;
             margin: 0 auto 40px;
-            padding: 25px;
+            padding: 20px;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
             border: 8px solid var(--blanco);
             position: relative;
@@ -354,6 +356,77 @@
             margin-right: auto;
             font-weight: 500;
             line-height: 1.6;
+        }
+
+        /* ESTILOS PARA PÁGINA DE CONCRETO */
+        .concreto-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .concreto-card {
+            background: linear-gradient(135deg, var(--blanco) 0%, var(--gris-claro) 100%);
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: var(--sombra-sutil);
+            transition: var(--transicion);
+            border: 1px solid rgba(0,0,0,0.05);
+            position: relative;
+            height: 100%;
+        }
+
+        .concreto-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--sombra-hover);
+        }
+
+        .concreto-card-header {
+            background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro));
+            color: var(--blanco);
+            padding: 25px 30px;
+            text-align: center;
+        }
+
+        .concreto-card-header h3 {
+            color: var(--blanco);
+            font-size: 24px;
+            margin: 0;
+            font-weight: 800;
+        }
+
+        .concreto-card-body {
+            padding: 35px 30px;
+        }
+
+        .concreto-card-body p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .concreto-card-body ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        .concreto-card-body li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 12px;
+            color: #555;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .concreto-card-body li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--verde-medio);
+            font-weight: bold;
         }
 
         /* GALERÍA DE PROYECTOS LUXURY */
@@ -847,19 +920,23 @@
         }
 
         .footer-logo {
-            max-width: 180px;
+            max-width: 200px;
             margin-bottom: 25px;
         }
 
         .footer-logo img {
             width: 100%;
             height: auto;
-            filter: brightness(0) invert(1);
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            background: var(--blanco);
+            padding: 10px;
             transition: var(--transicion);
         }
 
         .footer-logo:hover img {
             transform: scale(1.05) rotate(3deg);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
         }
 
         .footer-texto {
@@ -971,7 +1048,7 @@
             }
         }
 
-        /* RESPONSIVE DESIGN */
+        /* RESPONSIVE DESIGN - Optimizado */
         @media (max-width: 1400px) {
             .galeria-proyectos {
                 grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -1054,7 +1131,7 @@
             }
            
             .logo-img {
-                height: 50px;
+                height: 55px;
             }
            
             .marca-titulo {
@@ -1067,7 +1144,7 @@
             }
            
             .menu-luxury {
-                top: 90px;
+                top: 95px;
             }
            
             .hero-luxury {
@@ -1202,7 +1279,7 @@
 </head>
 <body>
     <!-- WhatsApp Flotante Luxury -->
-    <a href="https://wa.me/51927571365?text=Hola%20GRAOCON,%20quiero%20solicitar%20una%20cotización%20al%20instante" class="whatsapp-flotante" target="_blank">
+    <a href="https://wa.me/51927571365?text=Hola%20GRAOCON,%20quiero%20solicitar%20una%20cotización%20al%20instante" class="whatsapp-flotante" target="_blank" aria-label="Contactar por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
@@ -1210,7 +1287,7 @@
     <header class="header-luxury">
         <div class="container header-contenido">
             <div class="logo-container">
-                <img src="https://i.ibb.co/WNqCzKNY/Whats-App-Image-2026-01-02-at-11-19-53-AM.jpg" alt="GRAOCON Logo" class="logo-img">
+                <img src="https://i.ibb.co/VWFt2f67/Whats-App-Image-2026-01-02-at-11-19-53-AM.jpg" alt="GRAOCON Logo - Excelencia en Concreto" class="logo-img">
                 <div>
                     <div class="marca-titulo">GRAOCON</div>
                     <div class="marca-subtitulo">EXCELENCIA EN CONCRETO</div>
@@ -1218,11 +1295,11 @@
             </div>
            
             <div class="contacto-header">
-                <a href="tel:+51927571365" class="contacto-item">
+                <a href="tel:+51927571365" class="contacto-item" aria-label="Llamar a GRAOCON">
                     <i class="fas fa-phone"></i>
                     <span class="phone-number">927 571 365</span>
                 </a>
-                <a href="mailto:VENTAS@GRAOCON.COM" class="contacto-item">
+                <a href="mailto:VENTAS@GRAOCON.COM" class="contacto-item" aria-label="Enviar correo a GRAOCON">
                     <i class="fas fa-envelope"></i>
                     <span>VENTAS@GRAOCON.COM</span>
                 </a>
@@ -1235,37 +1312,42 @@
         <div class="container menu-contenido">
             <a href="#" class="menu-item activo" data-pagina="inicio">
                 <i class="fas fa-home"></i>
-                <span>Inicio</span>
+                <span>INICIO</span>
             </a>
            
-            <a href="#" class="menu-item" data-pagina="proyectos">
-                <i class="fas fa-images"></i>
-                <span>Proyectos</span>
-            </a>
-           
-            <a href="#" class="menu-item" data-pagina="clientes">
-                <i class="fas fa-building"></i>
-                <span>Clientes</span>
+            <a href="#" class="menu-item" data-pagina="concreto">
+                <i class="fas fa-cubes"></i>
+                <span>CONCRETO PREMEZCLADO</span>
             </a>
            
             <a href="#" class="menu-item" data-pagina="servicios">
                 <i class="fas fa-concierge-bell"></i>
-                <span>Servicios</span>
+                <span>SERVICIO</span>
+            </a>
+           
+            <a href="#" class="menu-item" data-pagina="proyectos">
+                <i class="fas fa-images"></i>
+                <span>PROYECTOS</span>
             </a>
 
+            <a href="#" class="menu-item" data-pagina="clientes">
+                <i class="fas fa-building"></i>
+                <span>CLIENTES</span>
+            </a>
+           
             <a href="#" class="menu-item" data-pagina="calculadora">
                 <i class="fas fa-calculator"></i>
-                <span>Calculadora</span>
+                <span>CALCULADORA</span>
             </a>
            
             <a href="#" class="menu-item" data-pagina="contacto">
                 <i class="fas fa-address-book"></i>
-                <span>Contacto</span>
+                <span>CONTACTO</span>
             </a>
            
             <a href="#" class="menu-item menu-item-cotizar" data-pagina="cotizacion">
                 <i class="fab fa-whatsapp"></i>
-                <span>Cotizar</span>
+                <span>COTIZAR</span>
             </a>
         </div>
     </nav>
@@ -1277,7 +1359,7 @@
             <div class="container">
                 <div class="hero-luxury animate-in">
                     <div class="hero-logo-grande animate-in">
-                        <img src="https://i.ibb.co/WNqCzKNY/Whats-App-Image-2026-01-02-at-11-19-53-AM.jpg" alt="GRAOCON Logo Luxury">
+                        <img src="https://i.ibb.co/VWFt2f67/Whats-App-Image-2026-01-02-at-11-19-53-AM.jpg" alt="GRAOCON Logo - Líder en soluciones de concreto" class="hero-logo-grande">
                     </div>
                     <h1>Excelencia en Soluciones de Concreto</h1>
                     <p>Líderes en innovación y tecnología para el sector construcción. Más de 15 años entregando calidad y precisión en cada proyecto.</p>
@@ -1291,27 +1373,156 @@
                     <div class="grid-clientes">
                         <div class="cliente-item animate-in" style="flex-direction: column; height: auto; padding: 35px; min-height: 280px;">
                             <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--verde-sutil), var(--blanco)); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 32px; color: var(--verde-medio); margin-bottom: 25px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); border: 2px solid var(--dorado);">
+                                <i class="fas fa-industry"></i>
+                            </div>
+                            <h3 style="font-size: 22px; margin-bottom: 15px; color: var(--verde-oscuro);">Planta Móvil Dosificadora</h3>
+                            <p style="font-size: 16px; color: #666; line-height: 1.6;">Producción in situ con control de calidad garantizado y reducción de costos logísticos.</p>
+                        </div>
+                       
+                        <div class="cliente-item animate-in" style="flex-direction: column; height: auto; padding: 35px; min-height: 280px;">
+                            <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--verde-sutil), var(--blanco)); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 32px; color: var(--verde-medio); margin-bottom: 25px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); border: 2px solid var(--dorado);">
                                 <i class="fas fa-pump"></i>
                             </div>
-                            <h3 style="font-size: 22px; margin-bottom: 15px; color: var(--verde-oscuro);">Servicio de Bomba</h3>
-                            <p style="font-size: 16px; color: #666; line-height: 1.6;">Equipos de última generación y personal altamente capacitado para bombeo de precisión en obras complejas.</p>
+                            <h3 style="font-size: 22px; margin-bottom: 15px; color: var(--verde-oscuro);">Bombeo de Concreto</h3>
+                            <p style="font-size: 16px; color: #666; line-height: 1.6;">Equipos modernos y operadores especializados para vaciados de precisión.</p>
                         </div>
-                       
-                        <div class="cliente-item animate-in" style="flex-direction: column; height: auto; padding: 35px; min-height: 280px;">
-                            <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--verde-sutil), var(--blanco)); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 32px; color: var(--verde-medio); margin-bottom: 25px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); border: 2px solid var(--dorado);">
-                                <i class="fas fa-cubes"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página de Concreto Premezclado -->
+        <section id="concreto" class="contenido-pagina">
+            <div class="container">
+                <div class="hero-luxury animate-in">
+                    <h1>Concreto Premezclado</h1>
+                    <p>Los diseños de mezcla son elaborados en nuestros laboratorios de control de calidad dependiendo de las exigencias del cliente y las condiciones de obra existentes en el área del proyecto.</p>
+                </div>
+               
+                <div class="seccion animate-in">
+                    <h2 class="titulo-seccion">Tipos de Concreto</h2>
+                    <p class="subtitulo-seccion">Se optimizan los factores referentes a resistencia, asentamiento (slump) y fraguado para cualquier tipo de concreto</p>
+                   
+                    <div class="concreto-grid">
+                        <!-- CONCRETO CONVENCIONAL -->
+                        <div class="concreto-card animate-in">
+                            <div class="concreto-card-header">
+                                <h3>CONCRETO CONVENCIONAL</h3>
                             </div>
-                            <h3 style="font-size: 22px; margin-bottom: 15px; color: var(--verde-oscuro);">Concreto Premezclado</h3>
-                            <p style="font-size: 16px; color: #666; line-height: 1.6;">CONCRETO PREMEZCALDO®: Innovación patentada con resistencia superior para proyectos de alta exigencia.</p>
+                            <div class="concreto-card-body">
+                                <p>Es una mezcla de cemento, arena, agregado, agua y aditivo, que tienen una amplia utilización en las estructuras de concreto más comunes que no requiera de condiciones especiales. Disponibles en diferentes resistencias (desde 175 hasta 350 kg/cm2), cuya resistencia máxima se evaluará a los 28 días después del vaciado.</p>
+                                <p><strong>Ofrecen resistencia a la compresión en las denominadas probetas cilíndricas a 28 días, con una serie de variables de tipo de agregado, según lo establecido en ASTM C33.</strong></p>
+                            </div>
                         </div>
                        
-                        <div class="cliente-item animate-in" style="flex-direction: column; height: auto; padding: 35px; min-height: 280px;">
-                            <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--verde-sutil), var(--blanco)); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 32px; color: var(--verde-medio); margin-bottom: 25px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); border: 2px solid var(--dorado);">
+                        <!-- CONCRETO DE ALTA RESISTENCIA -->
+                        <div class="concreto-card animate-in">
+                            <div class="concreto-card-header">
+                                <h3>CONCRETO DE ALTA RESISTENCIA</h3>
+                            </div>
+                            <div class="concreto-card-body">
+                                <p>Sea contratada que proteger el deseo de revisarse por lo que se encuentre también como convencer de alto desempeño, debido a que aumenten la densibilidad de las estructuras de concreto referentes. Tienen una excelente resistencia y trabajabilidad.</p>
+                                <p><strong>Descripción:</strong> ¿Qué procedido al ser utilizado acerca de referencia?<br>
+                                <strong>Aplicación:</strong> El concepto también se debe ser denominado framición con el modelo alto rendimiento y resistencia. La que es importante por un alto nivel de duras puede causar en las comunidades y esqueletos de concreto.</p>
+                            </div>
+                        </div>
+                       
+                        <!-- CONCRETO FIBROREFORZADO -->
+                        <div class="concreto-card animate-in">
+                            <div class="concreto-card-header">
+                                <h3>CONCRETO FIBROREFORZADO</h3>
+                            </div>
+                            <div class="concreto-card-body">
+                                <p>El concreto fibroreforzado o concreto con fibra estructural suele tener fibra sintética, fibra metálica y macró fibra.</p>
+                                <p><strong>Características:</strong> Concreto diseñado y controlado que permiten el desarrollo de las resistencias especificadas a edades temporales y que permiten llegar a resistencias específicas antes de los 26 días.</p>
+                            </div>
+                        </div>
+                       
+                        <!-- CONCRETO DE RESISTENCIA ACELERADA -->
+                        <div class="concreto-card animate-in">
+                            <div class="concreto-card-header">
+                                <h3>CONCRETO DE RESISTENCIA ACELERADA</h3>
+                            </div>
+                            <div class="concreto-card-body">
+                                <p>Concreto diseñado y controlado que permiten el desarrollo de las resistencias especificadas a edades temporales y que permiten llegar a resistencias específicas antes de los 26 días.</p>
+                                <p>Ideal para proyectos con tiempos de ejecución reducidos donde se necesita una rápida puesta en servicio de las estructuras.</p>
+                            </div>
+                        </div>
+                       
+                        <!-- CONCRETO AUTOCOMPACTANTE -->
+                        <div class="concreto-card animate-in">
+                            <div class="concreto-card-header">
+                                <h3>CONCRETO AUTOCOMPACTANTE</h3>
+                            </div>
+                            <div class="concreto-card-body">
+                                <p>De un contrato altamente fluido, sin reaproposición y escogencia el número sin riesgo tipo de comodidad con nuestras capacidades, la necesidad es una de sus características más importantes en estado plástico. Se utiliza en tiempos de agua paralela.</p>
+                                <p>Perfecto para estructuras con alta densidad de armadura o formas complejas donde la compactación mecánica es difícil.</p>
+                            </div>
+                        </div>
+                       
+                        <!-- CONCRETO FRAGUADO ACELERADO -->
+                        <div class="concreto-card animate-in">
+                            <div class="concreto-card-header">
+                                <h3>CONCRETO FRAGUADO ACELERADO</h3>
+                            </div>
+                            <div class="concreto-card-body">
+                                <p>Concreto especialmente diseñado para presentar un proceso de sección más rápido de lo habitual y con una curva de evolución de resistencias similar a la de un contrato convencional. El control de solididad de las resistencias privadas.</p>
+                                <p>Recomendado para climas fríos o cuando se requieren desencofrados rápidos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página de Servicios -->
+        <section id="servicios" class="contenido-pagina">
+            <div class="container">
+                <div class="hero-luxury animate-in">
+                    <h1>Servicios Especializados</h1>
+                    <p>Soluciones tecnológicas avanzadas para proyectos constructivos de alto impacto</p>
+                </div>
+               
+                <div class="seccion animate-in">
+                    <h2 class="titulo-seccion">Nuestros Servicios</h2>
+                    <p class="subtitulo-seccion">Innovación aplicada a cada etapa del proceso constructivo para garantizar resultados excepcionales</p>
+                   
+                    <div class="grid-clientes" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+                        <!-- SERVICIO DE PLANTA MÓVIL DOSIFICADORA DE CONCRETO -->
+                        <div class="cliente-item animate-in" style="flex-direction: column; height: auto; padding: 40px; min-height: 380px;">
+                            <div style="width: 90px; height: 90px; background: linear-gradient(135deg, var(--verde-sutil), var(--blanco)); border-radius: 25px; display: flex; align-items: center; justify-content: center; font-size: 36px; color: var(--verde-medio); margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12); border: 3px solid var(--dorado);">
+                                <i class="fas fa-industry"></i>
+                            </div>
+                            <h3 style="font-size: 26px; margin-bottom: 20px; color: var(--verde-oscuro);">SERVICIO DE PLANTA MÓVIL DOSIFICADORA DE CONCRETO</h3>
+                            <p style="font-size: 17px; color: #666; line-height: 1.7;">Instalamos plantas dosificadoras móviles en su obra para producción in situ de concreto de alta calidad. Sistema automatizado con control computarizado que garantiza dosificación precisa y consistencia en cada mezcla.</p>
+                            <ul style="margin-top: 20px; text-align: left; color: #555; font-size: 15px; line-height: 1.6;">
+                                <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--verde-medio); margin-right: 10px;"></i> Producción continua en obra: hasta 60 m³/hora</li>
+                                <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--verde-medio); margin-right: 10px;"></i> Control automatizado con sistema de pesaje digital</li>
+                                <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--verde-medio); margin-right: 10px;"></i> Reducción de hasta 30% en costos de transporte</li>
+                                <li><i class="fas fa-check" style="color: var(--verde-medio); margin-right: 10px;"></i> Ideal para proyectos en zonas de difícil acceso o grandes volúmenes</li>
+                            </ul>
+                        </div>
+                       
+                        <!-- SERVICIO DE BOMBEO DE CONCRETO -->
+                        <div class="cliente-item animate-in" style="flex-direction: column; height: auto; padding: 40px; min-height: 380px;">
+                            <div style="width: 90px; height: 90px; background: linear-gradient(135deg, var(--verde-sutil), var(--blanco)); border-radius: 25px; display: flex; align-items: center; justify-content: center; font-size: 36px; color: var(--verde-medio); margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12); border: 3px solid var(--dorado);">
                                 <i class="fas fa-hard-hat"></i>
                             </div>
-                            <h3 style="font-size: 22px; margin-bottom: 15px; color: var(--verde-oscuro);">Asesoría Técnica</h3>
-                            <p style="font-size: 16px; color: #666; line-height: 1.6;">Equipo de ingenieros especializados para optimización técnica y seguimiento de calidad en cada etapa.</p>
+                            <h3 style="font-size: 26px; margin-bottom: 20px; color: var(--verde-oscuro);">SERVICIO DE BOMBEO DE CONCRETO</h3>
+                            <p style="font-size: 17px; color: #666; line-height: 1.7;">Equipo profesional de bombeo con tecnología avanzada para vaciados de precisión. Contamos con bombas pluma de 32 y 42 metros de alcance, operadas por técnicos certificados con más de 10 años de experiencia.</p>
+                            <ul style="margin-top: 20px; text-align: left; color: #555; font-size: 15px; line-height: 1.6;">
+                                <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--verde-medio); margin-right: 10px;"></i> Bombas pluma de última generación (Putmeister, Schwing)</li>
+                                <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--verde-medio); margin-right: 10px;"></i> Capacidad de bombeo: 80-120 m³/hora según equipo</li>
+                                <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--verde-medio); margin-right: 10px;"></i> Operadores certificados con entrenamiento en seguridad</li>
+                                <li><i class="fas fa-check" style="color: var(--verde-medio); margin-right: 10px;"></i> Asesoría técnica durante el proceso de bombeo</li>
+                            </ul>
                         </div>
+                    </div>
+                   
+                    <div style="text-align: center; margin-top: 60px;">
+                        <a href="#" class="btn btn-primario" data-pagina="cotizacion" style="padding: 22px 50px; font-size: 20px; border: 3px solid var(--dorado);">
+                            <i class="fab fa-whatsapp"></i> COTIZAR SERVICIO
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1344,7 +1555,7 @@
                         <!-- Centro Deportivo -->
                         <div class="galeria-item animate-in" data-categoria="centro-deportivo">
                             <div class="galeria-categoria">Centro Deportivo</div>
-                            <img src="https://i.ibb.co/N6vN5Wgk/Whats-App-Image-2024-01-03-at-3-51-31-PM.jpg" alt="Centro Deportivo - Vista principal" class="galeria-img">
+                            <img src="https://i.ibb.co/N6vN5Wgk/Whats-App-Image-2024-01-03-at-3-51-31-PM.jpg" alt="Centro Deportivo - Vista principal" class="galeria-img" loading="lazy">
                             <div class="galeria-overlay">
                                 <h3 class="galeria-titulo">Centro Deportivo Integral</h3>
                                 <p class="galeria-desc">Construcción completa con concreto de alta resistencia para instalaciones deportivas profesionales.</p>
@@ -1353,7 +1564,7 @@
                        
                         <div class="galeria-item animate-in" data-categoria="centro-deportivo">
                             <div class="galeria-categoria">Centro Deportivo</div>
-                            <img src="https://i.ibb.co/5Wpd52SW/Whats-App-Image-2024-01-03-at-3-51-31-PM-1.jpg" alt="Centro Deportivo - Detalles constructivos" class="galeria-img">
+                            <img src="https://i.ibb.co/5Wpd52SW/Whats-App-Image-2024-01-03-at-3-51-31-PM-1.jpg" alt="Centro Deportivo - Detalles constructivos" class="galeria-img" loading="lazy">
                             <div class="galeria-overlay">
                                 <h3 class="galeria-titulo">Estructuras Deportivas</h3>
                                 <p class="galeria-desc">Detalles de construcción especializada para áreas deportivas de alto rendimiento.</p>
@@ -1362,7 +1573,7 @@
                        
                         <div class="galeria-item animate-in" data-categoria="centro-deportivo">
                             <div class="galeria-categoria">Centro Deportivo</div>
-                            <img src="https://i.ibb.co/Mmz4J4D/cbc65a7b-e98a-437d-abf8-e4cc98cf9331.jpg" alt="Centro Deportivo - Proceso constructivo" class="galeria-img">
+                            <img src="https://i.ibb.co/Mmz4J4D/cbc65a7b-e98a-437d-abf8-e4cc98cf9331.jpg" alt="Centro Deportivo - Proceso constructivo" class="galeria-img" loading="lazy">
                             <div class="galeria-overlay">
                                 <h3 class="galeria-titulo">Proceso Constructivo</h3>
                                 <p class="galeria-desc">Metodología especializada en proyectos deportivos de gran envergadura.</p>
@@ -1372,7 +1583,7 @@
                         <!-- Pavimento -->
                         <div class="galeria-item animate-in" data-categoria="pavimento">
                             <div class="galeria-categoria">Pavimento</div>
-                            <img src="https://i.ibb.co/vCrt7DHk/Whats-App-Image-2024-01-03-at-3-51-33-PM-1.jpg" alt="Pavimento - Carreteras principales" class="galeria-img">
+                            <img src="https://i.ibb.co/vCrt7DHk/Whats-App-Image-2024-01-03-at-3-51-33-PM-1.jpg" alt="Pavimento - Carreteras principales" class="galeria-img" loading="lazy">
                             <div class="galeria-overlay">
                                 <h3 class="galeria-titulo">Pavimentación Vial</h3>
                                 <p class="galeria-desc">Trabajos de pavimentación con concreto de alta durabilidad para vías principales.</p>
@@ -1381,7 +1592,7 @@
                        
                         <div class="galeria-item animate-in" data-categoria="pavimento">
                             <div class="galeria-categoria">Pavimento</div>
-                            <img src="https://i.ibb.co/pvKhXYzm/Whats-App-Image-2024-01-03-at-3-51-32-PM.jpg" alt="Pavimento - Áreas urbanas" class="galeria-img">
+                            <img src="https://i.ibb.co/pvKhXYzm/Whats-App-Image-2024-01-03-at-3-51-32-PM.jpg" alt="Pavimento - Áreas urbanas" class="galeria-img" loading="lazy">
                             <div class="galeria-overlay">
                                 <h3 class="galeria-titulo">Pavimentación Urbana</h3>
                                 <p class="galeria-desc">Soluciones de pavimentación para áreas urbanas con alto tráfico vehicular.</p>
@@ -1390,7 +1601,7 @@
                        
                         <div class="galeria-item animate-in" data-categoria="pavimento">
                             <div class="galeria-categoria">Pavimento</div>
-                            <img src="https://i.ibb.co/YVWDS8j/Whats-App-Image-2024-01-03-at-3-51-32-PM-1.jpg" alt="Pavimento - Control de calidad" class="galeria-img">
+                            <img src="https://i.ibb.co/YVWDS8j/Whats-App-Image-2024-01-03-at-3-51-32-PM-1.jpg" alt="Pavimento - Control de calidad" class="galeria-img" loading="lazy">
                             <div class="galeria-overlay">
                                 <h3 class="galeria-titulo">Control de Calidad</h3>
                                 <p class="galeria-desc">Procesos de control y aseguramiento de calidad en trabajos de pavimentación.</p>
@@ -1400,7 +1611,7 @@
                         <!-- Piscinas -->
                         <div class="galeria-item animate-in" data-categoria="piscinas">
                             <div class="galeria-categoria">Piscinas</div>
-                            <img src="https://i.ibb.co/v6N5jcsY/Whats-App-Image-2024-01-03-at-3-51-28-PM-2.jpg" alt="Piscina - Diseño arquitectónico" class="galeria-img">
+                            <img src="https://i.ibb.co/v6N5jcsY/Whats-App-Image-2024-01-03-at-3-51-28-PM-2.jpg" alt="Piscina - Diseño arquitectónico" class="galeria-img" loading="lazy">
                             <div class="galeria-overlay">
                                 <h3 class="galeria-titulo">Piscina Arquitectónica</h3>
                                 <p class="galeria-desc">Construcción de piscina con concreto especializado y diseño arquitectónico premium.</p>
@@ -1409,7 +1620,7 @@
                        
                         <div class="galeria-item animate-in" data-categoria="piscinas">
                             <div class="galeria-categoria">Piscinas</div>
-                            <img src="https://i.ibb.co/JRbwZjWy/Whats-App-Image-2024-01-03-at-3-51-27-PM.jpg" alt="Piscina - Impermeabilización" class="galeria-img">
+                            <img src="https://i.ibb.co/JRbwZjWy/Whats-App-Image-2024-01-03-at-3-51-27-PM.jpg" alt="Piscina - Impermeabilización" class="galeria-img" loading="lazy">
                             <div class="galeria-overlay">
                                 <h3 class="galeria-titulo">Sistema Impermeable</h3>
                                 <p class="galeria-desc">Tecnología de impermeabilización avanzada para piscinas de larga duración.</p>
@@ -1418,7 +1629,7 @@
                        
                         <div class="galeria-item animate-in" data-categoria="piscinas">
                             <div class="galeria-categoria">Piscinas</div>
-                            <img src="https://i.ibb.co/BHgmxdH6/Whats-App-Image-2024-01-03-at-3-51-26-PM-1.jpg" alt="Piscina - Olímpica" class="galeria-img">
+                            <img src="https://i.ibb.co/BHgmxdH6/Whats-App-Image-2024-01-03-at-3-51-26-PM-1.jpg" alt="Piscina - Olímpica" class="galeria-img" loading="lazy">
                             <div class="galeria-overlay">
                                 <h3 class="galeria-titulo">Piscina Olímpica</h3>
                                 <p class="galeria-desc">Proyecto de piscina olímpica con especificaciones técnicas de competición.</p>
@@ -1427,7 +1638,7 @@
                        
                         <div class="galeria-item animate-in" data-categoria="piscinas">
                             <div class="galeria-categoria">Piscinas</div>
-                            <img src="https://i.ibb.co/XfxnFJNz/Whats-App-Image-2024-01-03-at-3-51-21-PM-2.jpg" alt="Piscina - Residencial de lujo" class="galeria-img">
+                            <img src="https://i.ibb.co/XfxnFJNz/Whats-App-Image-2024-01-03-at-3-51-21-PM-2.jpg" alt="Piscina - Residencial de lujo" class="galeria-img" loading="lazy">
                             <div class="galeria-overlay">
                                 <h3 class="galeria-titulo">Piscina Residencial</h3>
                                 <p class="galeria-desc">Piscina residencial premium con acabados de lujo y tecnología de mantenimiento.</p>
@@ -1437,7 +1648,7 @@
                         <!-- Country Club -->
                         <div class="galeria-item animate-in" data-categoria="country-club">
                             <div class="galeria-categoria">Country Club</div>
-                            <img src="https://i.ibb.co/d0DzcC1k/Whats-App-Image-2026-01-09-at-9-53-51-AM-1.jpg" alt="Country Club El Bosque - Vista general" class="galeria-img">
+                            <img src="https://i.ibb.co/d0DzcC1k/Whats-App-Image-2026-01-09-at-9-53-51-AM-1.jpg" alt="Country Club El Bosque - Vista general" class="galeria-img" loading="lazy">
                             <div class="galeria-overlay">
                                 <h3 class="galeria-titulo">Country Club El Bosque</h3>
                                 <p class="galeria-desc">Proyecto integral en exclusivo club social con áreas deportivas y recreativas.</p>
@@ -1446,7 +1657,7 @@
                        
                         <div class="galeria-item animate-in" data-categoria="country-club">
                             <div class="galeria-categoria">Country Club</div>
-                            <img src="https://i.ibb.co/XZq9PCTM/Whats-App-Image-2026-01-09-at-9-53-51-AM.jpg" alt="Country Club - Instalaciones premium" class="galeria-img">
+                            <img src="https://i.ibb.co/XZq9PCTM/Whats-App-Image-2026-01-09-at-9-53-51-AM.jpg" alt="Country Club - Instalaciones premium" class="galeria-img" loading="lazy">
                             <div class="galeria-overlay">
                                 <h3 class="galeria-titulo">Instalaciones Premium</h3>
                                 <p class="galeria-desc">Construcción de instalaciones de primera categoría para club social exclusivo.</p>
@@ -1456,7 +1667,7 @@
                         <!-- Proyecto Importante -->
                         <div class="galeria-item animate-in" data-categoria="proyecto-importante">
                             <div class="galeria-categoria">Proyecto Importante</div>
-                            <img src="https://i.ibb.co/MDDStBNF/Whats-App-Image-2026-01-09-at-9-56-05-AM-1.jpg" alt="Proyecto Importante - Vista aérea" class="galeria-img">
+                            <img src="https://i.ibb.co/MDDStBNF/Whats-App-Image-2026-01-09-at-9-56-05-AM-1.jpg" alt="Proyecto Importante - Vista aérea" class="galeria-img" loading="lazy">
                             <div class="galeria-overlay">
                                 <h3 class="galeria-titulo">Proyecto Estratégico</h3>
                                 <p class="galeria-desc">Desarrollo de infraestructura de gran escala con tecnología de punta.</p>
@@ -1465,7 +1676,7 @@
                        
                         <div class="galeria-item animate-in" data-categoria="proyecto-importante">
                             <div class="galeria-categoria">Proyecto Importante</div>
-                            <img src="https://i.ibb.co/RphgJ6d4/Whats-App-Image-2026-01-09-at-9-56-05-AM.jpg" alt="Proyecto Importante - Detalles técnicos" class="galeria-img">
+                            <img src="https://i.ibb.co/RphgJ6d4/Whats-App-Image-2026-01-09-at-9-56-05-AM.jpg" alt="Proyecto Importante - Detalles técnicos" class="galeria-img" loading="lazy">
                             <div class="galeria-overlay">
                                 <h3 class="galeria-titulo">Ingeniería de Precisión</h3>
                                 <p class="galeria-desc">Aplicación de ingeniería avanzada en proyecto de infraestructura crítica.</p>
@@ -1490,22 +1701,22 @@
                    
                     <div class="grid-clientes">
                         <div class="cliente-item animate-in">
-                            <img src="https://i.ibb.co/d4dbhcKk/Gemini-Generated-Image-g1oxa3g1oxa3g1ox.png" alt="Universidad Nacional Agraria La Molina" class="cliente-img">
+                            <img src="https://i.ibb.co/d4dbhcKk/Gemini-Generated-Image-g1oxa3g1oxa3g1ox.png" alt="Universidad Nacional Agraria La Molina" class="cliente-img" loading="lazy">
                         </div>
                         <div class="cliente-item animate-in">
-                            <img src="https://i.ibb.co/BVptTXd0/Gemini-Generated-Image-d1o3zwd1o3zwd1o3.png" alt="Travex" class="cliente-img">
+                            <img src="https://i.ibb.co/BVptTXd0/Gemini-Generated-Image-d1o3zwd1o3zwd1o3.png" alt="Travex" class="cliente-img" loading="lazy">
                         </div>
                         <div class="cliente-item animate-in">
-                            <img src="https://i.ibb.co/1tX0tSFH/Gemini-Generated-Image-yr4e8qyr4e8qyr4e.png" alt="Country Club El Bosque" class="cliente-img">
+                            <img src="https://i.ibb.co/1tX0tSFH/Gemini-Generated-Image-yr4e8qyr4e8qyr4e.png" alt="Country Club El Bosque" class="cliente-img" loading="lazy">
                         </div>
                         <div class="cliente-item animate-in">
-                            <img src="https://i.ibb.co/G4jpq3vZ/Gemini-Generated-Image-9wpsy19wpsy19wps.png" alt="Imarbe Consultores" class="cliente-img">
+                            <img src="https://i.ibb.co/G4jpq3vZ/Gemini-Generated-Image-9wpsy19wpsy19wps.png" alt="Imarbe Consultores" class="cliente-img" loading="lazy">
                         </div>
                         <div class="cliente-item animate-in">
-                            <img src="https://i.ibb.co/PvZnZmGn/Gemini-Generated-Image-wt3j1jwt3j1jwt3j.png" alt="Huarcaya Group" class="cliente-img">
+                            <img src="https://i.ibb.co/PvZnZmGn/Gemini-Generated-Image-wt3j1jwt3j1jwt3j.png" alt="Huarcaya Group" class="cliente-img" loading="lazy">
                         </div>
                         <div class="cliente-item animate-in">
-                            <img src="https://i.ibb.co/MyvQFZCc/Gemini-Generated-Image-g0njg2g0njg2g0nj.png" alt="Artech Home" class="cliente-img">
+                            <img src="https://i.ibb.co/MyvQFZCc/Gemini-Generated-Image-g0njg2g0njg2g0nj.png" alt="Artech Home" class="cliente-img" loading="lazy">
                         </div>
                     </div>
                    
@@ -1515,62 +1726,6 @@
                         <button class="btn btn-primario" data-pagina="cotizacion" style="padding: 22px 50px; font-size: 20px; border: 3px solid var(--dorado);">
                             <i class="fab fa-whatsapp"></i> COTIZAR PROYECTO PREMIUM
                         </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Página de Servicios -->
-        <section id="servicios" class="contenido-pagina">
-            <div class="container">
-                <div class="hero-luxury animate-in">
-                    <h1>Servicios Especializados</h1>
-                    <p>Soluciones tecnológicas avanzadas para proyectos constructivos de alto impacto</p>
-                </div>
-               
-                <div class="seccion animate-in">
-                    <h2 class="titulo-seccion">Nuestra Tecnología</h2>
-                    <p class="subtitulo-seccion">Innovación aplicada a cada etapa del proceso constructivo para garantizar resultados excepcionales</p>
-                   
-                    <div class="grid-clientes">
-                        <div class="cliente-item animate-in" style="flex-direction: column; height: auto; padding: 40px; min-height: 350px;">
-                            <div style="width: 90px; height: 90px; background: linear-gradient(135deg, var(--verde-sutil), var(--blanco)); border-radius: 25px; display: flex; align-items: center; justify-content: center; font-size: 36px; color: var(--verde-medio); margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12); border: 3px solid var(--dorado);">
-                                <i class="fas fa-pump"></i>
-                            </div>
-                            <h3 style="font-size: 26px; margin-bottom: 20px; color: var(--verde-oscuro);">Servicio de Bomba</h3>
-                            <p style="font-size: 17px; color: #666; line-height: 1.7;">Flota moderna de bombas de concreto con alcances hasta 42 metros. Tecnología de bombeo de precisión para obras complejas y de difícil acceso. Monitoreo en tiempo real y control digital de presión.</p>
-                            <ul style="margin-top: 20px; text-align: left; color: #555; font-size: 15px; line-height: 1.6;">
-                                <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--verde-medio); margin-right: 10px;"></i> Bombas estacionarias y pluma</li>
-                                <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--verde-medio); margin-right: 10px;"></i> Capacidad hasta 120 m³/hora</li>
-                                <li><i class="fas fa-check" style="color: var(--verde-medio); margin-right: 10px;"></i> Operadores certificados</li>
-                            </ul>
-                        </div>
-                       
-                        <div class="cliente-item animate-in" style="flex-direction: column; height: auto; padding: 40px; min-height: 350px;">
-                            <div style="width: 90px; height: 90px; background: linear-gradient(135deg, var(--verde-sutil), var(--blanco)); border-radius: 25px; display: flex; align-items: center; justify-content: center; font-size: 36px; color: var(--verde-medio); margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12); border: 3px solid var(--dorado);">
-                                <i class="fas fa-cubes"></i>
-                            </div>
-                            <h3 style="font-size: 26px; margin-bottom: 20px; color: var(--verde-oscuro);">Concreto Premezclado</h3>
-                            <p style="font-size: 17px; color: #666; line-height: 1.7;">CONCRETO PREMEZCALDO®: Tecnología patentada con resistencias superiores a 400 kg/cm². Dosificación computarizada, control de calidad por espectrometría y trazabilidad total del producto.</p>
-                            <ul style="margin-top: 20px; text-align: left; color: #555; font-size: 15px; line-height: 1.6;">
-                                <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--verde-medio); margin-right: 10px;"></i> Resistencia 210-500 kg/cm²</li>
-                                <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--verde-medio); margin-right: 10px;"></i> Aditivos especializados</li>
-                                <li><i class="fas fa-check" style="color: var(--verde-medio); margin-right: 10px;"></i> Control de fisuración</li>
-                            </ul>
-                        </div>
-                       
-                        <div class="cliente-item animate-in" style="flex-direction: column; height: auto; padding: 40px; min-height: 350px;">
-                            <div style="width: 90px; height: 90px; background: linear-gradient(135deg, var(--verde-sutil), var(--blanco)); border-radius: 25px; display: flex; align-items: center; justify-content: center; font-size: 36px; color: var(--verde-medio); margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12); border: 3px solid var(--dorado);">
-                                <i class="fas fa-hard-hat"></i>
-                            </div>
-                            <h3 style="font-size: 26px; margin-bottom: 20px; color: var(--verde-oscuro);">Asesoría Técnica</h3>
-                            <p style="font-size: 17px; color: #666; line-height: 1.7;">Equipo multidisciplinario de ingenieros civiles, estructurales y de materiales. Diseño de mezclas optimizadas, supervisión técnica especializada y ensayos de laboratorio in situ.</p>
-                            <ul style="margin-top: 20px; text-align: left; color: #555; font-size: 15px; line-height: 1.6;">
-                                <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--verde-medio); margin-right: 10px;"></i> Diseño de mezclas</li>
-                                <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--verde-medio); margin-right: 10px;"></i> Control de calidad</li>
-                                <li><i class="fas fa-check" style="color: var(--verde-medio); margin-right: 10px;"></i> Optimización estructural</li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -1609,19 +1764,30 @@
                             <div class="grupo-form animate-in">
                                 <label for="calidad-concreto"><i class="fas fa-star"></i> Nivel de Calidad</label>
                                 <select id="calidad-concreto" class="control-form">
-                                    <option value="estandar">Estándar - Para obras básicas</option>
-                                    <option value="alta">Alta - Para obras importantes</option>
-                                    <option value="premium">Premium - Para proyectos especiales</option>
-                                    <option value="premezcaldo">Grado Superior - Máxima calidad</option>
+                                    <option value="estandar">Estándar - Concreto 210 kg/cm²</option>
+                                    <option value="alta">Alta - Concreto 280 kg/cm²</option>
+                                    <option value="premium">Premium - Concreto 350 kg/cm²</option>
+                                    <option value="premezcaldo">Grado Superior - Concreto 420 kg/cm²</option>
                                 </select>
                             </div>
                            
                             <div class="grupo-form animate-in">
                                 <label for="ubicacion-proyecto"><i class="fas fa-map-marker-alt"></i> Zona del Proyecto</label>
                                 <select id="ubicacion-proyecto" class="control-form">
-                                    <option value="lima">Lima Metropolitana</option>
-                                    <option value="provincia">Provincias cercanas</option>
-                                    <option value="lejana">Zonas alejadas</option>
+                                    <option value="Chorrillos">Chorrillos</option>
+                                    <option value="Lurín">Lurín</option>
+                                    <option value="Pachacamac">Pachacamac</option>
+                                    <option value="Pucusana">Pucusana</option>
+                                    <option value="Punta Hermosa">Punta Hermosa</option>
+                                    <option value="Punta Negra">Punta Negra</option>
+                                    <option value="La Molina">La Molina</option>
+                                    <option value="Santa Anita">Santa Anita</option>
+                                    <option value="San Bartolo">San Bartolo</option>
+                                    <option value="San Juan de Miraflores">San Juan de Miraflores</option>
+                                    <option value="Villa el Salvador">Villa el Salvador</option>
+                                    <option value="Villa María del Triunfo">Villa María del Triunfo</option>
+                                    <option value="San Borja">San Borja</option>
+                                    <option value="San Isidro">San Isidro</option>
                                 </select>
                             </div>
                            
@@ -1776,7 +1942,7 @@
                     <div>
                         <div class="footer-logo-section">
                             <div class="footer-logo">
-                                <img src="https://i.ibb.co/WNqCzKNY/Whats-App-Image-2026-01-02-at-11-19-53-AM.jpg" alt="GRAOCON Logo Luxury">
+                                <img src="https://i.ibb.co/VWFt2f67/Whats-App-Image-2026-01-02-at-11-19-53-AM.jpg" alt="GRAOCON Logo Luxury - Excelencia en Concreto" loading="lazy">
                             </div>
                             <div class="footer-texto">
                                 <p>Líderes en soluciones innovadoras de concreto premezclado y servicios de bomba en Perú. Tecnología avanzada y calidad certificada en cada proyecto.</p>
@@ -1790,9 +1956,9 @@
                     <div>
                         <h3 class="footer-titulo">Servicios Premium</h3>
                         <ul class="footer-lista">
-                            <li><button data-pagina="servicios">Servicio de Bomba</button></li>
-                            <li><button data-pagina="servicios">Concreto Premezclado</button></li>
-                            <li><button data-pagina="servicios">Asesoría Técnica</button></li>
+                            <li><button data-pagina="servicios">Planta Móvil Dosificadora</button></li>
+                            <li><button data-pagina="concreto">Concreto Premezclado</button></li>
+                            <li><button data-pagina="servicios">Servicio de Bombeo</button></li>
                             <li><button data-pagina="calculadora">Calculadora de Costos</button></li>
                         </ul>
                     </div>
@@ -1801,8 +1967,11 @@
                         <h3 class="footer-titulo">Navegación</h3>
                         <ul class="footer-lista">
                             <li><button data-pagina="inicio">Inicio</button></li>
+                            <li><button data-pagina="concreto">Concreto Premezclado</button></li>
+                            <li><button data-pagina="servicios">Servicio</button></li>
                             <li><button data-pagina="proyectos">Proyectos</button></li>
                             <li><button data-pagina="clientes">Clientes</button></li>
+                            <li><button data-pagina="calculadora">Calculadora</button></li>
                             <li><button data-pagina="contacto">Contacto</button></li>
                             <li><button data-pagina="cotizacion">Cotización</button></li>
                         </ul>
@@ -1882,7 +2051,7 @@
                 });
             });
            
-            // Calculadora de concreto simplificada
+            // Calculadora de concreto con precios realistas
             document.getElementById('calculate-button').addEventListener('click', function() {
                 // Obtener valores
                 const area = parseFloat(document.getElementById('area-techar').value);
@@ -1895,47 +2064,99 @@
                     return;
                 }
                
-                // Precios base por m² según calidad del concreto
-                let pricePerM2, calidadTexto, tipoTexto;
+                // Precios base por m³ según calidad del concreto (precios realistas en Perú)
+                let pricePerM3, calidadTexto;
                 switch(calidadConcreto) {
-                    case 'estandar': pricePerM2 = 120; calidadTexto = "Calidad Estándar"; break;
-                    case 'alta': pricePerM2 = 145; calidadTexto = "Alta Calidad"; break;
-                    case 'premium': pricePerM2 = 175; calidadTexto = "Calidad Premium"; break;
-                    case 'premezcaldo': pricePerM2 = 210; calidadTexto = "Grado Superior GRAOCON"; break;
-                    default: pricePerM2 = 120; calidadTexto = "Calidad Estándar";
+                    case 'estandar':
+                        pricePerM3 = 320; // Precio promedio por m³ para concreto 210 kg/cm²
+                        calidadTexto = "Calidad Estándar (210 kg/cm²)";
+                        break;
+                    case 'alta':
+                        pricePerM3 = 360; // Precio promedio por m³ para concreto 280 kg/cm²
+                        calidadTexto = "Alta Calidad (280 kg/cm²)";
+                        break;
+                    case 'premium':
+                        pricePerM3 = 420; // Precio promedio por m³ para concreto 350 kg/cm²
+                        calidadTexto = "Calidad Premium (350 kg/cm²)";
+                        break;
+                    case 'premezcaldo':
+                        pricePerM3 = 480; // Precio premium por m³ para concreto especial
+                        calidadTexto = "Grado Superior GRAOCON (420 kg/cm²)";
+                        break;
+                    default:
+                        pricePerM3 = 320;
+                        calidadTexto = "Calidad Estándar";
                 }
                
-                // Factor según tipo de construcción
-                let factorTipo;
+                // Factor según tipo de construcción (espesor aproximado en metros)
+                let factorEspesor, tipoTexto;
                 switch(tipoTecho) {
-                    case 'losa': factorTipo = 1.0; tipoTexto = "Losa para vivienda"; break;
-                    case 'maciza': factorTipo = 1.3; tipoTexto = "Losa para edificio"; break;
-                    case 'nervada': factorTipo = 1.5; tipoTexto = "Estructura industrial"; break;
-                    case 'vigueta': factorTipo = 0.9; tipoTexto = "Techos ligeros"; break;
-                    case 'cimentacion': factorTipo = 1.2; tipoTexto = "Cimientos y bases"; break;
-                    default: factorTipo = 1.0; tipoTexto = "Losa para vivienda";
+                    case 'losa': factorEspesor = 0.10; tipoTexto = "Losa para vivienda (10 cm)"; break;
+                    case 'maciza': factorEspesor = 0.15; tipoTexto = "Losa para edificio (15 cm)"; break;
+                    case 'nervada': factorEspesor = 0.20; tipoTexto = "Estructura industrial (20 cm)"; break;
+                    case 'vigueta': factorEspesor = 0.08; tipoTexto = "Techos ligeros (8 cm)"; break;
+                    case 'cimentacion': factorEspesor = 0.30; tipoTexto = "Cimientos y bases (30 cm)"; break;
+                    default: factorEspesor = 0.10; tipoTexto = "Losa para vivienda";
                 }
                
-                // Factor según ubicación
+                // Factor de ubicación (distancia desde planta)
                 let factorUbicacion, ubicacionTexto;
                 switch(ubicacion) {
-                    case 'lima': factorUbicacion = 1.0; ubicacionTexto = "Lima Metropolitana"; break;
-                    case 'provincia': factorUbicacion = 1.25; ubicacionTexto = "Provincias cercanas"; break;
-                    case 'lejana': factorUbicacion = 1.5; ubicacionTexto = "Zonas alejadas"; break;
-                    default: factorUbicacion = 1.0; ubicacionTexto = "Lima Metropolitana";
+                    // Zonas cercanas a planta (menor costo de transporte)
+                    case 'Chorrillos':
+                    case 'Lurín':
+                    case 'Pachacamac':
+                    case 'San Juan de Miraflores':
+                    case 'Villa el Salvador':
+                    case 'Villa María del Triunfo':
+                        factorUbicacion = 1.0;
+                        ubicacionTexto = ubicacion + " (zona cercana)";
+                        break;
+                   
+                    // Zonas intermedias
+                    case 'La Molina':
+                    case 'Santa Anita':
+                    case 'San Borja':
+                        factorUbicacion = 1.1;
+                        ubicacionTexto = ubicacion + " (zona intermedia)";
+                        break;
+                       
+                    // Zonas más lejanas
+                    case 'San Isidro':
+                    case 'Punta Hermosa':
+                    case 'Punta Negra':
+                    case 'San Bartolo':
+                    case 'Pucusana':
+                        factorUbicacion = 1.2;
+                        ubicacionTexto = ubicacion + " (zona lejana)";
+                        break;
+                       
+                    default: factorUbicacion = 1.0; ubicacionTexto = ubicacion;
                 }
                
-                // Cálculo simplificado
-                const costoBase = area * pricePerM2 * factorTipo;
-                const costoFinal = costoBase * factorUbicacion;
+                // Cálculo: Volumen = Área × Espesor
+                const volumenM3 = area * factorEspesor;
                
-                // Mostrar resultado simplificado
+                // Costo base del concreto
+                const costoConcreto = volumenM3 * pricePerM3;
+               
+                // Costo adicional por transporte y otros (aproximado 15% del costo del concreto)
+                const costosAdicionales = costoConcreto * 0.15 * factorUbicacion;
+               
+                // Costo final
+                const costoFinal = costoConcreto + costosAdicionales;
+               
+                // Redondear a múltiplo de 10
+                const costoFinalRedondeado = Math.round(costoFinal / 10) * 10;
+               
+                // Mostrar resultado
                 document.getElementById('result-details').innerHTML = `
                     <strong>${area.toLocaleString()} m²</strong> de ${tipoTexto}<br>
                     <strong>${calidadTexto}</strong><br>
-                    Ubicación: ${ubicacionTexto}
+                    Ubicación: ${ubicacionTexto}<br>
+                    Volumen estimado: <strong>${volumenM3.toFixed(1)} m³</strong>
                 `;
-                document.getElementById('final-cost').textContent = costoFinal.toLocaleString('es-PE', {minimumFractionDigits: 0, maximumFractionDigits: 0});
+                document.getElementById('final-cost').textContent = costoFinalRedondeado.toLocaleString('es-PE', {minimumFractionDigits: 0, maximumFractionDigits: 0});
                
                 // Mostrar el contenedor de resultados
                 document.getElementById('calculator-result').style.display = 'block';
@@ -2017,9 +2238,10 @@
             let tituloPagina = 'GRAOCON - ';
             switch(paginaId) {
                 case 'inicio': tituloPagina += 'Excelencia en Soluciones de Concreto'; break;
+                case 'concreto': tituloPagina += 'Concreto Premezclado'; break;
+                case 'servicios': tituloPagina += 'Servicios Especializados'; break;
                 case 'proyectos': tituloPagina += 'Portafolio de Proyectos'; break;
                 case 'clientes': tituloPagina += 'Alianzas Estratégicas'; break;
-                case 'servicios': tituloPagina += 'Servicios Especializados'; break;
                 case 'calculadora': tituloPagina += 'Calculadora de Presupuesto'; break;
                 case 'contacto': tituloPagina += 'Contacto Directo'; break;
                 case 'cotizacion': tituloPagina += 'Cotización Premium'; break;
