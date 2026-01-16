@@ -6,6 +6,7 @@
     <title>Concretera GRAOCON | Concreto Premezclado y Bombeo en Lima Perú</title>
     <meta name="description" content="Concretera líder en Perú. Concreto premezclado, bombeo de concreto, planta móvil dosificadora. Servicio a Lima, Lurín, Pachacamac y todo Perú. Calidad certificada.">
     <meta name="robots" content="index, follow">
+    <meta name="keywords" content="concreto premezclado, bombeo de concreto, Lima, Perú, construcción, planta móvil, Graocon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -90,13 +91,83 @@
             list-style: none;
         }
 
+        /* BARRA SUPERIOR CON TELÉFONO */
+        .top-bar {
+            background: linear-gradient(135deg, var(--verde-oscuro) 0%, #0a2f0a 100%);
+            color: var(--blanco);
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1001;
+        }
+
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 0.9rem;
+        }
+
+        .phone-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--dorado-claro);
+            font-weight: 600;
+            transition: var(--transicion);
+        }
+
+        .phone-link:hover {
+            color: var(--blanco);
+            transform: translateY(-1px);
+        }
+
+        .phone-link i {
+            font-size: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 6px;
+            border-radius: 50%;
+        }
+
+        .whatsapp-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #25D366;
+            font-weight: 600;
+            transition: var(--transicion);
+        }
+
+        .whatsapp-link:hover {
+            color: var(--blanco);
+            transform: translateY(-1px);
+        }
+
+        .schedule {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.85rem;
+        }
+
         /* HEADER MOBILE-FIRST */
         .header {
             background: linear-gradient(135deg, var(--verde-oscuro) 0%, #0a2f0a 100%);
             color: var(--blanco);
             padding: 15px 0;
             position: fixed;
-            top: 0;
+            top: 40px;
             left: 0;
             width: 100%;
             z-index: 1000;
@@ -246,15 +317,21 @@
             padding: 20px 0 40px;
         }
 
-        /* HERO SECTION */
+        /* HERO SECTION CON NUEVO FONDO */
         .hero {
-            background: linear-gradient(135deg, rgba(26, 93, 26, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
-            padding: 30px 20px;
+            background: linear-gradient(rgba(13, 59, 13, 0.85), rgba(13, 59, 13, 0.75)), url('https://i.ibb.co/5XbPHRGX/Whats-App-Image-2026-01-08-at-4-11-49-PM.jpg') center/cover no-repeat;
+            color: var(--blanco);
+            padding: 60px 20px;
             border-radius: 15px;
             margin-bottom: 40px;
             text-align: center;
             position: relative;
             overflow: hidden;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         .hero-logo {
@@ -264,8 +341,8 @@
             background: var(--blanco);
             border-radius: 15px;
             padding: 15px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-            border: 5px solid var(--blanco);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            border: 5px solid var(--dorado);
         }
 
         .hero-logo img {
@@ -275,17 +352,27 @@
         }
 
         .hero h1 {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-            color: var(--verde-oscuro);
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--blanco);
             font-weight: 900;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
         }
 
         .hero p {
-            font-size: 1rem;
-            color: #555;
-            max-width: 600px;
-            margin: 0 auto;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.95);
+            max-width: 700px;
+            margin: 0 auto 30px;
+            line-height: 1.6;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
         }
 
         /* SECTIONS */
@@ -583,6 +670,18 @@
             box-shadow: 0 6px 20px rgba(26, 93, 26, 0.2);
         }
 
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: var(--blanco);
+            border: 2px solid white;
+        }
+
+        .btn-whatsapp:hover {
+            background: linear-gradient(135deg, #128C7E, #25D366);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.2);
+        }
+
         .calculator-result {
             background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro));
             color: var(--blanco);
@@ -624,6 +723,32 @@
         .whatsapp-float:hover {
             transform: scale(1.1);
             box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        /* PHONE FLOATING */
+        .phone-float {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 15px rgba(26, 93, 26, 0.3);
+            z-index: 999;
+            text-decoration: none;
+            transition: var(--transicion);
+            border: 3px solid white;
+        }
+
+        .phone-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(26, 93, 26, 0.4);
         }
 
         /* FOOTER */
@@ -734,10 +859,11 @@
         /* MEDIA QUERIES PARA TABLET */
         @media (min-width: 768px) {
             body {
-                padding-top: 100px;
+                padding-top: 120px;
             }
 
             .header {
+                top: 40px;
                 padding: 20px 0;
             }
 
@@ -798,7 +924,8 @@
             }
 
             .hero {
-                padding: 50px 40px;
+                padding: 80px 40px;
+                min-height: 500px;
                 margin-bottom: 60px;
             }
 
@@ -808,11 +935,11 @@
             }
 
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2.8rem;
             }
 
             .hero p {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
             }
 
             .section-title {
@@ -854,6 +981,14 @@
                 right: 30px;
             }
 
+            .phone-float {
+                width: 70px;
+                height: 70px;
+                font-size: 28px;
+                bottom: 110px;
+                right: 30px;
+            }
+
             .footer-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 40px;
@@ -866,6 +1001,14 @@
                 padding: 0 30px;
             }
 
+            .top-bar {
+                padding: 10px 0;
+            }
+
+            .contact-info {
+                font-size: 1rem;
+            }
+
             .nav-menu {
                 gap: 10px;
             }
@@ -876,7 +1019,8 @@
             }
 
             .hero {
-                padding: 70px 60px;
+                padding: 100px 60px;
+                min-height: 600px;
                 margin-bottom: 80px;
             }
 
@@ -886,11 +1030,11 @@
             }
 
             .hero h1 {
-                font-size: 3rem;
+                font-size: 3.5rem;
             }
 
             .hero p {
-                font-size: 1.3rem;
+                font-size: 1.5rem;
             }
 
             .section {
@@ -932,6 +1076,14 @@
                 bottom: 40px;
                 right: 40px;
             }
+
+            .phone-float {
+                width: 75px;
+                height: 75px;
+                font-size: 32px;
+                bottom: 130px;
+                right: 40px;
+            }
         }
 
         /* MEDIA QUERIES PARA DESKTOP GRANDE */
@@ -941,7 +1093,7 @@
             }
 
             .hero h1 {
-                font-size: 3.5rem;
+                font-size: 4rem;
             }
 
             .hero-logo {
@@ -954,6 +1106,15 @@
         @media (max-width: 360px) {
             .container {
                 padding: 0 10px;
+            }
+
+            .top-bar {
+                padding: 6px 0;
+            }
+
+            .contact-info {
+                font-size: 0.8rem;
+                gap: 10px;
             }
 
             .logo {
@@ -970,7 +1131,8 @@
             }
 
             .hero {
-                padding: 25px 15px;
+                padding: 40px 15px;
+                min-height: 350px;
             }
 
             .hero-logo {
@@ -979,11 +1141,11 @@
             }
 
             .hero h1 {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
             }
 
             .hero p {
-                font-size: 0.95rem;
+                font-size: 1rem;
             }
 
             .gallery-item {
@@ -999,6 +1161,14 @@
                 height: 55px;
                 font-size: 24px;
                 bottom: 15px;
+                right: 15px;
+            }
+
+            .phone-float {
+                width: 55px;
+                height: 55px;
+                font-size: 20px;
+                bottom: 80px;
                 right: 15px;
             }
         }
@@ -1017,14 +1187,33 @@
             .whatsapp-float:hover {
                 transform: none;
             }
+
+            .phone-float:hover {
+                transform: none;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/51927571365?text=Hola%20GRAOCON,%20quiero%20solicitar%20una%20cotización%20al%20instante" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <!-- Top Bar con Teléfono -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="contact-info">
+                <a href="tel:+51927571365" class="phone-link">
+                    <i class="fas fa-phone"></i>
+                    <span>+51 927 571 365</span>
+                </a>
+                <a href="https://wa.me/51927571365" target="_blank" class="whatsapp-link">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <div class="schedule">
+                    <i class="far fa-clock"></i>
+                    <span>Lun-Sáb: 7:00 am - 7:00 pm</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Header -->
     <header class="header">
@@ -1060,6 +1249,16 @@
         </div>
     </header>
 
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/51927571365?text=Hola%20GRAOCON,%20quiero%20solicitar%20una%20cotización%20al%20instante" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Phone Floating Button -->
+    <a href="tel:+51927571365" class="phone-float" aria-label="Llamar por teléfono">
+        <i class="fas fa-phone"></i>
+    </a>
+
     <!-- Main Content -->
     <main class="main-content">
         <!-- Home Page -->
@@ -1070,7 +1269,16 @@
                         <img src="https://i.ibb.co/VWFt2f67/Whats-App-Image-2026-01-02-at-11-19-53-AM.jpg" alt="GRAOCON Logo">
                     </div>
                     <h1>Excelencia en Soluciones de Concreto</h1>
-                    <p>Líderes en innovación y tecnología para el sector construcción. Más de 15 años entregando calidad y precisión en cada proyecto.</p>
+                    <p>Líderes en innovación y tecnología para el sector construcción. Más de 15 años entregando calidad y precisión en cada proyecto en Lima y todo Perú.</p>
+                    
+                    <div class="hero-cta">
+                        <a href="tel:+51927571365" class="btn btn-primary">
+                            <i class="fas fa-phone"></i> LLAMAR AHORA
+                        </a>
+                        <a href="https://wa.me/51927571365" target="_blank" class="btn btn-whatsapp">
+                            <i class="fab fa-whatsapp"></i> WHATSAPP
+                        </a>
+                    </div>
                 </div>
 
                 <div class="section fade-in">
@@ -1104,6 +1312,48 @@
                                     <li>Asesoría técnica durante el proceso</li>
                                 </ul>
                             </div>
+                        </div>
+
+                        <div class="card fade-in">
+                            <div class="card-header">
+                                <h3>Concreto Premezclado</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>Calidad certificada con diseños de mezcla optimizados para cada tipo de proyecto.</p>
+                                <ul>
+                                    <li>Resistencias de 175-420 kg/cm²</li>
+                                    <li>Control de calidad estricto</li>
+                                    <li>Entrega puntual en obra</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección de Ventajas -->
+                <div class="section fade-in" style="background: var(--verde-sutil); padding: 40px 25px; border-radius: 15px;">
+                    <h2 class="section-title">¿Por qué elegir GRAOCON?</h2>
+                    <div class="grid">
+                        <div class="text-center">
+                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; color: white; margin: 0 auto 20px; border: 3px solid var(--dorado);">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <h3 style="font-size: 1.2rem;">Calidad Certificada</h3>
+                            <p style="color: #555;">Cumplimos con los más altos estándares de calidad en cada proyecto.</p>
+                        </div>
+                        <div class="text-center">
+                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; color: white; margin: 0 auto 20px; border: 3px solid var(--dorado);">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h3 style="font-size: 1.2rem;">Puntualidad</h3>
+                            <p style="color: #555;">Entregas a tiempo para cumplir con los cronogramas de construcción.</p>
+                        </div>
+                        <div class="text-center">
+                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; color: white; margin: 0 auto 20px; border: 3px solid var(--dorado);">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <h3 style="font-size: 1.2rem;">Soporte 24/7</h3>
+                            <p style="color: #555;">Asesoría técnica permanente durante todo el proceso constructivo.</p>
                         </div>
                     </div>
                 </div>
