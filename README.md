@@ -1,2 +1,2277 @@
-# CONCRETERAGRAOCON
-"Sitio web oficial de Graocon"
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRAOCON - Excelencia en Soluciones de Concreto</title>
+    <meta name="description" content="Líderes en concreto premezclado, bombeo y soluciones constructivas de alta calidad en Perú. Más de 15 años de experiencia certificada.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos optimizados - eliminé duplicaciones y mejoré el rendimiento */
+        :root {
+            --verde-oscuro: #0d3b0d;
+            --verde-medio: #1a5d1a;
+            --verde-claro: #2e8b57;
+            --verde-sutil: #e8f5e9;
+            --blanco: #ffffff;
+            --gris-claro: #f8f9fa;
+            --gris-medio: #e9ecef;
+            --gris-texto: #333333;
+            --dorado: #c8a951;
+            --dorado-claro: #e6d29c;
+            --sombra-sutil: 0 8px 30px rgba(0, 0, 0, 0.08);
+            --sombra-hover: 0 15px 40px rgba(0, 0, 0, 0.15);
+            --transicion: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--blanco);
+            color: var(--gris-texto);
+            line-height: 1.7;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--verde-oscuro);
+            letter-spacing: -0.5px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        /* ENCABEZADO LUXURY */
+        .header-luxury {
+            background: linear-gradient(135deg, var(--verde-oscuro) 0%, #0a2f0a 100%);
+            color: var(--blanco);
+            padding: 18px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+            border-bottom: 3px solid var(--dorado);
+        }
+
+        .header-contenido {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .logo-img {
+            height: 65px;
+            width: auto;
+            transition: var(--transicion);
+            border-radius: 8px;
+            padding: 3px;
+            background: var(--blanco);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo-img:hover {
+            transform: scale(1.08) rotate(2deg);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .marca-titulo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 26px;
+            color: var(--blanco);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .marca-subtitulo {
+            font-size: 12px;
+            color: var(--dorado-claro);
+            letter-spacing: 3px;
+            font-weight: 300;
+            margin-top: 2px;
+        }
+
+        .contacto-header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .contacto-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--blanco);
+            transition: var(--transicion);
+            font-size: 15px;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .contacto-item:hover {
+            color: var(--dorado);
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .phone-number {
+            font-size: 18px;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--dorado), var(--dorado-claro));
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: var(--verde-oscuro);
+            box-shadow: 0 4px 15px rgba(200, 169, 81, 0.3);
+        }
+
+        /* MENÚ LUXURY */
+        .menu-luxury {
+            position: fixed;
+            top: 101px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 999;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .menu-contenido {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .menu-item {
+            padding: 12px 25px;
+            text-decoration: none;
+            color: var(--gris-texto);
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 10px;
+            transition: var(--transicion);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .menu-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(26, 93, 26, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .menu-item:hover::before {
+            left: 100%;
+        }
+
+        .menu-item:hover, .menu-item.active {
+            background: linear-gradient(135deg, var(--verde-sutil), var(--blanco));
+            color: var(--verde-oscuro);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(26, 93, 26, 0.15);
+        }
+
+        .menu-item-cotizar {
+            background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro));
+            color: var(--blanco);
+            font-weight: 700;
+            padding: 14px 28px;
+            border: 2px solid var(--dorado);
+        }
+
+        .menu-item-cotizar:hover {
+            background: linear-gradient(135deg, var(--verde-claro), var(--verde-medio));
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(26, 93, 26, 0.3);
+        }
+
+        /* CONTENIDO PRINCIPAL */
+        .contenido-principal {
+            margin-top: 161px;
+            padding: 40px 0;
+        }
+
+        /* HERO LUXURY */
+        .hero-luxury {
+            background: linear-gradient(135deg, rgba(26, 93, 26, 0.15) 0%, rgba(255, 255, 255, 0.1) 100%);
+            padding: 100px 60px;
+            border-radius: 30px;
+            margin-bottom: 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .hero-luxury::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, var(--dorado), var(--verde-medio), var(--dorado));
+        }
+
+        .hero-luxury::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(200, 169, 81, 0.1) 0%, transparent 70%);
+            transform: translate(-50%, -50%);
+        }
+
+        .hero-logo-grande {
+            width: 240px;
+            height: 240px;
+            background: var(--blanco);
+            border-radius: 25px;
+            margin: 0 auto 40px;
+            padding: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            border: 8px solid var(--blanco);
+            position: relative;
+            overflow: hidden;
+            transition: var(--transicion);
+        }
+
+        .hero-logo-grande::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(45deg, var(--dorado), var(--verde-medio), var(--dorado));
+            z-index: -1;
+            border-radius: 30px;
+            opacity: 0.5;
+        }
+
+        .hero-logo-grande:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-logo-grande img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+        }
+
+        .hero-luxury h1 {
+            font-size: 52px;
+            margin-bottom: 25px;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--verde-oscuro), var(--verde-medio));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            letter-spacing: -1px;
+        }
+
+        .hero-luxury p {
+            font-size: 22px;
+            max-width: 900px;
+            margin: 0 auto;
+            color: #555;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        /* SECCIONES ELEGANTES */
+        .seccion {
+            margin-bottom: 100px;
+            position: relative;
+        }
+
+        .titulo-seccion {
+            font-size: 42px;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 20px;
+            text-align: center;
+            font-weight: 800;
+        }
+
+        .titulo-seccion::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 6px;
+            background: linear-gradient(90deg, var(--dorado), var(--verde-medio));
+            border-radius: 3px;
+        }
+
+        .subtitulo-seccion {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 50px;
+            max-width: 900px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        /* ESTILOS PARA PÁGINA DE CONCRETO */
+        .concreto-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .concreto-card {
+            background: linear-gradient(135deg, var(--blanco) 0%, var(--gris-claro) 100%);
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: var(--sombra-sutil);
+            transition: var(--transicion);
+            border: 1px solid rgba(0,0,0,0.05);
+            position: relative;
+            height: 100%;
+        }
+
+        .concreto-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--sombra-hover);
+        }
+
+        .concreto-card-header {
+            background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro));
+            color: var(--blanco);
+            padding: 25px 30px;
+            text-align: center;
+        }
+
+        .concreto-card-header h3 {
+            color: var(--blanco);
+            font-size: 24px;
+            margin: 0;
+            font-weight: 800;
+        }
+
+        .concreto-card-body {
+            padding: 35px 30px;
+        }
+
+        .concreto-card-body p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .concreto-card-body ul {
+            list-style: none;
+            padding-left: 20px;
+        }
+
+        .concreto-card-body li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 12px;
+            color: #555;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        .concreto-card-body li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--verde-medio);
+            font-weight: bold;
+        }
+
+        /* GALERÍA DE PROYECTOS LUXURY */
+        .galeria-categorias {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .categoria-btn {
+            padding: 14px 32px;
+            background: linear-gradient(135deg, var(--gris-claro), var(--blanco));
+            border: 2px solid transparent;
+            border-radius: 50px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--gris-texto);
+            cursor: pointer;
+            transition: var(--transicion);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .categoria-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(26, 93, 26, 0.1), transparent);
+            transition: left 0.6s ease;
+        }
+
+        .categoria-btn:hover::before {
+            left: 100%;
+        }
+
+        .categoria-btn:hover, .categoria-btn.active {
+            background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro));
+            color: var(--blanco);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(26, 93, 26, 0.25);
+            border-color: var(--dorado);
+        }
+
+        .galeria-proyectos {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 35px;
+            margin-top: 30px;
+        }
+
+        .galeria-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            height: 320px;
+            box-shadow: var(--sombra-sutil);
+            transition: var(--transicion);
+            cursor: pointer;
+        }
+
+        .galeria-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 40%, rgba(13, 59, 13, 0.9) 100%);
+            opacity: 0;
+            transition: opacity 0.6s ease;
+            z-index: 1;
+        }
+
+        .galeria-item:hover::before {
+            opacity: 1;
+        }
+
+        .galeria-item:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: var(--sombra-hover);
+        }
+
+        .galeria-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            filter: brightness(0.95);
+        }
+
+        .galeria-item:hover .galeria-img {
+            transform: scale(1.1);
+            filter: brightness(1);
+        }
+
+        .galeria-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 35px;
+            z-index: 2;
+            transform: translateY(100%);
+            transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .galeria-item:hover .galeria-overlay {
+            transform: translateY(0);
+        }
+
+        .galeria-titulo {
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: var(--blanco);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .galeria-desc {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        .galeria-categoria {
+            position: absolute;
+            top: 25px;
+            left: 25px;
+            background: linear-gradient(135deg, var(--dorado), var(--dorado-claro));
+            color: var(--verde-oscuro);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 700;
+            z-index: 2;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: all 0.4s ease;
+        }
+
+        .galeria-item:hover .galeria-categoria {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* SECCIÓN DE CLIENTES LUXURY */
+        .seccion-clientes {
+            background: linear-gradient(135deg, rgba(232, 245, 233, 0.9), rgba(255, 255, 255, 0.95));
+            padding: 80px 60px;
+            border-radius: 30px;
+            margin-top: 100px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .seccion-clientes::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, var(--dorado), var(--verde-medio), var(--dorado));
+        }
+
+        .grid-clientes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 50px;
+            margin-top: 50px;
+            align-items: center;
+        }
+
+        .cliente-item {
+            background: var(--blanco);
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: var(--transicion);
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .cliente-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--dorado), var(--verde-medio));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .cliente-item:hover::before {
+            transform: scaleX(1);
+        }
+
+        .cliente-item:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .cliente-img {
+            max-width: 100%;
+            max-height: 90px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: var(--transicion);
+        }
+
+        .cliente-item:hover .cliente-img {
+            filter: grayscale(0);
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        /* CALCULADORA LUXURY */
+        .calculadora-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, var(--blanco) 0%, var(--gris-claro) 100%);
+            padding: 70px 60px;
+            border-radius: 30px;
+            box-shadow: var(--sombra-sutil);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .calculadora-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, var(--dorado), var(--verde-medio), var(--dorado));
+        }
+
+        .grupo-form {
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .grupo-form label {
+            display: block;
+            margin-bottom: 15px;
+            font-weight: 700;
+            color: var(--verde-oscuro);
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .grupo-form label i {
+            color: var(--dorado);
+            font-size: 20px;
+        }
+
+        .control-form {
+            width: 100%;
+            padding: 20px 25px;
+            border: 2px solid var(--gris-medio);
+            border-radius: 15px;
+            font-size: 18px;
+            transition: var(--transicion);
+            background: var(--blanco);
+            font-family: 'Open Sans', sans-serif;
+            color: var(--gris-texto);
+        }
+
+        .control-form:focus {
+            border-color: var(--verde-medio);
+            outline: none;
+            background: var(--blanco);
+            box-shadow: 0 0 0 4px rgba(26, 93, 26, 0.15);
+            transform: translateY(-3px);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 20px 40px;
+            border-radius: 15px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: var(--transicion);
+            border: none;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primario {
+            background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro));
+            color: var(--blanco);
+            border: 2px solid var(--dorado);
+        }
+
+        .btn-primario::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.8s, height 0.8s;
+        }
+
+        .btn-primario:hover::after {
+            width: 400px;
+            height: 400px;
+        }
+
+        .btn-primario:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 15px 35px rgba(26, 93, 26, 0.35);
+        }
+
+        /* RESULTADO CALCULADORA LUXURY */
+        .resultado-calculadora {
+            background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro));
+            color: var(--blanco);
+            padding: 60px 50px;
+            border-radius: 25px;
+            text-align: center;
+            display: none;
+            margin-top: 50px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            border: 3px solid var(--dorado);
+        }
+
+        .resultado-calculadora::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://i.ibb.co/MDDStBNF/Whats-App-Image-2026-01-09-at-9-56-05-AM-1.jpg');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.08;
+            z-index: 0;
+        }
+
+        .resultado-calculadora > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .valor-resultado {
+            font-size: 64px;
+            font-weight: 900;
+            margin: 30px 0;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, var(--dorado), var(--blanco));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -1px;
+        }
+
+        /* PIE DE PÁGINA LUXURY */
+        .footer-luxury {
+            background: linear-gradient(135deg, var(--verde-oscuro), #0a2f0a);
+            color: var(--blanco);
+            padding: 80px 60px 40px;
+            margin-top: 120px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-luxury::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, var(--dorado), var(--verde-claro), var(--dorado));
+        }
+
+        .footer-luxury::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(200, 169, 81, 0.05) 0%, transparent 70%);
+            transform: translate(-50%, -50%);
+        }
+
+        .grid-footer {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 60px;
+            margin-bottom: 70px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-titulo {
+            font-size: 24px;
+            margin-bottom: 35px;
+            color: var(--blanco);
+            font-weight: 800;
+            position: relative;
+            padding-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .footer-titulo::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: var(--dorado);
+            border-radius: 2px;
+        }
+
+        .footer-lista {
+            list-style: none;
+        }
+
+        .footer-lista li {
+            margin-bottom: 20px;
+        }
+
+        .footer-lista a, .footer-lista button {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            transition: var(--transicion);
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            padding: 0;
+            font-weight: 500;
+        }
+
+        .footer-lista a:hover, .footer-lista button:hover {
+            color: var(--dorado);
+            padding-left: 15px;
+            transform: translateX(5px);
+        }
+
+        /* LOGO Y TEXTO EN FOOTER LUXURY */
+        .footer-logo-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 30px;
+            margin-bottom: 35px;
+        }
+
+        .footer-logo {
+            max-width: 200px;
+            margin-bottom: 25px;
+        }
+
+        .footer-logo img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            background: var(--blanco);
+            padding: 10px;
+            transition: var(--transicion);
+        }
+
+        .footer-logo:hover img {
+            transform: scale(1.05) rotate(3deg);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .footer-texto {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 18px;
+            line-height: 1.8;
+            font-weight: 400;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* WHATSAPP FLOTANTE LUXURY */
+        .whatsapp-flotante {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            text-decoration: none;
+            transition: var(--transicion);
+            animation: pulse-luxury 2s infinite;
+            border: 3px solid white;
+        }
+
+        @keyframes pulse-luxury {
+            0% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4),
+                          0 0 0 0 rgba(255, 255, 255, 0.1);
+            }
+            70% {
+                box-shadow: 0 0 0 20px rgba(37, 211, 102, 0),
+                          0 0 0 10px rgba(255, 255, 255, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0),
+                          0 0 0 0 rgba(255, 255, 255, 0);
+            }
+        }
+
+        .whatsapp-flotante:hover {
+            transform: scale(1.15) rotate(15deg);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5);
+            animation: none;
+        }
+
+        /* ENLACE GOOGLE MAPS LUXURY */
+        .google-maps-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro));
+            color: white;
+            padding: 16px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 20px;
+            transition: var(--transicion);
+            border: 2px solid transparent;
+        }
+
+        .google-maps-link:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(26, 93, 26, 0.4);
+            border-color: var(--dorado);
+            background: linear-gradient(135deg, var(--verde-claro), var(--verde-medio));
+        }
+
+        /* EFECTOS DE ENTRADA LUXURY */
+        .animate-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                       transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .animate-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* CONTENIDO DE PÁGINAS */
+        .contenido-pagina {
+            display: none;
+            animation: fadeInLuxury 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .contenido-pagina.activo {
+            display: block;
+        }
+
+        @keyframes fadeInLuxury {
+            from {
+                opacity: 0;
+                transform: translateY(30px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        /* RESPONSIVE DESIGN - Optimizado */
+        @media (max-width: 1400px) {
+            .galeria-proyectos {
+                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .container {
+                padding: 0 25px;
+            }
+           
+            .hero-luxury {
+                padding: 80px 40px;
+            }
+           
+            .hero-luxury h1 {
+                font-size: 46px;
+            }
+           
+            .galeria-proyectos {
+                grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .contacto-header {
+                gap: 20px;
+            }
+           
+            .contacto-item span:not(.phone-number) {
+                display: none;
+            }
+           
+            .menu-contenido {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px;
+            }
+           
+            .menu-item {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+           
+            .contenido-principal {
+                margin-top: 180px;
+            }
+
+            .hero-luxury {
+                padding: 70px 30px;
+            }
+
+            .hero-luxury h1 {
+                font-size: 40px;
+            }
+
+            .hero-logo-grande {
+                width: 200px;
+                height: 200px;
+            }
+           
+            .galeria-proyectos {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+
+            .grid-footer {
+                gap: 40px;
+            }
+           
+            .grid-clientes {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-luxury {
+                padding: 15px 0;
+            }
+           
+            .logo-img {
+                height: 55px;
+            }
+           
+            .marca-titulo {
+                font-size: 22px;
+            }
+           
+            .phone-number {
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+           
+            .menu-luxury {
+                top: 95px;
+            }
+           
+            .hero-luxury {
+                padding: 60px 25px;
+            }
+           
+            .hero-luxury h1 {
+                font-size: 36px;
+            }
+
+            .hero-logo-grande {
+                width: 180px;
+                height: 180px;
+            }
+           
+            .titulo-seccion {
+                font-size: 36px;
+            }
+           
+            .whatsapp-flotante {
+                bottom: 30px;
+                right: 30px;
+                width: 65px;
+                height: 65px;
+                font-size: 32px;
+            }
+           
+            .galeria-proyectos {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .galeria-item {
+                height: 300px;
+            }
+
+            .grid-clientes {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
+            }
+
+            .calculadora-container {
+                padding: 50px 35px;
+            }
+           
+            .seccion-clientes {
+                padding: 60px 40px;
+            }
+           
+            .footer-luxury {
+                padding: 70px 40px 35px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero-luxury h1 {
+                font-size: 32px;
+            }
+
+            .hero-logo-grande {
+                width: 160px;
+                height: 160px;
+            }
+           
+            .titulo-seccion {
+                font-size: 32px;
+            }
+           
+            .footer-luxury {
+                padding: 60px 30px 30px;
+            }
+           
+            .grid-clientes {
+                grid-template-columns: 1fr;
+            }
+
+            .galeria-proyectos {
+                grid-template-columns: 1fr;
+            }
+
+            .galeria-item {
+                height: 280px;
+            }
+
+            .valor-resultado {
+                font-size: 48px;
+            }
+           
+            .btn-primario {
+                padding: 18px 32px;
+                font-size: 16px;
+            }
+           
+            .contacto-item {
+                padding: 6px 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-luxury h1 {
+                font-size: 28px;
+            }
+
+            .hero-logo-grande {
+                width: 140px;
+                height: 140px;
+            }
+           
+            .titulo-seccion {
+                font-size: 28px;
+            }
+           
+            .galeria-categorias {
+                gap: 10px;
+            }
+
+            .categoria-btn {
+                padding: 12px 24px;
+                font-size: 14px;
+            }
+           
+            .container {
+                padding: 0 20px;
+            }
+           
+            .menu-item {
+                padding: 8px 16px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp Flotante Luxury -->
+    <a href="https://wa.me/51927571365?text=Hola%20GRAOCON,%20quiero%20solicitar%20una%20cotización%20al%20instante" class="whatsapp-flotante" target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Encabezado Luxury -->
+    <header class="header-luxury">
+        <div class="container header-contenido">
+            <div class="logo-container">
+                <img src="https://i.ibb.co/VWFt2f67/Whats-App-Image-2026-01-02-at-11-19-53-AM.jpg" alt="GRAOCON Logo - Excelencia en Concreto" class="logo-img">
+                <div>
+                    <div class="marca-titulo">GRAOCON</div>
+                    <div class="marca-subtitulo">EXCELENCIA EN CONCRETO</div>
+                </div>
+            </div>
+           
+            <div class="contacto-header">
+                <a href="tel:+51927571365" class="contacto-item" aria-label="Llamar a GRAOCON">
+                    <i class="fas fa-phone"></i>
+                    <span class="phone-number">927 571 365</span>
+                </a>
+                <a href="mailto:VENTAS@GRAOCON.COM" class="contacto-item" aria-label="Enviar correo a GRAOCON">
+                    <i class="fas fa-envelope"></i>
+                    <span>VENTAS@GRAOCON.COM</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menú Luxury -->
+    <nav class="menu-luxury">
+        <div class="container menu-contenido">
+            <a href="#" class="menu-item activo" data-pagina="inicio">
+                <i class="fas fa-home"></i>
+                <span>INICIO</span>
+            </a>
+           
+            <a href="#" class="menu-item" data-pagina="concreto">
+                <i class="fas fa-cubes"></i>
+                <span>CONCRETO PREMEZCLADO</span>
+            </a>
+           
+            <a href="#" class="menu-item" data-pagina="servicios">
+                <i class="fas fa-concierge-bell"></i>
+                <span>SERVICIO</span>
+            </a>
+           
+            <a href="#" class="menu-item" data-pagina="proyectos">
+                <i class="fas fa-images"></i>
+                <span>PROYECTOS</span>
+            </a>
+
+            <a href="#" class="menu-item" data-pagina="clientes">
+                <i class="fas fa-building"></i>
+                <span>CLIENTES</span>
+            </a>
+           
+            <a href="#" class="menu-item" data-pagina="calculadora">
+                <i class="fas fa-calculator"></i>
+                <span>CALCULADORA</span>
+            </a>
+           
+            <a href="#" class="menu-item" data-pagina="contacto">
+                <i class="fas fa-address-book"></i>
+                <span>CONTACTO</span>
+            </a>
+           
+            <a href="#" class="menu-item menu-item-cotizar" data-pagina="cotizacion">
+                <i class="fab fa-whatsapp"></i>
+                <span>COTIZAR</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <main class="contenido-principal">
+        <!-- Página de Inicio -->
+        <section id="inicio" class="contenido-pagina activo">
+            <div class="container">
+                <div class="hero-luxury animate-in">
+                    <div class="hero-logo-grande animate-in">
+                        <img src="https://i.ibb.co/VWFt2f67/Whats-App-Image-2026-01-02-at-11-19-53-AM.jpg" alt="GRAOCON Logo - Líder en soluciones de concreto" class="hero-logo-grande">
+                    </div>
+                    <h1>Excelencia en Soluciones de Concreto</h1>
+                    <p>Líderes en innovación y tecnología para el sector construcción. Más de 15 años entregando calidad y precisión en cada proyecto.</p>
+                </div>
+               
+                <!-- Sección de Servicios Resumida -->
+                <div class="seccion animate-in">
+                    <h2 class="titulo-seccion">Nuestros Servicios Premium</h2>
+                    <p class="subtitulo-seccion">Soluciones integrales diseñadas para maximizar la eficiencia y calidad de su proyecto constructivo</p>
+                   
+                    <div class="grid-clientes">
+                        <div class="cliente-item animate-in" style="flex-direction: column; height: auto; padding: 35px; min-height: 280px;">
+                            <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--verde-sutil), var(--blanco)); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 32px; color: var(--verde-medio); margin-bottom: 25px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); border: 2px solid var(--dorado);">
+                                <i class="fas fa-industry"></i>
+                            </div>
+                            <h3 style="font-size: 22px; margin-bottom: 15px; color: var(--verde-oscuro);">Planta Móvil Dosificadora</h3>
+                            <p style="font-size: 16px; color: #666; line-height: 1.6;">Producción in situ con control de calidad garantizado y reducción de costos logísticos.</p>
+                        </div>
+                       
+                        <div class="cliente-item animate-in" style="flex-direction: column; height: auto; padding: 35px; min-height: 280px;">
+                            <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--verde-sutil), var(--blanco)); border-radius: 20px; display: flex; align-items: center; justify-content: center; font-size: 32px; color: var(--verde-medio); margin-bottom: 25px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); border: 2px solid var(--dorado);">
+                                <i class="fas fa-pump"></i>
+                            </div>
+                            <h3 style="font-size: 22px; margin-bottom: 15px; color: var(--verde-oscuro);">Bombeo de Concreto</h3>
+                            <p style="font-size: 16px; color: #666; line-height: 1.6;">Equipos modernos y operadores especializados para vaciados de precisión.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página de Concreto Premezclado -->
+        <section id="concreto" class="contenido-pagina">
+            <div class="container">
+                <div class="hero-luxury animate-in">
+                    <h1>Concreto Premezclado</h1>
+                    <p>Los diseños de mezcla son elaborados en nuestros laboratorios de control de calidad dependiendo de las exigencias del cliente y las condiciones de obra existentes en el área del proyecto.</p>
+                </div>
+               
+                <div class="seccion animate-in">
+                    <h2 class="titulo-seccion">Tipos de Concreto</h2>
+                    <p class="subtitulo-seccion">Se optimizan los factores referentes a resistencia, asentamiento (slump) y fraguado para cualquier tipo de concreto</p>
+                   
+                    <div class="concreto-grid">
+                        <!-- CONCRETO CONVENCIONAL -->
+                        <div class="concreto-card animate-in">
+                            <div class="concreto-card-header">
+                                <h3>CONCRETO CONVENCIONAL</h3>
+                            </div>
+                            <div class="concreto-card-body">
+                                <p>Es una mezcla de cemento, arena, agregado, agua y aditivo, que tienen una amplia utilización en las estructuras de concreto más comunes que no requiera de condiciones especiales. Disponibles en diferentes resistencias (desde 175 hasta 350 kg/cm2), cuya resistencia máxima se evaluará a los 28 días después del vaciado.</p>
+                                <p><strong>Ofrecen resistencia a la compresión en las denominadas probetas cilíndricas a 28 días, con una serie de variables de tipo de agregado, según lo establecido en ASTM C33.</strong></p>
+                            </div>
+                        </div>
+                       
+                        <!-- CONCRETO DE ALTA RESISTENCIA -->
+                        <div class="concreto-card animate-in">
+                            <div class="concreto-card-header">
+                                <h3>CONCRETO DE ALTA RESISTENCIA</h3>
+                            </div>
+                            <div class="concreto-card-body">
+                                <p>Sea contratada que proteger el deseo de revisarse por lo que se encuentre también como convencer de alto desempeño, debido a que aumenten la densibilidad de las estructuras de concreto referentes. Tienen una excelente resistencia y trabajabilidad.</p>
+                                <p><strong>Descripción:</strong> ¿Qué procedido al ser utilizado acerca de referencia?<br>
+                                <strong>Aplicación:</strong> El concepto también se debe ser denominado framición con el modelo alto rendimiento y resistencia. La que es importante por un alto nivel de duras puede causar en las comunidades y esqueletos de concreto.</p>
+                            </div>
+                        </div>
+                       
+                        <!-- CONCRETO FIBROREFORZADO -->
+                        <div class="concreto-card animate-in">
+                            <div class="concreto-card-header">
+                                <h3>CONCRETO FIBROREFORZADO</h3>
+                            </div>
+                            <div class="concreto-card-body">
+                                <p>El concreto fibroreforzado o concreto con fibra estructural suele tener fibra sintética, fibra metálica y macró fibra.</p>
+                                <p><strong>Características:</strong> Concreto diseñado y controlado que permiten el desarrollo de las resistencias especificadas a edades temporales y que permiten llegar a resistencias específicas antes de los 26 días.</p>
+                            </div>
+                        </div>
+                       
+                        <!-- CONCRETO DE RESISTENCIA ACELERADA -->
+                        <div class="concreto-card animate-in">
+                            <div class="concreto-card-header">
+                                <h3>CONCRETO DE RESISTENCIA ACELERADA</h3>
+                            </div>
+                            <div class="concreto-card-body">
+                                <p>Concreto diseñado y controlado que permiten el desarrollo de las resistencias especificadas a edades temporales y que permiten llegar a resistencias específicas antes de los 26 días.</p>
+                                <p>Ideal para proyectos con tiempos de ejecución reducidos donde se necesita una rápida puesta en servicio de las estructuras.</p>
+                            </div>
+                        </div>
+                       
+                        <!-- CONCRETO AUTOCOMPACTANTE -->
+                        <div class="concreto-card animate-in">
+                            <div class="concreto-card-header">
+                                <h3>CONCRETO AUTOCOMPACTANTE</h3>
+                            </div>
+                            <div class="concreto-card-body">
+                                <p>De un contrato altamente fluido, sin reaproposición y escogencia el número sin riesgo tipo de comodidad con nuestras capacidades, la necesidad es una de sus características más importantes en estado plástico. Se utiliza en tiempos de agua paralela.</p>
+                                <p>Perfecto para estructuras con alta densidad de armadura o formas complejas donde la compactación mecánica es difícil.</p>
+                            </div>
+                        </div>
+                       
+                        <!-- CONCRETO FRAGUADO ACELERADO -->
+                        <div class="concreto-card animate-in">
+                            <div class="concreto-card-header">
+                                <h3>CONCRETO FRAGUADO ACELERADO</h3>
+                            </div>
+                            <div class="concreto-card-body">
+                                <p>Concreto especialmente diseñado para presentar un proceso de sección más rápido de lo habitual y con una curva de evolución de resistencias similar a la de un contrato convencional. El control de solididad de las resistencias privadas.</p>
+                                <p>Recomendado para climas fríos o cuando se requieren desencofrados rápidos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página de Servicios -->
+        <section id="servicios" class="contenido-pagina">
+            <div class="container">
+                <div class="hero-luxury animate-in">
+                    <h1>Servicios Especializados</h1>
+                    <p>Soluciones tecnológicas avanzadas para proyectos constructivos de alto impacto</p>
+                </div>
+               
+                <div class="seccion animate-in">
+                    <h2 class="titulo-seccion">Nuestros Servicios</h2>
+                    <p class="subtitulo-seccion">Innovación aplicada a cada etapa del proceso constructivo para garantizar resultados excepcionales</p>
+                   
+                    <div class="grid-clientes" style="grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));">
+                        <!-- SERVICIO DE PLANTA MÓVIL DOSIFICADORA DE CONCRETO -->
+                        <div class="cliente-item animate-in" style="flex-direction: column; height: auto; padding: 40px; min-height: 380px;">
+                            <div style="width: 90px; height: 90px; background: linear-gradient(135deg, var(--verde-sutil), var(--blanco)); border-radius: 25px; display: flex; align-items: center; justify-content: center; font-size: 36px; color: var(--verde-medio); margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12); border: 3px solid var(--dorado);">
+                                <i class="fas fa-industry"></i>
+                            </div>
+                            <h3 style="font-size: 26px; margin-bottom: 20px; color: var(--verde-oscuro);">SERVICIO DE PLANTA MÓVIL DOSIFICADORA DE CONCRETO</h3>
+                            <p style="font-size: 17px; color: #666; line-height: 1.7;">Instalamos plantas dosificadoras móviles en su obra para producción in situ de concreto de alta calidad. Sistema automatizado con control computarizado que garantiza dosificación precisa y consistencia en cada mezcla.</p>
+                            <ul style="margin-top: 20px; text-align: left; color: #555; font-size: 15px; line-height: 1.6;">
+                                <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--verde-medio); margin-right: 10px;"></i> Producción continua en obra: hasta 60 m³/hora</li>
+                                <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--verde-medio); margin-right: 10px;"></i> Control automatizado con sistema de pesaje digital</li>
+                                <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--verde-medio); margin-right: 10px;"></i> Reducción de hasta 30% en costos de transporte</li>
+                                <li><i class="fas fa-check" style="color: var(--verde-medio); margin-right: 10px;"></i> Ideal para proyectos en zonas de difícil acceso o grandes volúmenes</li>
+                            </ul>
+                        </div>
+                       
+                        <!-- SERVICIO DE BOMBEO DE CONCRETO -->
+                        <div class="cliente-item animate-in" style="flex-direction: column; height: auto; padding: 40px; min-height: 380px;">
+                            <div style="width: 90px; height: 90px; background: linear-gradient(135deg, var(--verde-sutil), var(--blanco)); border-radius: 25px; display: flex; align-items: center; justify-content: center; font-size: 36px; color: var(--verde-medio); margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12); border: 3px solid var(--dorado);">
+                                <i class="fas fa-hard-hat"></i>
+                            </div>
+                            <h3 style="font-size: 26px; margin-bottom: 20px; color: var(--verde-oscuro);">SERVICIO DE BOMBEO DE CONCRETO</h3>
+                            <p style="font-size: 17px; color: #666; line-height: 1.7;">Equipo profesional de bombeo con tecnología avanzada para vaciados de precisión. Contamos con bombas pluma de 32 y 42 metros de alcance, operadas por técnicos certificados con más de 10 años de experiencia.</p>
+                            <ul style="margin-top: 20px; text-align: left; color: #555; font-size: 15px; line-height: 1.6;">
+                                <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--verde-medio); margin-right: 10px;"></i> Bombas pluma de última generación (Putmeister, Schwing)</li>
+                                <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--verde-medio); margin-right: 10px;"></i> Capacidad de bombeo: 80-120 m³/hora según equipo</li>
+                                <li style="margin-bottom: 10px;"><i class="fas fa-check" style="color: var(--verde-medio); margin-right: 10px;"></i> Operadores certificados con entrenamiento en seguridad</li>
+                                <li><i class="fas fa-check" style="color: var(--verde-medio); margin-right: 10px;"></i> Asesoría técnica durante el proceso de bombeo</li>
+                            </ul>
+                        </div>
+                    </div>
+                   
+                    <div style="text-align: center; margin-top: 60px;">
+                        <a href="#" class="btn btn-primario" data-pagina="cotizacion" style="padding: 22px 50px; font-size: 20px; border: 3px solid var(--dorado);">
+                            <i class="fab fa-whatsapp"></i> COTIZAR SERVICIO
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página de Proyectos -->
+        <section id="proyectos" class="contenido-pagina">
+            <div class="container">
+                <div class="hero-luxury animate-in">
+                    <h1>Portafolio de Proyectos</h1>
+                    <p>Una muestra representativa de nuestra excelencia en diferentes tipologías constructivas</p>
+                </div>
+               
+                <div class="seccion animate-in">
+                    <h2 class="titulo-seccion">Galería de Éxitos</h2>
+                    <p class="subtitulo-seccion">Proyectos que demuestran nuestra capacidad técnica y compromiso con la calidad</p>
+                   
+                    <!-- Filtros de Categorías -->
+                    <div class="galeria-categorias">
+                        <button class="categoria-btn active" data-categoria="todos">Todos los Proyectos</button>
+                        <button class="categoria-btn" data-categoria="centro-deportivo">Centro Deportivo</button>
+                        <button class="categoria-btn" data-categoria="pavimento">Pavimento</button>
+                        <button class="categoria-btn" data-categoria="piscinas">Piscinas</button>
+                        <button class="categoria-btn" data-categoria="country-club">Country Club</button>
+                        <button class="categoria-btn" data-categoria="proyecto-importante">Proyecto Importante</button>
+                    </div>
+                   
+                    <!-- Galería de Proyectos -->
+                    <div class="galeria-proyectos">
+                        <!-- Centro Deportivo -->
+                        <div class="galeria-item animate-in" data-categoria="centro-deportivo">
+                            <div class="galeria-categoria">Centro Deportivo</div>
+                            <img src="https://i.ibb.co/N6vN5Wgk/Whats-App-Image-2024-01-03-at-3-51-31-PM.jpg" alt="Centro Deportivo - Vista principal" class="galeria-img" loading="lazy">
+                            <div class="galeria-overlay">
+                                <h3 class="galeria-titulo">Centro Deportivo Integral</h3>
+                                <p class="galeria-desc">Construcción completa con concreto de alta resistencia para instalaciones deportivas profesionales.</p>
+                            </div>
+                        </div>
+                       
+                        <div class="galeria-item animate-in" data-categoria="centro-deportivo">
+                            <div class="galeria-categoria">Centro Deportivo</div>
+                            <img src="https://i.ibb.co/5Wpd52SW/Whats-App-Image-2024-01-03-at-3-51-31-PM-1.jpg" alt="Centro Deportivo - Detalles constructivos" class="galeria-img" loading="lazy">
+                            <div class="galeria-overlay">
+                                <h3 class="galeria-titulo">Estructuras Deportivas</h3>
+                                <p class="galeria-desc">Detalles de construcción especializada para áreas deportivas de alto rendimiento.</p>
+                            </div>
+                        </div>
+                       
+                        <div class="galeria-item animate-in" data-categoria="centro-deportivo">
+                            <div class="galeria-categoria">Centro Deportivo</div>
+                            <img src="https://i.ibb.co/Mmz4J4D/cbc65a7b-e98a-437d-abf8-e4cc98cf9331.jpg" alt="Centro Deportivo - Proceso constructivo" class="galeria-img" loading="lazy">
+                            <div class="galeria-overlay">
+                                <h3 class="galeria-titulo">Proceso Constructivo</h3>
+                                <p class="galeria-desc">Metodología especializada en proyectos deportivos de gran envergadura.</p>
+                            </div>
+                        </div>
+                       
+                        <!-- Pavimento -->
+                        <div class="galeria-item animate-in" data-categoria="pavimento">
+                            <div class="galeria-categoria">Pavimento</div>
+                            <img src="https://i.ibb.co/vCrt7DHk/Whats-App-Image-2024-01-03-at-3-51-33-PM-1.jpg" alt="Pavimento - Carreteras principales" class="galeria-img" loading="lazy">
+                            <div class="galeria-overlay">
+                                <h3 class="galeria-titulo">Pavimentación Vial</h3>
+                                <p class="galeria-desc">Trabajos de pavimentación con concreto de alta durabilidad para vías principales.</p>
+                            </div>
+                        </div>
+                       
+                        <div class="galeria-item animate-in" data-categoria="pavimento">
+                            <div class="galeria-categoria">Pavimento</div>
+                            <img src="https://i.ibb.co/pvKhXYzm/Whats-App-Image-2024-01-03-at-3-51-32-PM.jpg" alt="Pavimento - Áreas urbanas" class="galeria-img" loading="lazy">
+                            <div class="galeria-overlay">
+                                <h3 class="galeria-titulo">Pavimentación Urbana</h3>
+                                <p class="galeria-desc">Soluciones de pavimentación para áreas urbanas con alto tráfico vehicular.</p>
+                            </div>
+                        </div>
+                       
+                        <div class="galeria-item animate-in" data-categoria="pavimento">
+                            <div class="galeria-categoria">Pavimento</div>
+                            <img src="https://i.ibb.co/YVWDS8j/Whats-App-Image-2024-01-03-at-3-51-32-PM-1.jpg" alt="Pavimento - Control de calidad" class="galeria-img" loading="lazy">
+                            <div class="galeria-overlay">
+                                <h3 class="galeria-titulo">Control de Calidad</h3>
+                                <p class="galeria-desc">Procesos de control y aseguramiento de calidad en trabajos de pavimentación.</p>
+                            </div>
+                        </div>
+                       
+                        <!-- Piscinas -->
+                        <div class="galeria-item animate-in" data-categoria="piscinas">
+                            <div class="galeria-categoria">Piscinas</div>
+                            <img src="https://i.ibb.co/v6N5jcsY/Whats-App-Image-2024-01-03-at-3-51-28-PM-2.jpg" alt="Piscina - Diseño arquitectónico" class="galeria-img" loading="lazy">
+                            <div class="galeria-overlay">
+                                <h3 class="galeria-titulo">Piscina Arquitectónica</h3>
+                                <p class="galeria-desc">Construcción de piscina con concreto especializado y diseño arquitectónico premium.</p>
+                            </div>
+                        </div>
+                       
+                        <div class="galeria-item animate-in" data-categoria="piscinas">
+                            <div class="galeria-categoria">Piscinas</div>
+                            <img src="https://i.ibb.co/JRbwZjWy/Whats-App-Image-2024-01-03-at-3-51-27-PM.jpg" alt="Piscina - Impermeabilización" class="galeria-img" loading="lazy">
+                            <div class="galeria-overlay">
+                                <h3 class="galeria-titulo">Sistema Impermeable</h3>
+                                <p class="galeria-desc">Tecnología de impermeabilización avanzada para piscinas de larga duración.</p>
+                            </div>
+                        </div>
+                       
+                        <div class="galeria-item animate-in" data-categoria="piscinas">
+                            <div class="galeria-categoria">Piscinas</div>
+                            <img src="https://i.ibb.co/BHgmxdH6/Whats-App-Image-2024-01-03-at-3-51-26-PM-1.jpg" alt="Piscina - Olímpica" class="galeria-img" loading="lazy">
+                            <div class="galeria-overlay">
+                                <h3 class="galeria-titulo">Piscina Olímpica</h3>
+                                <p class="galeria-desc">Proyecto de piscina olímpica con especificaciones técnicas de competición.</p>
+                            </div>
+                        </div>
+                       
+                        <div class="galeria-item animate-in" data-categoria="piscinas">
+                            <div class="galeria-categoria">Piscinas</div>
+                            <img src="https://i.ibb.co/XfxnFJNz/Whats-App-Image-2024-01-03-at-3-51-21-PM-2.jpg" alt="Piscina - Residencial de lujo" class="galeria-img" loading="lazy">
+                            <div class="galeria-overlay">
+                                <h3 class="galeria-titulo">Piscina Residencial</h3>
+                                <p class="galeria-desc">Piscina residencial premium con acabados de lujo y tecnología de mantenimiento.</p>
+                            </div>
+                        </div>
+                       
+                        <!-- Country Club -->
+                        <div class="galeria-item animate-in" data-categoria="country-club">
+                            <div class="galeria-categoria">Country Club</div>
+                            <img src="https://i.ibb.co/d0DzcC1k/Whats-App-Image-2026-01-09-at-9-53-51-AM-1.jpg" alt="Country Club El Bosque - Vista general" class="galeria-img" loading="lazy">
+                            <div class="galeria-overlay">
+                                <h3 class="galeria-titulo">Country Club El Bosque</h3>
+                                <p class="galeria-desc">Proyecto integral en exclusivo club social con áreas deportivas y recreativas.</p>
+                            </div>
+                        </div>
+                       
+                        <div class="galeria-item animate-in" data-categoria="country-club">
+                            <div class="galeria-categoria">Country Club</div>
+                            <img src="https://i.ibb.co/XZq9PCTM/Whats-App-Image-2026-01-09-at-9-53-51-AM.jpg" alt="Country Club - Instalaciones premium" class="galeria-img" loading="lazy">
+                            <div class="galeria-overlay">
+                                <h3 class="galeria-titulo">Instalaciones Premium</h3>
+                                <p class="galeria-desc">Construcción de instalaciones de primera categoría para club social exclusivo.</p>
+                            </div>
+                        </div>
+                       
+                        <!-- Proyecto Importante -->
+                        <div class="galeria-item animate-in" data-categoria="proyecto-importante">
+                            <div class="galeria-categoria">Proyecto Importante</div>
+                            <img src="https://i.ibb.co/MDDStBNF/Whats-App-Image-2026-01-09-at-9-56-05-AM-1.jpg" alt="Proyecto Importante - Vista aérea" class="galeria-img" loading="lazy">
+                            <div class="galeria-overlay">
+                                <h3 class="galeria-titulo">Proyecto Estratégico</h3>
+                                <p class="galeria-desc">Desarrollo de infraestructura de gran escala con tecnología de punta.</p>
+                            </div>
+                        </div>
+                       
+                        <div class="galeria-item animate-in" data-categoria="proyecto-importante">
+                            <div class="galeria-categoria">Proyecto Importante</div>
+                            <img src="https://i.ibb.co/RphgJ6d4/Whats-App-Image-2026-01-09-at-9-56-05-AM.jpg" alt="Proyecto Importante - Detalles técnicos" class="galeria-img" loading="lazy">
+                            <div class="galeria-overlay">
+                                <h3 class="galeria-titulo">Ingeniería de Precisión</h3>
+                                <p class="galeria-desc">Aplicación de ingeniería avanzada en proyecto de infraestructura crítica.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página de Clientes -->
+        <section id="clientes" class="contenido-pagina">
+            <div class="container">
+                <div class="hero-luxury animate-in">
+                    <h1>Alianzas Estratégicas</h1>
+                    <p>Empresas líderes que confían en nuestra excelencia y profesionalismo</p>
+                </div>
+               
+                <div class="seccion animate-in">
+                    <h2 class="titulo-seccion">Clientes Destacados</h2>
+                    <p class="subtitulo-seccion">Colaboramos con instituciones y empresas de prestigio en el sector construcción y desarrollo inmobiliario</p>
+                   
+                    <div class="grid-clientes">
+                        <div class="cliente-item animate-in">
+                            <img src="https://i.ibb.co/d4dbhcKk/Gemini-Generated-Image-g1oxa3g1oxa3g1ox.png" alt="Universidad Nacional Agraria La Molina" class="cliente-img" loading="lazy">
+                        </div>
+                        <div class="cliente-item animate-in">
+                            <img src="https://i.ibb.co/BVptTXd0/Gemini-Generated-Image-d1o3zwd1o3zwd1o3.png" alt="Travex" class="cliente-img" loading="lazy">
+                        </div>
+                        <div class="cliente-item animate-in">
+                            <img src="https://i.ibb.co/1tX0tSFH/Gemini-Generated-Image-yr4e8qyr4e8qyr4e.png" alt="Country Club El Bosque" class="cliente-img" loading="lazy">
+                        </div>
+                        <div class="cliente-item animate-in">
+                            <img src="https://i.ibb.co/G4jpq3vZ/Gemini-Generated-Image-9wpsy19wpsy19wps.png" alt="Imarbe Consultores" class="cliente-img" loading="lazy">
+                        </div>
+                        <div class="cliente-item animate-in">
+                            <img src="https://i.ibb.co/PvZnZmGn/Gemini-Generated-Image-wt3j1jwt3j1jwt3j.png" alt="Huarcaya Group" class="cliente-img" loading="lazy">
+                        </div>
+                        <div class="cliente-item animate-in">
+                            <img src="https://i.ibb.co/MyvQFZCc/Gemini-Generated-Image-g0njg2g0njg2g0nj.png" alt="Artech Home" class="cliente-img" loading="lazy">
+                        </div>
+                    </div>
+                   
+                    <div style="background: linear-gradient(135deg, rgba(26, 93, 26, 0.08), rgba(255, 255, 255, 0.9)); padding: 60px 50px; border-radius: 25px; margin-top: 80px; text-align: center; border: 1px solid rgba(0,0,0,0.05);">
+                        <h3 style="color: var(--verde-oscuro); margin-bottom: 25px; font-size: 32px; font-weight: 800;">¿Listo para ser nuestro próximo caso de éxito?</h3>
+                        <p style="font-size: 20px; color: #555; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.6;">Únase a las organizaciones líderes que ya confían en GRAOCON para transformar sus proyectos constructivos.</p>
+                        <button class="btn btn-primario" data-pagina="cotizacion" style="padding: 22px 50px; font-size: 20px; border: 3px solid var(--dorado);">
+                            <i class="fab fa-whatsapp"></i> COTIZAR PROYECTO PREMIUM
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página de Calculadora -->
+        <section id="calculadora" class="contenido-pagina">
+            <div class="container">
+                <div class="hero-luxury animate-in">
+                    <h1>Calculadora de Presupuesto</h1>
+                    <p>Estime rápidamente el costo aproximado de su proyecto de construcción</p>
+                </div>
+               
+                <div class="seccion animate-in">
+                    <h2 class="titulo-seccion">Simulador de Costos</h2>
+                    <p class="subtitulo-seccion">Complete los datos básicos de su proyecto para obtener un estimado preliminar</p>
+                   
+                    <div class="calculadora-container">
+                        <form id="concrete-calculator">
+                            <div class="grupo-form animate-in">
+                                <label for="area-techar"><i class="fas fa-ruler-combined"></i> Área del Proyecto (m²)</label>
+                                <input type="number" id="area-techar" class="control-form" min="1" max="10000" value="150" placeholder="Ej: 150 para 150 m²">
+                            </div>
+                           
+                            <div class="grupo-form animate-in">
+                                <label for="tipo-techo"><i class="fas fa-home"></i> Tipo de Construcción</label>
+                                <select id="tipo-techo" class="control-form">
+                                    <option value="losa">Losa para vivienda</option>
+                                    <option value="maciza">Losa para edificio</option>
+                                    <option value="nervada">Estructura industrial</option>
+                                    <option value="vigueta">Techos ligeros</option>
+                                    <option value="cimentacion">Cimientos y bases</option>
+                                </select>
+                            </div>
+                           
+                            <div class="grupo-form animate-in">
+                                <label for="calidad-concreto"><i class="fas fa-star"></i> Nivel de Calidad</label>
+                                <select id="calidad-concreto" class="control-form">
+                                    <option value="estandar">Estándar - Concreto 210 kg/cm²</option>
+                                    <option value="alta">Alta - Concreto 280 kg/cm²</option>
+                                    <option value="premium">Premium - Concreto 350 kg/cm²</option>
+                                    <option value="premezcaldo">Grado Superior - Concreto 420 kg/cm²</option>
+                                </select>
+                            </div>
+                           
+                            <div class="grupo-form animate-in">
+                                <label for="ubicacion-proyecto"><i class="fas fa-map-marker-alt"></i> Zona del Proyecto</label>
+                                <select id="ubicacion-proyecto" class="control-form">
+                                    <option value="Chorrillos">Chorrillos</option>
+                                    <option value="Lurín">Lurín</option>
+                                    <option value="Pachacamac">Pachacamac</option>
+                                    <option value="Pucusana">Pucusana</option>
+                                    <option value="Punta Hermosa">Punta Hermosa</option>
+                                    <option value="Punta Negra">Punta Negra</option>
+                                    <option value="La Molina">La Molina</option>
+                                    <option value="Santa Anita">Santa Anita</option>
+                                    <option value="San Bartolo">San Bartolo</option>
+                                    <option value="San Juan de Miraflores">San Juan de Miraflores</option>
+                                    <option value="Villa el Salvador">Villa el Salvador</option>
+                                    <option value="Villa María del Triunfo">Villa María del Triunfo</option>
+                                    <option value="San Borja">San Borja</option>
+                                    <option value="San Isidro">San Isidro</option>
+                                </select>
+                            </div>
+                           
+                            <button type="button" id="calculate-button" class="btn btn-primario animate-in" style="width: 100%; padding: 22px; font-size: 20px; margin-top: 20px;">
+                                <i class="fas fa-calculator"></i> CALCULAR ESTIMADO APROXIMADO
+                            </button>
+                        </form>
+                       
+                        <div id="calculator-result" class="resultado-calculadora animate-in">
+                            <div style="font-size: 26px; margin-bottom: 20px; opacity: 0.95; font-weight: 700;">ESTIMADO PARA SU PROYECTO</div>
+                            <div id="result-details" style="font-size: 22px; margin-bottom: 35px; font-weight: 600; line-height: 1.5; padding: 20px; background: rgba(255, 255, 255, 0.1); border-radius: 15px;">
+                                Basado en los parámetros ingresados
+                            </div>
+                            <div class="valor-resultado">S/ <span id="final-cost">0.00</span></div>
+                           
+                            <p style="margin-top: 30px; opacity: 0.95; font-size: 17px; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+                                * Este cálculo es un estimado aproximado. Incluye materiales, transporte y mano de obra básica.
+                                El costo final puede variar según condiciones específicas del terreno, accesos y detalles técnicos.
+                            </p>
+                           
+                            <div style="background: rgba(255, 255, 255, 0.15); padding: 25px; border-radius: 15px; margin-top: 40px;">
+                                <p style="font-size: 18px; margin-bottom: 20px; font-weight: 600;">¿Desea un presupuesto exacto?</p>
+                                <p style="font-size: 16px; margin-bottom: 25px; opacity: 0.95;">
+                                    Para una cotización precisa con análisis de terreno, planos específicos y condiciones particulares,
+                                    contáctenos directamente.
+                                </p>
+                                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                                    <a href="https://wa.me/51927571365?text=Hola%20GRAOCON,%20quiero%20una%20cotización%20exacta%20para%20mi%20proyecto"
+                                       target="_blank" class="btn animate-in"
+                                       style="background: linear-gradient(135deg, #25D366, #128C7E); color: white; padding: 16px 35px; font-size: 16px; border: 2px solid white;">
+                                        <i class="fab fa-whatsapp"></i> WHATSAPP
+                                    </a>
+                                    <a href="tel:+51927571365" class="btn animate-in"
+                                       style="background: linear-gradient(135deg, var(--blanco), var(--dorado-claro)); color: var(--verde-oscuro); padding: 16px 35px; font-size: 16px; border: 2px solid var(--dorado);">
+                                        <i class="fas fa-phone"></i> LLAMAR
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página de Contacto -->
+        <section id="contacto" class="contenido-pagina">
+            <div class="container">
+                <div class="hero-luxury animate-in">
+                    <h1>Contacto Directo</h1>
+                    <p>Conecte con nuestro equipo de especialistas para atender sus necesidades específicas</p>
+                </div>
+               
+                <div class="seccion animate-in">
+                    <h2 class="titulo-seccion">Información de Contacto</h2>
+                    <p class="subtitulo-seccion">Estamos disponibles para asesorarle en cada etapa de su proyecto constructivo</p>
+                   
+                    <div class="grid-clientes">
+                        <div class="cliente-item animate-in" style="flex-direction: column; height: auto; padding: 45px; min-height: 380px;">
+                            <div style="width: 90px; height: 90px; background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 36px; color: var(--blanco); margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); border: 3px solid var(--dorado);">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h3 style="font-size: 26px; margin-bottom: 20px; color: var(--verde-oscuro);">Ubicación Principal</h3>
+                            <p style="font-size: 18px; color: #555; margin-bottom: 25px; line-height: 1.6;">CONCRETERA GRAOCON - CONCRETO PREMEZCLADO</p>
+                            <p style="font-size: 16px; color: #777; margin-bottom: 30px; line-height: 1.6;">Planta de producción y oficinas principales equipadas con tecnología de punta.</p>
+                            <a href="https://www.google.com/maps/place/CONCRETERA+GRAOCON+-+CONCRETO+PREMEZCLADO/@-12.2213086,-76.9776444,17z/data=!3m1!4b1!4m6!3m5!1s0x9105bbfdf8e55503:0x97b5fe2bcfa1b919!8m2!3d-12.2213139!4d-76.9727735!16s%2Fg%2F11h1091yl6?entry=ttu&g_ep=EgoyMDI2MDEwNC4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D" target="_blank" class="google-maps-link">
+                                <i class="fas fa-external-link-alt"></i> VER EN GOOGLE MAPS
+                            </a>
+                        </div>
+                       
+                        <div class="cliente-item animate-in" style="flex-direction: column; height: auto; padding: 45px; min-height: 380px;">
+                            <div style="width: 90px; height: 90px; background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 36px; color: var(--blanco); margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); border: 3px solid var(--dorado);">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h3 style="font-size: 26px; margin-bottom: 20px; color: var(--verde-oscuro);">Teléfonos Directos</h3>
+                            <p style="font-size: 32px; font-weight: 800; color: var(--verde-medio); margin: 20px 0; line-height: 1.3;">+51 927 571 365</p>
+                            <p style="font-size: 16px; color: #777; margin-bottom: 30px; line-height: 1.6;">Atención especializada las 24 horas para emergencias y consultas técnicas.</p>
+                            <a href="tel:+51927571365" style="background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro)); color: white; padding: 18px 35px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 18px; display: inline-block; border: 3px solid transparent; transition: var(--transicion);">
+                                <i class="fas fa-phone"></i> LLAMAR AHORA
+                            </a>
+                        </div>
+                       
+                        <div class="cliente-item animate-in" style="flex-direction: column; height: auto; padding: 45px; min-height: 380px;">
+                            <div style="width: 90px; height: 90px; background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 36px; color: var(--blanco); margin-bottom: 30px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); border: 3px solid var(--dorado);">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3 style="font-size: 26px; margin-bottom: 20px; color: var(--verde-oscuro);">Correo Corporativo</h3>
+                            <p style="font-size: 24px; font-weight: 700; color: var(--verde-medio); margin: 20px 0; line-height: 1.3;">VENTAS@GRAOCON.COM</p>
+                            <p style="font-size: 16px; color: #777; margin-bottom: 30px; line-height: 1.6;">Para cotizaciones formales, documentación técnica y consultas específicas.</p>
+                            <a href="mailto:VENTAS@GRAOCON.COM" style="background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro)); color: white; padding: 18px 35px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 18px; display: inline-block; border: 3px solid transparent; transition: var(--transicion);">
+                                <i class="fas fa-envelope"></i> ENVIAR CORREO
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Página de Cotización -->
+        <section id="cotizacion" class="contenido-pagina">
+            <div class="container">
+                <div class="hero-luxury animate-in">
+                    <h1>Cotización Premium</h1>
+                    <p>Reciba una cotización detallada en menos de 15 minutos</p>
+                </div>
+               
+                <div class="seccion animate-in">
+                    <h2 class="titulo-seccion">Solicitud de Cotización</h2>
+                    <p class="subtitulo-seccion">Contáctenos directamente para una propuesta técnica y comercial personalizada</p>
+                   
+                    <div style="max-width: 900px; margin: 0 auto;">
+                        <div class="cliente-item animate-in" style="text-align: center; padding: 70px 60px; flex-direction: column; height: auto; background: linear-gradient(135deg, var(--blanco) 0%, var(--gris-claro) 100%); border-radius: 30px; border: 1px solid rgba(0,0,0,0.05);">
+                            <div style="width: 120px; height: 120px; background: linear-gradient(135deg, #25D366, #128C7E); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 50px; color: white; margin: 0 auto 40px; box-shadow: 0 15px 40px rgba(37, 211, 102, 0.3); border: 5px solid white;">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                           
+                            <h3 style="font-size: 34px; margin-bottom: 25px; color: var(--verde-oscuro);">Cotización por WhatsApp Business</h3>
+                            <p style="font-size: 22px; margin: 30px 0; color: #555; line-height: 1.6;">Nuestro equipo comercial responderá con una propuesta detallada incluyendo especificaciones técnicas, cronograma y condiciones.</p>
+                           
+                            <div style="background: linear-gradient(135deg, rgba(232, 245, 233, 0.9), rgba(255, 255, 255, 0.95)); padding: 40px; border-radius: 20px; margin: 40px 0; border: 2px solid var(--dorado);">
+                                <h4 style="color: var(--verde-medio); margin-bottom: 25px; font-size: 28px; font-weight: 800;">Número Oficial</h4>
+                                <p style="font-size: 42px; font-weight: 900; color: var(--verde-oscuro); letter-spacing: 1px;">+51 927 571 365</p>
+                                <p style="font-size: 18px; color: #777; margin-top: 15px;">Atención: Lunes a Sábado 7:00 am - 7:00 pm</p>
+                            </div>
+                           
+                            <div style="background-color: var(--gris-claro); padding: 40px; border-radius: 20px; margin: 40px 0; border: 2px solid rgba(0,0,0,0.05);">
+                                <h4 style="color: var(--verde-medio); margin-bottom: 25px; font-size: 28px; font-weight: 800;">Información Sugerida</h4>
+                                <div style="background: white; padding: 30px; border-radius: 15px; border-left: 6px solid var(--verde-medio);">
+                                    <p style="font-size: 18px; font-style: italic; color: #555; line-height: 1.6; text-align: left;">
+                                        "Hola GRAOCON, solicito cotización para:<br>
+                                        • Tipo de proyecto: [Residencial/Comercial/Industrial]<br>
+                                        • Área aproximada: [m²]<br>
+                                        • Ubicación: [Distrito, Ciudad]<br>
+                                        • Fecha estimada de inicio: [Mes/Año]<br>
+                                        • Requiero: [Concreto/Bombeo/Asesoría]"
+                                    </p>
+                                </div>
+                            </div>
+                           
+                            <a href="https://wa.me/51927571365?text=Hola%20GRAOCON,%20solicito%20cotización%20para%20mi%20proyecto%20constructivo.%20Tipo%20de%20proyecto:%20%5BEspecificar%5D.%20Área:%20%5Bm²%5D.%20Ubicación:%20%5BDistrito%5D.%20Fecha%20estimada:%20%5BMes/Año%5D.%20Requiero:%20%5BServicio%5D." target="_blank" style="background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro)); color: white; padding: 25px 60px; border-radius: 15px; text-decoration: none; font-size: 22px; font-weight: 800; display: inline-flex; align-items: center; gap: 15px; border: 3px solid var(--dorado); transition: var(--transicion);">
+                                <i class="fab fa-whatsapp"></i> INICIAR COTIZACIÓN EN WHATSAPP
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Luxury -->
+        <footer class="footer-luxury">
+            <div class="container">
+                <div class="grid-footer">
+                    <div>
+                        <div class="footer-logo-section">
+                            <div class="footer-logo">
+                                <img src="https://i.ibb.co/VWFt2f67/Whats-App-Image-2026-01-02-at-11-19-53-AM.jpg" alt="GRAOCON Logo Luxury - Excelencia en Concreto" loading="lazy">
+                            </div>
+                            <div class="footer-texto">
+                                <p>Líderes en soluciones innovadoras de concreto premezclado y servicios de bomba en Perú. Tecnología avanzada y calidad certificada en cada proyecto.</p>
+                            </div>
+                        </div>
+                        <p style="color: rgba(255, 255, 255, 0.85); font-size: 16px; margin-top: 30px; line-height: 1.6;">
+                            Más de 15 años de experiencia respaldan nuestro compromiso con la excelencia en el sector construcción. Certificaciones de calidad y tecnología de punta para resultados superiores.
+                        </p>
+                    </div>
+                   
+                    <div>
+                        <h3 class="footer-titulo">Servicios Premium</h3>
+                        <ul class="footer-lista">
+                            <li><button data-pagina="servicios">Planta Móvil Dosificadora</button></li>
+                            <li><button data-pagina="concreto">Concreto Premezclado</button></li>
+                            <li><button data-pagina="servicios">Servicio de Bombeo</button></li>
+                            <li><button data-pagina="calculadora">Calculadora de Costos</button></li>
+                        </ul>
+                    </div>
+                   
+                    <div>
+                        <h3 class="footer-titulo">Navegación</h3>
+                        <ul class="footer-lista">
+                            <li><button data-pagina="inicio">Inicio</button></li>
+                            <li><button data-pagina="concreto">Concreto Premezclado</button></li>
+                            <li><button data-pagina="servicios">Servicio</button></li>
+                            <li><button data-pagina="proyectos">Proyectos</button></li>
+                            <li><button data-pagina="clientes">Clientes</button></li>
+                            <li><button data-pagina="calculadora">Calculadora</button></li>
+                            <li><button data-pagina="contacto">Contacto</button></li>
+                            <li><button data-pagina="cotizacion">Cotización</button></li>
+                        </ul>
+                    </div>
+                   
+                    <div>
+                        <h3 class="footer-titulo">Contacto Corporativo</h3>
+                        <ul class="footer-lista">
+                            <li style="display: flex; align-items: flex-start; gap: 18px; margin-bottom: 25px;">
+                                <i class="fas fa-map-marker-alt" style="color: var(--dorado); margin-top: 5px; font-size: 20px;"></i>
+                                <div>
+                                    <p style="color: rgba(255, 255, 255, 0.95); font-weight: 600; font-size: 17px;">CONCRETERA GRAOCON</p>
+                                    <p style="color: rgba(255, 255, 255, 0.85); font-size: 15px; margin-top: 8px; line-height: 1.5;">Planta principal y oficinas corporativas</p>
+                                    <a href="https://www.google.com/maps/place/CONCRETERA+GRAOCON+-+CONCRETO+PREMEZCLADO/@-12.2213086,-76.9776444,17z/data=!3m1!4b1!4m6!3m5!1s0x9105bbfdf8e55503:0x97b5fe2bcfa1b919!8m2!3d-12.2213139!4d-76.9727735!16s%2Fg%2F11h1091yl6?entry=ttu&g_ep=EgoyMDI2MDEwNC4wIKXMDSoKLDEwMDc5MjA2OUgBUAM%3D" target="_blank" style="color: var(--dorado); font-size: 15px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; font-weight: 600;">
+                                        <i class="fas fa-external-link-alt"></i> VER UBICACIÓN EN MAPA
+                                    </a>
+                                </div>
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 18px; margin-bottom: 25px;">
+                                <i class="fas fa-phone" style="color: var(--dorado); font-size: 20px;"></i>
+                                <a href="tel:+51927571365" style="color: rgba(255, 255, 255, 0.95); text-decoration: none; font-weight: 600; font-size: 18px;">+51 927 571 365</a>
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 18px;">
+                                <i class="fas fa-envelope" style="color: var(--dorado); font-size: 20px;"></i>
+                                <a href="mailto:VENTAS@GRAOCON.COM" style="color: rgba(255, 255, 255, 0.95); text-decoration: none; font-weight: 600; font-size: 18px;">VENTAS@GRAOCON.COM</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+               
+                <div class="footer-derechos" style="padding-top: 40px; border-top: 1px solid rgba(255, 255, 255, 0.15); text-align: center; color: rgba(255, 255, 255, 0.7); font-size: 16px; position: relative; z-index: 1;">
+                    <p>&copy; <span id="anio-actual">2024</span> GRAOCON S.A. - Todos los derechos reservados. | Certificaciones de calidad vigentes</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializar página de inicio
+            mostrarPagina('inicio');
+           
+            // Configurar navegación del menú
+            document.querySelectorAll('.menu-item, button[data-pagina]').forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const paginaId = this.getAttribute('data-pagina');
+                   
+                    // Actualizar estado activo en menú
+                    document.querySelectorAll('.menu-item').forEach(i => {
+                        i.classList.remove('activo');
+                    });
+                   
+                    if (this.classList.contains('menu-item')) {
+                        this.classList.add('activo');
+                    } else {
+                        const menuItem = document.querySelector(`.menu-item[data-pagina="${paginaId}"]`);
+                        if (menuItem) menuItem.classList.add('activo');
+                    }
+                   
+                    // Mostrar página
+                    mostrarPagina(paginaId);
+                });
+            });
+           
+            // Filtro de categorías para galería de proyectos
+            document.querySelectorAll('.categoria-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Actualizar botones activos
+                    document.querySelectorAll('.categoria-btn').forEach(b => {
+                        b.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                   
+                    const categoria = this.getAttribute('data-categoria');
+                    filtrarProyectos(categoria);
+                });
+            });
+           
+            // Calculadora de concreto con precios realistas
+            document.getElementById('calculate-button').addEventListener('click', function() {
+                // Obtener valores
+                const area = parseFloat(document.getElementById('area-techar').value);
+                const tipoTecho = document.getElementById('tipo-techo').value;
+                const calidadConcreto = document.getElementById('calidad-concreto').value;
+                const ubicacion = document.getElementById('ubicacion-proyecto').value;
+               
+                if (!area || area <= 0) {
+                    alert('Por favor ingrese un área válida en metros cuadrados.');
+                    return;
+                }
+               
+                // Precios base por m³ según calidad del concreto (precios realistas en Perú)
+                let pricePerM3, calidadTexto;
+                switch(calidadConcreto) {
+                    case 'estandar':
+                        pricePerM3 = 320; // Precio promedio por m³ para concreto 210 kg/cm²
+                        calidadTexto = "Calidad Estándar (210 kg/cm²)";
+                        break;
+                    case 'alta':
+                        pricePerM3 = 360; // Precio promedio por m³ para concreto 280 kg/cm²
+                        calidadTexto = "Alta Calidad (280 kg/cm²)";
+                        break;
+                    case 'premium':
+                        pricePerM3 = 420; // Precio promedio por m³ para concreto 350 kg/cm²
+                        calidadTexto = "Calidad Premium (350 kg/cm²)";
+                        break;
+                    case 'premezcaldo':
+                        pricePerM3 = 480; // Precio premium por m³ para concreto especial
+                        calidadTexto = "Grado Superior GRAOCON (420 kg/cm²)";
+                        break;
+                    default:
+                        pricePerM3 = 320;
+                        calidadTexto = "Calidad Estándar";
+                }
+               
+                // Factor según tipo de construcción (espesor aproximado en metros)
+                let factorEspesor, tipoTexto;
+                switch(tipoTecho) {
+                    case 'losa': factorEspesor = 0.10; tipoTexto = "Losa para vivienda (10 cm)"; break;
+                    case 'maciza': factorEspesor = 0.15; tipoTexto = "Losa para edificio (15 cm)"; break;
+                    case 'nervada': factorEspesor = 0.20; tipoTexto = "Estructura industrial (20 cm)"; break;
+                    case 'vigueta': factorEspesor = 0.08; tipoTexto = "Techos ligeros (8 cm)"; break;
+                    case 'cimentacion': factorEspesor = 0.30; tipoTexto = "Cimientos y bases (30 cm)"; break;
+                    default: factorEspesor = 0.10; tipoTexto = "Losa para vivienda";
+                }
+               
+                // Factor de ubicación (distancia desde planta)
+                let factorUbicacion, ubicacionTexto;
+                switch(ubicacion) {
+                    // Zonas cercanas a planta (menor costo de transporte)
+                    case 'Chorrillos':
+                    case 'Lurín':
+                    case 'Pachacamac':
+                    case 'San Juan de Miraflores':
+                    case 'Villa el Salvador':
+                    case 'Villa María del Triunfo':
+                        factorUbicacion = 1.0;
+                        ubicacionTexto = ubicacion + " (zona cercana)";
+                        break;
+                   
+                    // Zonas intermedias
+                    case 'La Molina':
+                    case 'Santa Anita':
+                    case 'San Borja':
+                        factorUbicacion = 1.1;
+                        ubicacionTexto = ubicacion + " (zona intermedia)";
+                        break;
+                       
+                    // Zonas más lejanas
+                    case 'San Isidro':
+                    case 'Punta Hermosa':
+                    case 'Punta Negra':
+                    case 'San Bartolo':
+                    case 'Pucusana':
+                        factorUbicacion = 1.2;
+                        ubicacionTexto = ubicacion + " (zona lejana)";
+                        break;
+                       
+                    default: factorUbicacion = 1.0; ubicacionTexto = ubicacion;
+                }
+               
+                // Cálculo: Volumen = Área × Espesor
+                const volumenM3 = area * factorEspesor;
+               
+                // Costo base del concreto
+                const costoConcreto = volumenM3 * pricePerM3;
+               
+                // Costo adicional por transporte y otros (aproximado 15% del costo del concreto)
+                const costosAdicionales = costoConcreto * 0.15 * factorUbicacion;
+               
+                // Costo final
+                const costoFinal = costoConcreto + costosAdicionales;
+               
+                // Redondear a múltiplo de 10
+                const costoFinalRedondeado = Math.round(costoFinal / 10) * 10;
+               
+                // Mostrar resultado
+                document.getElementById('result-details').innerHTML = `
+                    <strong>${area.toLocaleString()} m²</strong> de ${tipoTexto}<br>
+                    <strong>${calidadTexto}</strong><br>
+                    Ubicación: ${ubicacionTexto}<br>
+                    Volumen estimado: <strong>${volumenM3.toFixed(1)} m³</strong>
+                `;
+                document.getElementById('final-cost').textContent = costoFinalRedondeado.toLocaleString('es-PE', {minimumFractionDigits: 0, maximumFractionDigits: 0});
+               
+                // Mostrar el contenedor de resultados
+                document.getElementById('calculator-result').style.display = 'block';
+               
+                // Desplazarse suavemente al resultado
+                document.getElementById('calculator-result').scrollIntoView({behavior: 'smooth', block: 'center'});
+            });
+           
+            // Actualizar año en el footer
+            const anioElement = document.getElementById('anio-actual');
+            if(anioElement) anioElement.textContent = new Date().getFullYear();
+           
+            // Animaciones al hacer scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
+           
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+           
+            // Observar elementos con clase animate-in
+            document.querySelectorAll('.animate-in').forEach(el => {
+                observer.observe(el);
+            });
+        });
+       
+        // Función para mostrar una página específica
+        function mostrarPagina(paginaId) {
+            // Ocultar todas las páginas
+            document.querySelectorAll('.contenido-pagina').forEach(pagina => {
+                pagina.classList.remove('activo');
+            });
+           
+            // Mostrar la página solicitada
+            const paginaActiva = document.getElementById(paginaId);
+            if (paginaActiva) {
+                paginaActiva.classList.add('activo');
+               
+                // Reiniciar animaciones
+                setTimeout(() => {
+                    paginaActiva.querySelectorAll('.animate-in').forEach(el => {
+                        el.classList.remove('visible');
+                    });
+                   
+                    setTimeout(() => {
+                        const observerOptions = {
+                            threshold: 0.1,
+                            rootMargin: '0px 0px -100px 0px'
+                        };
+                       
+                        const observer = new IntersectionObserver((entries) => {
+                            entries.forEach(entry => {
+                                if (entry.isIntersecting) {
+                                    entry.target.classList.add('visible');
+                                }
+                            });
+                        }, observerOptions);
+                       
+                        paginaActiva.querySelectorAll('.animate-in').forEach(el => {
+                            observer.observe(el);
+                        });
+                    }, 150);
+                }, 10);
+            }
+           
+            // Scroll al inicio de la página
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+           
+            // Actualizar el título de la página
+            let tituloPagina = 'GRAOCON - ';
+            switch(paginaId) {
+                case 'inicio': tituloPagina += 'Excelencia en Soluciones de Concreto'; break;
+                case 'concreto': tituloPagina += 'Concreto Premezclado'; break;
+                case 'servicios': tituloPagina += 'Servicios Especializados'; break;
+                case 'proyectos': tituloPagina += 'Portafolio de Proyectos'; break;
+                case 'clientes': tituloPagina += 'Alianzas Estratégicas'; break;
+                case 'calculadora': tituloPagina += 'Calculadora de Presupuesto'; break;
+                case 'contacto': tituloPagina += 'Contacto Directo'; break;
+                case 'cotizacion': tituloPagina += 'Cotización Premium'; break;
+                default: tituloPagina += 'Excelencia en Soluciones de Concreto';
+            }
+            document.title = tituloPagina;
+        }
+       
+        // Función para filtrar proyectos por categoría
+        function filtrarProyectos(categoria) {
+            const proyectos = document.querySelectorAll('.galeria-item');
+           
+            proyectos.forEach(proyecto => {
+                if (categoria === 'todos' || proyecto.getAttribute('data-categoria') === categoria) {
+                    proyecto.style.display = 'block';
+                    setTimeout(() => {
+                        proyecto.style.opacity = '1';
+                        proyecto.style.transform = 'translateY(0) scale(1)';
+                    }, 10);
+                } else {
+                    proyecto.style.opacity = '0';
+                    proyecto.style.transform = 'translateY(30px) scale(0.9)';
+                    setTimeout(() => {
+                        proyecto.style.display = 'none';
+                    }, 400);
+                }
+            });
+        }
+    </script>
+</body>
+</html>
