@@ -308,6 +308,11 @@
             transform: rotate(-45deg) translate(6px, -6px);
         }
 
+        .nav-container {
+            display: flex;
+            align-items: center;
+        }
+
         .nav {
             position: fixed;
             top: 0;
@@ -922,6 +927,12 @@
                 display: none;
             }
 
+            .nav-container {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+
             .nav {
                 position: static;
                 width: auto;
@@ -940,7 +951,6 @@
             .nav-menu {
                 flex-direction: row;
                 padding: 0;
-                flex-wrap: wrap;
                 gap: 5px;
             }
 
@@ -949,6 +959,7 @@
                 border-bottom: none;
                 font-size: 0.95rem;
                 border-radius: 8px;
+                white-space: nowrap;
             }
 
             .nav-item:hover,
@@ -959,7 +970,11 @@
 
             .nav-item-cotizar {
                 margin-top: 0;
-                margin-left: 10px;
+                background: linear-gradient(135deg, var(--dorado), var(--dorado-claro));
+                color: var(--verde-oscuro);
+                padding: 10px 20px;
+                border-radius: 8px;
+                font-weight: 700;
             }
 
             .hero {
@@ -1040,6 +1055,10 @@
 
             .contact-info {
                 font-size: 1rem;
+            }
+
+            .nav-container {
+                gap: 20px;
             }
 
             .nav-menu {
@@ -1239,24 +1258,26 @@
                 </div>
             </div>
 
+            <div class="nav-container">
+                <nav class="nav" id="mainNav" aria-label="Navegación principal">
+                    <ul class="nav-menu">
+                        <li><a href="#" class="nav-item active" data-page="home" aria-current="page"><i class="fas fa-home"></i> INICIO</a></li>
+                        <li><a href="#" class="nav-item" data-page="concrete"><i class="fas fa-cubes"></i> CONCRETO</a></li>
+                        <li><a href="#" class="nav-item" data-page="services"><i class="fas fa-concierge-bell"></i> SERVICIOS</a></li>
+                        <li><a href="#" class="nav-item" data-page="projects"><i class="fas fa-images"></i> PROYECTOS</a></li>
+                        <li><a href="#" class="nav-item" data-page="clients"><i class="fas fa-building"></i> CLIENTES</a></li>
+                        <li><a href="#" class="nav-item" data-page="calculator"><i class="fas fa-calculator"></i> CALCULADORA</a></li>
+                        <li><a href="#" class="nav-item" data-page="contact"><i class="fas fa-address-book"></i> CONTACTO</a></li>
+                    </ul>
+                </nav>
+                <a href="#" class="nav-item-cotizar" data-page="quote"><i class="fab fa-whatsapp"></i> COTIZAR</a>
+            </div>
+
             <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-
-            <nav class="nav" id="mainNav" aria-label="Navegación principal">
-                <ul class="nav-menu">
-                    <li><a href="#" class="nav-item active" data-page="home" aria-current="page"><i class="fas fa-home"></i> INICIO</a></li>
-                    <li><a href="#" class="nav-item" data-page="concrete"><i class="fas fa-cubes"></i> CONCRETO</a></li>
-                    <li><a href="#" class="nav-item" data-page="services"><i class="fas fa-concierge-bell"></i> SERVICIOS</a></li>
-                    <li><a href="#" class="nav-item" data-page="projects"><i class="fas fa-images"></i> PROYECTOS</a></li>
-                    <li><a href="#" class="nav-item" data-page="clients"><i class="fas fa-building"></i> CLIENTES</a></li>
-                    <li><a href="#" class="nav-item" data-page="calculator"><i class="fas fa-calculator"></i> CALCULADORA</a></li>
-                    <li><a href="#" class="nav-item" data-page="contact"><i class="fas fa-address-book"></i> CONTACTO</a></li>
-                    <li><a href="#" class="nav-item nav-item-cotizar" data-page="quote"><i class="fab fa-whatsapp"></i> COTIZAR</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
 
@@ -1605,7 +1626,7 @@
                             </p>
                            
                             <div style="background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 10px; margin-top: 25px;">
-                                <p style="font-weight: 600; margin-bottom: 15px;">¿Desea un presupuesto exacto?</p>
+                                <p style="font-weight: 600; margin-bottom: 15px;">¿Desea un presupuesto exacta?</p>
                                 <div style="display: flex; flex-direction: column; gap: 10px;">
                                     <a href="https://wa.me/51927571365?text=Hola%20GRAOCON,%20quiero%20una%20cotización%20exacta%20para%20mi%20proyecto"
                                        target="_blank" class="btn"
@@ -1767,6 +1788,7 @@
             const menuToggle = document.getElementById('menuToggle');
             const mainNav = document.getElementById('mainNav');
             const navItems = document.querySelectorAll('.nav-item');
+            const navCotizar = document.querySelector('.nav-item-cotizar');
             const pageContents = document.querySelectorAll('.page-content');
             const filterBtns = document.querySelectorAll('.filter-btn');
             const calculateBtn = document.getElementById('calculateBtn');
@@ -1848,7 +1870,7 @@
                             window.scrollTo({
                                 top: 0,
                                 behavior: 'smooth'
-                            });
+                                });
                         }
                     }, 100);
                    
@@ -1861,6 +1883,12 @@
                         item.classList.add('active');
                     }
                 });
+               
+                if (navCotizar && pageId === 'quote') {
+                    navCotizar.classList.add('active');
+                } else {
+                    navCotizar.classList.remove('active');
+                }
                
                 if (window.innerWidth < 768) {
                     menuToggle.classList.remove('active');
@@ -1983,8 +2011,23 @@
                 });
             });
            
+            if (navCotizar) {
+                navCotizar.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    showPage('quote');
+                });
+            }
+           
             document.querySelectorAll('.footer-links a[data-page]').forEach(link => {
                 link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const pageId = this.getAttribute('data-page');
+                    showPage(pageId);
+                });
+            });
+           
+            document.querySelectorAll('button[data-page]').forEach(button => {
+                button.addEventListener('click', function(e) {
                     e.preventDefault();
                     const pageId = this.getAttribute('data-page');
                     showPage(pageId);
