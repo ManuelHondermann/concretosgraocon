@@ -4,4 +4,5 @@ Disallow: /admin/
 Disallow: /private/
 
 
-Sitemap: https://concreterasgraocon.pe/sitemap.xml
+Sitemap: https://ManuellHondermann.github.io/graocon-website
+
