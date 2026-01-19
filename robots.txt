@@ -3,4 +3,5 @@ Allow: /
 Disallow: /admin/
 Disallow: /private/
 
+
 Sitemap: https://concreterasgraocon.pe/sitemap.xml
