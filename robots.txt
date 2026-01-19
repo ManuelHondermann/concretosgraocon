@@ -1,8 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /admin/
-Disallow: /private/
-
-
-Sitemap: https://ManuellHondermann.github.io/graocon-website
-
