@@ -1312,12 +1312,13 @@
                     <p class="section-subtitle">Soluciones integrales diseñadas para maximizar la eficiencia y calidad de su proyecto constructivo</p>
                    
                     <div class="grid">
-                        <div class="card fade-in service-card" data-service="planta-movil">
+                        <!-- PRIMERO: Concreto Premezclado -->
+                        <div class="card fade-in service-card" data-service="concreto-prem">
                             <div class="card-header">
-                                <h3>Alquiler de Planta Móvil Dosificadora</h3>
+                                <h3>Concreto premezclado</h3>
                             </div>
                             <div class="card-body">
-                                <p>Alquiler de planta móvil dosificadora de concreto semi automatizada, con capacidad de producción de hasta 40 m³/h, equipada con balanza electrónica para una dosificación precisa y comandos electrónicos. Permite la producción de concreto premezclado in situ, con control de calidad garantizado, operación continua en obra y una reducción significativa de los costos logísticos y de transporte</p>
+                                <p>Somos proveedores de concreto premezclado de alta calidad en Lima, con diseños de mezcla optimizados para todo tipo de obras y estructuras como cimentaciones, losas, columnas, pisos y obras civiles, garantizando resistencia, durabilidad y cumplimiento normativo. Resistencias: desde 100 hasta 420 kg/cm².</p>
                             </div>
                         </div>
 
@@ -1330,12 +1331,13 @@
                             </div>
                         </div>
 
-                        <div class="card fade-in service-card" data-service="concreto-prem">
+                        <!-- SEGUNDO: Planta Móvil (antes estaba primero) -->
+                        <div class="card fade-in service-card" data-service="planta-movil">
                             <div class="card-header">
-                                <h3>Concreto premezclado</h3>
+                                <h3>Alquiler de Planta Móvil Dosificadora</h3>
                             </div>
                             <div class="card-body">
-                                <p>Somos proveedores de concreto premezclado de alta calidad en Lima, con diseños de mezcla optimizados para todo tipo de obras y estructuras como cimentaciones, losas, columnas, pisos y obras civiles, garantizando resistencia, durabilidad y cumplimiento normativo. Resistencias: desde 100 hasta 420 kg/cm².</p>
+                                <p>Alquiler de planta móvil dosificadora de concreto semi automatizada, con capacidad de producción de hasta 40 m³/h, equipada con balanza electrónica para una dosificación precisa y comandos electrónicos. Permite la producción de concreto premezclado in situ, con control de calidad garantizado, operación continua en obra y una reducción significativa de los costos logísticos y de transporte.</p>
                             </div>
                         </div>
 
@@ -1497,12 +1499,13 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
                     <p class="section-subtitle">Innovación aplicada a cada etapa del proceso constructivo para garantizar resultados excepcionales</p>
                    
                     <div class="grid">
-                        <div class="card fade-in" id="planta-movil-service">
+                        <!-- PRIMERO: Concreto Premezclado en servicios también -->
+                        <div class="card fade-in" id="concreto-prem-service">
                             <div class="card-header">
-                                <h3>Alquiler de Planta Móvil Dosificadora</h3>
+                                <h3>Concreto Premezclado</h3>
                             </div>
                             <div class="card-body">
-                                <p>Alquiler de planta móvil dosificadora de concreto semi automatizada, con capacidad de producción de hasta 40 m³/h, equipada con balanza electrónica para una dosificación precisa y comandos electrónicos. Permite la producción de concreto premezclado in situ, con control de calidad garantizado, operación continua en obra y una reducción significativa de los costos logísticos y de transporte</p>
+                                <p>Somos proveedores de concreto premezclado de alta calidad en Lima, con diseños de mezcla optimizados para todo tipo de obras y estructuras como cimentaciones, losas, columnas, pisos y obras civiles, garantizando resistencia, durabilidad y cumplimiento normativo. Resistencias: desde 100 hasta 420 kg/cm².</p>
                             </div>
                         </div>
 
@@ -1512,6 +1515,16 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
                             </div>
                             <div class="card-body">
                                 <p>Ofrecemos servicio de bombeo de concreto con equipos modernos y tecnológicamente avanzados, ideales para vaciados en zonas de difícil acceso. Contamos con bombas pluma de 32 y 42 metros, capacidades de 80 a 120 m³/h, operadores certificados y asesoría técnica permanente, garantizando vaciados precisos, seguros y eficientes en cada obra.</p>
+                            </div>
+                        </div>
+
+                        <!-- SEGUNDO: Planta Móvil -->
+                        <div class="card fade-in" id="planta-movil-service">
+                            <div class="card-header">
+                                <h3>Alquiler de Planta Móvil Dosificadora</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>Alquiler de planta móvil dosificadora de concreto semi automatizada, con capacidad de producción de hasta 40 m³/h, equipada con balanza electrónica para una dosificación precisa y comandos electrónicos. Permite la producción de concreto premezclado in situ, con control de calidad garantizado, operación continua en obra y una reducción significativa de los costos logísticos y de transporte.</p>
                             </div>
                         </div>
 
@@ -2013,7 +2026,8 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
                                 targetElement = 'bombeo-service';
                                 break;
                             case 'concreto-prem':
-                                targetPage = 'concrete';
+                                targetPage = 'services';
+                                targetElement = 'concreto-prem-service';
                                 break;
                             case 'pisos-pulidos':
                                 targetPage = 'services';
