@@ -827,6 +827,158 @@
             transform: scale(1);
         }
 
+        /* MODAL DE LIGHTBOX */
+        .lightbox-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.4s ease, visibility 0.4s ease;
+            padding: 20px;
+        }
+
+        .lightbox-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            transform: scale(0.95);
+            transition: transform 0.4s ease;
+        }
+
+        .lightbox-modal.active .lightbox-content {
+            transform: scale(1);
+        }
+
+        .lightbox-image {
+            width: 100%;
+            height: auto;
+            max-height: 70vh;
+            object-fit: contain;
+            display: block;
+            background: #000;
+        }
+
+        .lightbox-info {
+            padding: 30px;
+            background: #fff;
+            max-width: 800px;
+        }
+
+        .lightbox-title {
+            font-size: 2rem;
+            color: var(--verde-oscuro);
+            margin-bottom: 15px;
+            font-weight: 900;
+        }
+
+        .lightbox-category {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro));
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .lightbox-description {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 30px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--verde-oscuro);
+            cursor: pointer;
+            z-index: 10;
+            border: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .lightbox-close:hover {
+            background: var(--dorado);
+            color: #fff;
+            transform: rotate(90deg);
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        .lightbox-prev,
+        .lightbox-next {
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--verde-oscuro);
+            cursor: pointer;
+            pointer-events: all;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .lightbox-prev:hover,
+        .lightbox-next:hover {
+            background: var(--dorado);
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        .lightbox-prev {
+            left: 20px;
+        }
+
+        .lightbox-next {
+            right: 20px;
+        }
+
         .clients-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -1318,6 +1470,15 @@
                 font-size: 1.6rem;
             }
 
+            /* MODAL PARA TABLET */
+            .lightbox-content {
+                max-width: 85%;
+            }
+
+            .lightbox-title {
+                font-size: 1.8rem;
+            }
+
             .clients-grid {
                 grid-template-columns: repeat(3, 1fr);
                 gap: 30px;
@@ -1425,6 +1586,29 @@
                 font-size: 1.7rem;
             }
 
+            /* MODAL PARA DESKTOP */
+            .lightbox-content {
+                max-width: 80%;
+                display: flex;
+                flex-direction: row;
+            }
+
+            .lightbox-image {
+                max-height: 80vh;
+                width: 60%;
+                object-fit: cover;
+            }
+
+            .lightbox-info {
+                width: 40%;
+                max-height: 80vh;
+                overflow-y: auto;
+            }
+
+            .lightbox-title {
+                font-size: 2.2rem;
+            }
+
             .clients-grid {
                 grid-template-columns: repeat(4, 1fr);
                 gap: 35px;
@@ -1522,6 +1706,39 @@
             
             .gallery-title {
                 font-size: 1.4rem;
+            }
+
+            /* MODAL PARA MÓVILES PEQUEÑOS */
+            .lightbox-content {
+                max-width: 95%;
+                max-height: 95%;
+            }
+
+            .lightbox-info {
+                padding: 20px;
+            }
+
+            .lightbox-title {
+                font-size: 1.5rem;
+            }
+
+            .lightbox-description {
+                font-size: 1rem;
+            }
+
+            .lightbox-close {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+                top: 10px;
+                right: 10px;
+            }
+
+            .lightbox-prev,
+            .lightbox-next {
+                width: 45px;
+                height: 45px;
+                font-size: 1.2rem;
             }
 
             .clients-grid {
@@ -1721,6 +1938,45 @@
     </style>
 </head>
 <body itemscope itemtype="https://schema.org/LocalBusiness">
+    <!-- Modal para galería -->
+    <div class="lightbox-modal" id="lightboxModal">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="lightbox-nav">
+                <button class="lightbox-prev" id="lightboxPrev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="lightbox-next" id="lightboxNext">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            
+            <img class="lightbox-image" id="lightboxImage" src="" alt="">
+            
+            <div class="lightbox-info">
+                <span class="lightbox-category" id="lightboxCategory"></span>
+                <h2 class="lightbox-title" id="lightboxTitle"></h2>
+                <div class="lightbox-description" id="lightboxDescription"></div>
+                
+                <div class="lightbox-details" id="lightboxDetails" style="margin-top: 30px;">
+                    <h4 style="color: var(--verde-oscuro); margin-bottom: 15px;">Detalles del Proyecto:</h4>
+                    <p id="lightboxFullDescription" style="line-height: 1.8; color: #555;"></p>
+                </div>
+                
+                <div style="margin-top: 40px; padding-top: 20px; border-top: 2px solid #eee;">
+                    <p style="font-weight: 600; color: var(--verde-medio); margin-bottom: 15px;">¿Interesado en un proyecto similar?</p>
+                    <a href="https://wa.me/51927571365?text=Hola%20GRAOCON,%20estoy%20interesado%20en%20un%20proyecto%20similar" 
+                       target="_blank" class="btn btn-primary" style="max-width: 300px;">
+                        <i class="fab fa-whatsapp"></i> COTIZAR PROYECTO
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="top-bar">
         <div class="container top-bar-content">
             <div class="contact-info">
@@ -2435,12 +2691,27 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
             const footerYear = document.getElementById('currentYear');
             const galleryContainer = document.getElementById('galleryContainer');
            
+            // Elementos del modal
+            const lightboxModal = document.getElementById('lightboxModal');
+            const lightboxClose = document.getElementById('lightboxClose');
+            const lightboxImage = document.getElementById('lightboxImage');
+            const lightboxTitle = document.getElementById('lightboxTitle');
+            const lightboxCategory = document.getElementById('lightboxCategory');
+            const lightboxDescription = document.getElementById('lightboxDescription');
+            const lightboxFullDescription = document.getElementById('lightboxFullDescription');
+            const lightboxPrev = document.getElementById('lightboxPrev');
+            const lightboxNext = document.getElementById('lightboxNext');
+           
+            let currentGalleryIndex = 0;
+            let filteredGalleryItems = [];
+           
             const galleryItems = [
                 { 
                     category: 'sports', 
                     img: 'https://i.ibb.co/N6vN5Wgk/Whats-App-Image-2024-01-03-at-3-51-31-PM.jpg', 
                     title: 'Centro Deportivo', 
                     desc: 'Construcción completa de instalaciones deportivas',
+                    fullDesc: 'Proyecto integral de construcción de centro deportivo con canchas multifuncionales, áreas de entrenamiento y espacios complementarios. Utilizamos concreto de alta resistencia y técnicas especializadas para garantizar durabilidad y seguridad en las instalaciones deportivas.',
                     icon: 'fas fa-futbol'
                 },
                 { 
@@ -2448,6 +2719,7 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
                     img: 'https://i.ibb.co/5Wpd52SW/Whats-App-Image-2024-01-03-at-3-51-31-PM-1.jpg', 
                     title: 'Estructuras Deportivas', 
                     desc: 'Detalles de construcción especializada',
+                    fullDesc: 'Detalles constructivos de estructuras deportivas, mostrando la precisión en el vaciado y acabado de elementos estructurales. Se emplearon técnicas de bombeo de concreto para alcanzar zonas de difícil acceso y garantizar uniformidad en la calidad.',
                     icon: 'fas fa-running'
                 },
                 { 
@@ -2455,6 +2727,7 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
                     img: 'https://i.ibb.co/vCrt7DHk/Whats-App-Image-2024-01-03-at-3-51-33-PM-1.jpg', 
                     title: 'Pavimentación Vial', 
                     desc: 'Trabajos de pavimentación de alta resistencia',
+                    fullDesc: 'Proyecto de pavimentación vial con concreto de alta resistencia al desgaste y condiciones climáticas adversas. Implementamos técnicas de compactación y acabado que garantizan superficies lisas y duraderas para tráfico intenso.',
                     icon: 'fas fa-road'
                 },
                 { 
@@ -2462,6 +2735,7 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
                     img: 'https://i.ibb.co/pvKhXYzm/Whats-App-Image-2024-01-03-at-3-51-32-PM.jpg', 
                     title: 'Pavimentación Urbana', 
                     desc: 'Soluciones urbanas modernas y duraderas',
+                    fullDesc: 'Trabajos de pavimentación urbana que combinan funcionalidad y estética. Utilizamos concreto con aditivos especiales para resistir el paso del tiempo y las condiciones urbanas, garantizando superficies seguras y de bajo mantenimiento.',
                     icon: 'fas fa-city'
                 },
                 { 
@@ -2469,6 +2743,7 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
                     img: 'https://i.ibb.co/PZTFd7dW/20191105-164102.jpg', 
                     title: 'Proyecto de Pavimentación', 
                     desc: 'Trabajo de pavimentación especializada',
+                    fullDesc: 'Proyecto de pavimentación especializada en áreas de alto tránsito. Se aplicaron técnicas de acabado superficial que mejoran la adherencia y reducen el riesgo de accidentes, garantizando seguridad y durabilidad.',
                     icon: 'fas fa-hard-hat'
                 },
                 { 
@@ -2476,6 +2751,7 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
                     img: 'https://i.ibb.co/JXzdGNf/20190603-123653-1.jpg', 
                     title: 'Pavimentación Industrial', 
                     desc: 'Pavimentación para áreas industriales',
+                    fullDesc: 'Pavimentación para áreas industriales con requisitos especiales de resistencia a cargas pesadas y productos químicos. Utilizamos concreto reforzado con fibras para mayor durabilidad y resistencia al impacto.',
                     icon: 'fas fa-industry'
                 },
                 { 
@@ -2483,6 +2759,7 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
                     img: 'https://i.ibb.co/5Wp8Vycy/20190603-123649.jpg', 
                     title: 'Pavimentación Comercial', 
                     desc: 'Pavimentación para espacios comerciales',
+                    fullDesc: 'Proyecto de pavimentación comercial con acabados de alta calidad estética y funcional. Se emplearon técnicas de pulido y sellado que garantizan superficies fáciles de limpiar y mantener, ideales para centros comerciales.',
                     icon: 'fas fa-store'
                 },
                 { 
@@ -2490,6 +2767,7 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
                     img: 'https://i.ibb.co/6CbGqQ4/Whats-App-Image-2024-01-03-at-3-51-21-PM-2.jpg', 
                     title: 'Piscina Arquitectónica', 
                     desc: 'Diseño y construcción especializada',
+                    fullDesc: 'Construcción de piscina arquitectónica con diseño personalizado y acabados de lujo. Se utilizó concreto impermeable especial y técnicas de encofrado complejas para lograr las formas curvas y detalles arquitectónicos.',
                     icon: 'fas fa-swimming-pool'
                 },
                 { 
@@ -2497,6 +2775,7 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
                     img: 'https://i.ibb.co/Csv8wjF3/Whats-App-Image-2024-01-03-at-3-51-29-PM.jpg', 
                     title: 'Sistema de Piscina', 
                     desc: 'Tecnología avanzada en construcción',
+                    fullDesc: 'Sistema de piscina construido con tecnología avanzada, incluyendo sistemas de filtración integrados y revestimientos especiales. El concreto utilizado es de alta resistencia a productos químicos y condiciones de humedad constante.',
                     icon: 'fas fa-water'
                 },
                 { 
@@ -2504,6 +2783,7 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
                     img: 'https://i.ibb.co/PZbkfF6W/Whats-App-Image-2024-01-03-at-3-51-28-PM.jpg', 
                     title: 'Piscina Moderna', 
                     desc: 'Estilo contemporáneo y funcional',
+                    fullDesc: 'Piscina moderna con estilo contemporáneo que combina funcionalidad y diseño. Se utilizaron técnicas de acabado especiales para lograr superficies lisas y atractivas, con sistemas integrados de iluminación y climatización.',
                     icon: 'fas fa-umbrella-beach'
                 },
                 { 
@@ -2511,6 +2791,7 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
                     img: 'https://i.ibb.co/gZ3XZ2t9/Whats-App-Image-2024-01-12-at-5-19-36-PM.jpg', 
                     title: 'Pista Recreacional', 
                     desc: 'Espacio para actividades recreativas',
+                    fullDesc: 'Construcción de pista recreacional con superficie de concreto especialmente diseñada para actividades deportivas y recreativas. Se utilizó concreto de bajo impacto para mayor seguridad y comodidad de los usuarios.',
                     icon: 'fas fa-hiking'
                 },
                 { 
@@ -2518,6 +2799,7 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
                     img: 'https://i.ibb.co/691DNgW/Whats-App-Image-2024-01-03-at-3-51-29-PM-2.jpg', 
                     title: 'Pista Deportiva', 
                     desc: 'Superficie profesional para deportes',
+                    fullDesc: 'Pista deportiva profesional construida con concreto de alta resistencia y acabados especiales para deportes específicos. La superficie cumple con estándares internacionales de seguridad y rendimiento deportivo.',
                     icon: 'fas fa-basketball-ball'
                 },
                 { 
@@ -2525,6 +2807,7 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
                     img: 'https://i.ibb.co/WNfBprMH/Whats-App-Image-2024-01-03-at-3-51-29-PM-1.jpg', 
                     title: 'Área Recreativa', 
                     desc: 'Diseño funcional y seguro',
+                    fullDesc: 'Área recreativa diseñada con criterios de seguridad y funcionalidad. Se utilizaron materiales de alta calidad y técnicas constructivas que garantizan durabilidad y bajo mantenimiento en espacios de uso intensivo.',
                     icon: 'fas fa-gamepad'
                 },
                 { 
@@ -2532,6 +2815,7 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
                     img: 'https://i.ibb.co/d0DzcC1k/Whats-App-Image-2026-01-09-at-9-53-51-AM-1.jpg', 
                     title: 'Country Club', 
                     desc: 'Proyecto integral de alta gama',
+                    fullDesc: 'Proyecto integral para country club de alta gama, incluyendo áreas sociales, deportivas y de esparcimiento. Se emplearon materiales premium y técnicas constructivas avanzadas para lograr acabados de excelencia.',
                     icon: 'fas fa-golf-ball'
                 },
                 { 
@@ -2539,6 +2823,7 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
                     img: 'https://i.ibb.co/XZq9PCTM/Whats-App-Image-2026-01-09-at-9-53-51-AM.jpg', 
                     title: 'Instalaciones Premium', 
                     desc: 'Primera categoría en acabados',
+                    fullDesc: 'Instalaciones premium con acabados de primera categoría. El proyecto incluyó trabajos especializados de concreto arquitectónico y elementos decorativos que realzan la estética y funcionalidad del espacio.',
                     icon: 'fas fa-star'
                 }
             ];
@@ -2546,10 +2831,11 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
             function initGallery() {
                 if (galleryContainer) {
                     galleryContainer.innerHTML = '';
-                    galleryItems.forEach(item => {
+                    galleryItems.forEach((item, index) => {
                         const galleryItem = document.createElement('div');
                         galleryItem.className = 'gallery-item fade-in';
                         galleryItem.setAttribute('data-category', item.category);
+                        galleryItem.setAttribute('data-index', index);
                         galleryItem.innerHTML = `
                             <img src="${item.img}" alt="${item.title}" loading="lazy" style="object-position: center 30%;">
                             <div class="gallery-category">${item.category}</div>
@@ -2559,14 +2845,53 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
                                 <p class="gallery-description">${item.desc}</p>
                             </div>
                         `;
+                        galleryItem.addEventListener('click', () => openLightbox(index));
                         galleryContainer.appendChild(galleryItem);
                     });
+                    filteredGalleryItems = [...galleryItems];
                     initAnimations();
                 }
             }
            
+            function openLightbox(index) {
+                currentGalleryIndex = index;
+                const item = galleryItems[index];
+               
+                lightboxImage.src = item.img;
+                lightboxImage.alt = item.title;
+                lightboxTitle.textContent = item.title;
+                lightboxCategory.textContent = item.category;
+                lightboxDescription.textContent = item.desc;
+                lightboxFullDescription.textContent = item.fullDesc;
+               
+                lightboxModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+           
+            function closeLightbox() {
+                lightboxModal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+           
+            function navigateLightbox(direction) {
+                currentGalleryIndex += direction;
+               
+                if (currentGalleryIndex < 0) {
+                    currentGalleryIndex = galleryItems.length - 1;
+                } else if (currentGalleryIndex >= galleryItems.length) {
+                    currentGalleryIndex = 0;
+                }
+               
+                openLightbox(currentGalleryIndex);
+            }
+           
             function filterGallery(category) {
                 const items = document.querySelectorAll('.gallery-item');
+               
+                filteredGalleryItems = category === 'all' 
+                    ? [...galleryItems] 
+                    : galleryItems.filter(item => item.category === category);
+               
                 items.forEach(item => {
                     if (category === 'all' || item.getAttribute('data-category') === category) {
                         item.style.display = 'block';
@@ -2740,6 +3065,7 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
                 });
             }
            
+            // Event Listeners
             menuToggle.addEventListener('click', function() {
                 this.classList.toggle('active');
                 mainNav.classList.toggle('active');
@@ -2795,16 +3121,45 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
                 calculateBtn.addEventListener('click', calculateCost);
             }
            
-            document.addEventListener('click', function(e) {
-                if (!mainNav.contains(e.target) && !menuToggle.contains(e.target)) {
+            // Lightbox Event Listeners
+            if (lightboxClose) {
+                lightboxClose.addEventListener('click', closeLightbox);
+            }
+           
+            if (lightboxPrev) {
+                lightboxPrev.addEventListener('click', () => navigateLightbox(-1));
+            }
+           
+            if (lightboxNext) {
+                lightboxNext.addEventListener('click', () => navigateLightbox(1));
+            }
+           
+            // Cerrar modal al hacer clic fuera del contenido
+            lightboxModal.addEventListener('click', function(e) {
+                if (e.target === lightboxModal) {
+                    closeLightbox();
+                }
+            });
+           
+            // Navegación con teclado
+            document.addEventListener('keydown', function(e) {
+                if (lightboxModal.classList.contains('active')) {
+                    if (e.key === 'Escape') {
+                        closeLightbox();
+                    } else if (e.key === 'ArrowLeft') {
+                        navigateLightbox(-1);
+                    } else if (e.key === 'ArrowRight') {
+                        navigateLightbox(1);
+                    }
+                } else if (e.key === 'Escape') {
                     menuToggle.classList.remove('active');
                     mainNav.classList.remove('active');
                     document.body.style.overflow = 'auto';
                 }
             });
            
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape') {
+            document.addEventListener('click', function(e) {
+                if (!mainNav.contains(e.target) && !menuToggle.contains(e.target)) {
                     menuToggle.classList.remove('active');
                     mainNav.classList.remove('active');
                     document.body.style.overflow = 'auto';
