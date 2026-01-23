@@ -539,90 +539,132 @@
             font-size: 1.1rem;
         }
 
+        /* GALERÍA DE ÉXITOS - DISEÑO MEJORADO Y MODERNO */
         .gallery-filters {
             display: flex;
-            flex-wrap: nowrap;
-            overflow-x: auto;
-            gap: 15px;
-            margin-bottom: 35px;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 40px;
             padding-bottom: 15px;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .gallery-filters::-webkit-scrollbar {
-            display: none;
         }
 
         .filter-btn {
             padding: 12px 25px;
             background: var(--gris-claro);
             border: 2px solid transparent;
-            border-radius: 30px;
+            border-radius: 50px;
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
-            font-size: 1rem;
+            font-size: 0.95rem;
             color: var(--gris-texto);
             white-space: nowrap;
             flex-shrink: 0;
             transition: var(--transicion);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .filter-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro));
+            transition: width 0.4s ease;
+            z-index: -1;
+            border-radius: 50px;
         }
 
         .filter-btn.active,
         .filter-btn:hover {
-            background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro));
             color: var(--blanco);
             border-color: var(--dorado);
             transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(26, 93, 26, 0.2);
+            box-shadow: 0 6px 20px rgba(26, 93, 26, 0.2);
         }
 
-        /* GALERÍA MEJORADA - FORMATO HORIZONTAL (LANDSCAPE) */
+        .filter-btn.active::before,
+        .filter-btn:hover::before {
+            width: 100%;
+        }
+
         .gallery-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 25px;
+            gap: 30px;
         }
 
         .gallery-item {
             position: relative;
-            border-radius: 15px;
+            border-radius: 20px;
             overflow: hidden;
-            height: 300px; /* Reducida para formato más horizontal */
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            height: 320px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
             isolation: isolate;
-            transition: all 0.4s ease;
-            aspect-ratio: 16/9; /* Forzar relación de aspecto horizontal */
+            transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+            aspect-ratio: 16/9;
+            cursor: pointer;
         }
 
         .gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
         }
 
         .gallery-item::before {
             content: '';
             position: absolute;
-            bottom: 0;
+            top: 0;
             left: 0;
             right: 0;
-            height: 150px; /* Reducida para formato horizontal */
-            background: linear-gradient(to top, 
-                rgba(0, 0, 0, 0.85) 0%, 
-                rgba(0, 0, 0, 0.5) 50%, 
-                transparent 100%);
+            bottom: 0;
+            background: linear-gradient(135deg, 
+                rgba(13, 59, 13, 0.1) 0%, 
+                rgba(13, 59, 13, 0.3) 50%, 
+                rgba(13, 59, 13, 0.8) 100%);
             z-index: 1;
             pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .gallery-item:hover::before {
+            opacity: 1;
+        }
+
+        .gallery-item::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.2), 
+                transparent);
+            transition: left 0.8s ease;
+        }
+
+        .gallery-item:hover::after {
+            left: 100%;
         }
 
         .gallery-item img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Mantiene el formato horizontal sin distorsión */
-            transition: transform 0.6s ease;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+            filter: brightness(0.9);
         }
 
         .gallery-item:hover img {
-            transform: scale(1.08);
+            transform: scale(1.1);
+            filter: brightness(1);
         }
 
         .gallery-overlay {
@@ -630,42 +672,47 @@
             bottom: 0;
             left: 0;
             right: 0;
-            padding: 20px 25px; /* Reducido verticalmente */
+            padding: 30px 25px;
             background: linear-gradient(to top, 
                 rgba(13, 59, 13, 0.95) 0%, 
                 rgba(13, 59, 13, 0.7) 60%, 
                 transparent 100%);
             color: var(--blanco);
             z-index: 2;
-            min-height: 120px; /* Reducido para formato horizontal */
+            min-height: 140px;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
+            transform: translateY(10px);
+            transition: transform 0.5s ease, padding 0.5s ease;
         }
 
         .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+            padding: 35px 25px;
             background: linear-gradient(to top, 
                 rgba(13, 59, 13, 0.98) 0%, 
-                rgba(13, 59, 13, 0.8) 70%, 
+                rgba(13, 59, 13, 0.85) 70%, 
                 transparent 100%);
-            padding: 25px 25px; /* Mantenemos reducción vertical */
         }
 
         .gallery-title {
-            font-size: 1.5rem; /* Ajustado para formato horizontal */
+            font-size: 1.6rem;
             font-weight: 900;
-            margin-bottom: 8px; /* Reducido */
-            color: #ffffff;
+            margin-bottom: 10px;
+            color: var(--blanco);
             text-shadow: 
-                0 2px 12px rgba(0, 0, 0, 0.9),
-                0 4px 20px rgba(0, 0, 0, 0.8),
-                0 0 30px rgba(0, 0, 0, 0.6);
+                0 2px 10px rgba(0, 0, 0, 0.8),
+                0 4px 20px rgba(0, 0, 0, 0.6);
             letter-spacing: 0.5px;
             position: relative;
             display: inline-block;
             padding-bottom: 8px;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            transform: translateY(10px);
+            opacity: 0.9;
+            transition: transform 0.5s ease, opacity 0.5s ease;
         }
 
         .gallery-title::after {
@@ -677,38 +724,89 @@
             height: 3px;
             background: var(--dorado);
             border-radius: 2px;
-        }
-
-        .gallery-description {
-            font-size: 1.1rem; /* Ajustado para formato horizontal */
-            opacity: 0.95;
-            font-weight: 600;
-            color: #f5f5f5;
-            text-shadow: 
-                0 1px 8px rgba(0, 0, 0, 0.9),
-                0 2px 15px rgba(0, 0, 0, 0.7);
-            line-height: 1.4; /* Reducido */
-            padding: 8px 0; /* Reducido */
-            background: rgba(0, 0, 0, 0.25);
-            border-radius: 6px;
-            margin-top: 5px; /* Reducido */
-            padding-left: 10px;
-            border-left: 3px solid var(--dorado);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.5s ease 0.2s;
         }
 
         .gallery-item:hover .gallery-title {
-            font-size: 1.6rem; /* Ajustado */
+            transform: translateY(0);
+            opacity: 1;
+            font-size: 1.7rem;
             text-shadow: 
-                0 3px 18px rgba(0, 0, 0, 1),
-                0 5px 30px rgba(0, 0, 0, 0.9);
+                0 3px 15px rgba(0, 0, 0, 0.9),
+                0 5px 25px rgba(0, 0, 0, 0.7);
+        }
+
+        .gallery-item:hover .gallery-title::after {
+            transform: scaleX(1);
+        }
+
+        .gallery-description {
+            font-size: 1.1rem;
+            opacity: 0;
+            font-weight: 500;
+            color: #f5f5f5;
+            line-height: 1.5;
+            transform: translateY(20px);
+            transition: all 0.5s ease 0.1s;
+            max-height: 0;
+            overflow: hidden;
         }
 
         .gallery-item:hover .gallery-description {
             opacity: 1;
-            font-size: 1.15rem; /* Ajustado */
-            background: rgba(0, 0, 0, 0.35);
+            font-size: 1.15rem;
+            transform: translateY(0);
+            max-height: 100px;
+            margin-top: 10px;
+        }
+
+        .gallery-category {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(13, 59, 13, 0.9);
+            color: var(--dorado-claro);
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            z-index: 3;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transform: translateY(-10px);
+            opacity: 0;
+            transition: all 0.5s ease;
+        }
+
+        .gallery-item:hover .gallery-category {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .gallery-icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--verde-oscuro);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            z-index: 3;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transform: scale(0);
+            transition: transform 0.5s ease 0.2s;
+        }
+
+        .gallery-item:hover .gallery-icon {
+            transform: scale(1);
         }
 
         .clients-grid {
@@ -1168,23 +1266,22 @@
                 gap: 35px;
             }
 
-            /* GALERÍA MEJORADA PARA TABLETS - FORMATO HORIZONTAL */
+            /* GALERÍA MEJORADA PARA TABLETS */
             .gallery-grid {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 30px;
+                gap: 35px;
             }
 
             .gallery-item {
-                height: 280px; /* Más horizontal para tablets */
-                aspect-ratio: 16/9;
+                height: 280px;
             }
 
             .gallery-title {
                 font-size: 1.5rem;
             }
 
-            .gallery-description {
-                font-size: 1.1rem;
+            .gallery-item:hover .gallery-title {
+                font-size: 1.6rem;
             }
 
             .clients-grid {
@@ -1272,23 +1369,22 @@
                 gap: 40px;
             }
 
-            /* GALERÍA MEJORADA PARA DESKTOP - FORMATO HORIZONTAL */
+            /* GALERÍA MEJORADA PARA DESKTOP */
             .gallery-grid {
                 grid-template-columns: repeat(3, 1fr);
-                gap: 35px;
+                gap: 40px;
             }
 
             .gallery-item {
-                height: 280px; /* Mantenemos horizontal */
-                aspect-ratio: 16/9;
+                height: 300px;
             }
 
             .gallery-title {
-                font-size: 1.5rem;
+                font-size: 1.6rem;
             }
 
-            .gallery-description {
-                font-size: 1.1rem;
+            .gallery-item:hover .gallery-title {
+                font-size: 1.7rem;
             }
 
             .clients-grid {
@@ -1319,23 +1415,14 @@
         }
 
         @media (min-width: 1200px) {
-            /* GALERÍA MEJORADA PARA PANTALLAS EXTRA GRANDES - FORMATO HORIZONTAL */
+            /* GALERÍA MEJORADA PARA PANTALLAS EXTRA GRANDES */
             .gallery-grid {
                 grid-template-columns: repeat(4, 1fr);
-                gap: 30px;
+                gap: 40px;
             }
 
             .gallery-item {
-                height: 260px; /* Más horizontal en pantallas grandes */
-                aspect-ratio: 16/8; /* Aún más horizontal */
-            }
-
-            .gallery-title {
-                font-size: 1.4rem; /* Reducido para pantallas grandes con más elementos */
-            }
-
-            .gallery-description {
-                font-size: 1rem; /* Reducido para pantallas grandes con más elementos */
+                height: 280px;
             }
 
             .hero h1 {
@@ -1384,22 +1471,15 @@
             }
 
             .gallery-item {
-                height: 250px; /* Más horizontal para móviles pequeños */
-                aspect-ratio: 16/9;
+                height: 250px;
             }
             
             .gallery-overlay {
-                padding: 15px 20px;
-                min-height: 100px;
+                padding: 20px 15px;
             }
             
             .gallery-title {
-                font-size: 1.3rem;
-            }
-            
-            .gallery-description {
-                font-size: 1rem;
-                padding: 6px 0 6px 8px;
+                font-size: 1.4rem;
             }
 
             .clients-grid {
@@ -1438,6 +1518,14 @@
             }
 
             .phone-float:hover {
+                transform: none;
+            }
+
+            .gallery-item:hover {
+                transform: none;
+            }
+
+            .gallery-item:hover img {
                 transform: none;
             }
         }
@@ -1488,23 +1576,15 @@
             }
 
             .gallery-overlay {
-                padding: 20px 20px; /* Cambiado de 25px 20px */
-                background: linear-gradient(to top, 
-                    rgba(13, 59, 13, 0.98) 0%, 
-                    rgba(13, 59, 13, 0.8) 50%, 
-                    transparent 100%);
+                padding: 25px 20px;
             }
             
             .gallery-title {
-                font-size: 1.4rem; /* Reducido de 1.5rem */
-                text-shadow: 
-                    0 2px 10px rgba(0, 0, 0, 0.9),
-                    0 3px 15px rgba(0, 0, 0, 0.8);
+                font-size: 1.5rem;
             }
             
             .gallery-description {
-                font-size: 1rem; /* Reducido de 1.1rem */
-                padding: 8px 0 8px 10px;
+                font-size: 1.1rem;
             }
         }
 
@@ -1515,11 +1595,11 @@
             }
             
             .gallery-title {
-                font-size: 1.5rem; /* Reducido de 1.8rem */
+                font-size: 1.5rem;
             }
             
             .gallery-description {
-                font-size: 1.1rem; /* Reducido de 1.25rem */
+                font-size: 1.1rem;
             }
         }
 
@@ -1904,6 +1984,13 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
 
                     <div class="gallery-grid" id="galleryContainer">
                     </div>
+
+                    <div class="text-center mt-3">
+                        <p style="color: #666; font-size: 1.1rem; margin-bottom: 30px;">¿Interesado en ver más proyectos o solicitar una cotización personalizada?</p>
+                        <button class="btn btn-primary" data-page="quote" style="max-width: 300px; margin: 0 auto;">
+                            <i class="fab fa-whatsapp"></i> COTIZAR PROYECTO
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -2201,25 +2288,111 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
             const galleryContainer = document.getElementById('galleryContainer');
            
             const galleryItems = [
-                { category: 'sports', img: 'https://i.ibb.co/N6vN5Wgk/Whats-App-Image-2024-01-03-at-3-51-31-PM.jpg', title: 'Centro Deportivo', desc: 'Construcción completa' },
-                { category: 'sports', img: 'https://i.ibb.co/5Wpd52SW/Whats-App-Image-2024-01-03-at-3-51-31-PM-1.jpg', title: 'Estructuras Deportivas', desc: 'Detalles de construcción' },
-                { category: 'paving', img: 'https://i.ibb.co/vCrt7DHk/Whats-App-Image-2024-01-03-at-3-51-33-PM-1.jpg', title: 'Pavimentación Vial', desc: 'Trabajos de pavimentación' },
-                { category: 'paving', img: 'https://i.ibb.co/pvKhXYzm/Whats-App-Image-2024-01-03-at-3-51-32-PM.jpg', title: 'Pavimentación Urbana', desc: 'Soluciones urbanas' },
-                // Nuevas imágenes de pavimentación agregadas
-                { category: 'paving', img: 'https://i.ibb.co/PZTFd7dW/20191105-164102.jpg', title: 'Proyecto de Pavimentación', desc: 'Trabajo de pavimentación especializada' },
-                { category: 'paving', img: 'https://i.ibb.co/JXzdGNf/20190603-123653-1.jpg', title: 'Pavimentación Industrial', desc: 'Pavimentación para áreas industriales' },
-                { category: 'paving', img: 'https://i.ibb.co/5Wp8Vycy/20190603-123649.jpg', title: 'Pavimentación Comercial', desc: 'Pavimentación para espacios comerciales' },
-                // Nuevas imágenes de piscinas
-                { category: 'pools', img: 'https://i.ibb.co/6CbGqQ4/Whats-App-Image-2024-01-03-at-3-51-21-PM-2.jpg', title: 'Piscina Arquitectónica', desc: 'Diseño y construcción especializada' },
-                { category: 'pools', img: 'https://i.ibb.co/Csv8wjF3/Whats-App-Image-2024-01-03-at-3-51-29-PM.jpg', title: 'Sistema de Piscina', desc: 'Tecnología avanzada' },
-                { category: 'pools', img: 'https://i.ibb.co/PZbkfF6W/Whats-App-Image-2024-01-03-at-3-51-28-PM.jpg', title: 'Piscina Moderna', desc: 'Estilo contemporáneo' },
-                { category: 'pools', img: 'https://i.ibb.co/PZbkfF6W/Whats-App-Image-2024-01-03-at-3-51-28-PM.jpg', title: 'Piscina Residencial', desc: 'Ambiente familiar' },
-                // Nuevas imágenes de pista recreacional
-                { category: 'recreational', img: 'https://i.ibb.co/gZ3XZ2t9/Whats-App-Image-2024-01-12-at-5-19-36-PM.jpg', title: 'Pista Recreacional', desc: 'Espacio para actividades recreativas' },
-                { category: 'recreational', img: 'https://i.ibb.co/691DNgW/Whats-App-Image-2024-01-03-at-3-51-29-PM-2.jpg', title: 'Pista Deportiva', desc: 'Superficie profesional para deportes' },
-                { category: 'recreational', img: 'https://i.ibb.co/WNfBprMH/Whats-App-Image-2024-01-03-at-3-51-29-PM-1.jpg', title: 'Área Recreativa', desc: 'Diseño funcional y seguro' },
-                { category: 'clubs', img: 'https://i.ibb.co/d0DzcC1k/Whats-App-Image-2026-01-09-at-9-53-51-AM-1.jpg', title: 'Country Club', desc: 'Proyecto integral' },
-                { category: 'clubs', img: 'https://i.ibb.co/XZq9PCTM/Whats-App-Image-2026-01-09-at-9-53-51-AM.jpg', title: 'Instalaciones Premium', desc: 'Primera categoría' }
+                { 
+                    category: 'sports', 
+                    img: 'https://i.ibb.co/N6vN5Wgk/Whats-App-Image-2024-01-03-at-3-51-31-PM.jpg', 
+                    title: 'Centro Deportivo', 
+                    desc: 'Construcción completa de instalaciones deportivas',
+                    icon: 'fas fa-futbol'
+                },
+                { 
+                    category: 'sports', 
+                    img: 'https://i.ibb.co/5Wpd52SW/Whats-App-Image-2024-01-03-at-3-51-31-PM-1.jpg', 
+                    title: 'Estructuras Deportivas', 
+                    desc: 'Detalles de construcción especializada',
+                    icon: 'fas fa-running'
+                },
+                { 
+                    category: 'paving', 
+                    img: 'https://i.ibb.co/vCrt7DHk/Whats-App-Image-2024-01-03-at-3-51-33-PM-1.jpg', 
+                    title: 'Pavimentación Vial', 
+                    desc: 'Trabajos de pavimentación de alta resistencia',
+                    icon: 'fas fa-road'
+                },
+                { 
+                    category: 'paving', 
+                    img: 'https://i.ibb.co/pvKhXYzm/Whats-App-Image-2024-01-03-at-3-51-32-PM.jpg', 
+                    title: 'Pavimentación Urbana', 
+                    desc: 'Soluciones urbanas modernas y duraderas',
+                    icon: 'fas fa-city'
+                },
+                { 
+                    category: 'paving', 
+                    img: 'https://i.ibb.co/PZTFd7dW/20191105-164102.jpg', 
+                    title: 'Proyecto de Pavimentación', 
+                    desc: 'Trabajo de pavimentación especializada',
+                    icon: 'fas fa-hard-hat'
+                },
+                { 
+                    category: 'paving', 
+                    img: 'https://i.ibb.co/JXzdGNf/20190603-123653-1.jpg', 
+                    title: 'Pavimentación Industrial', 
+                    desc: 'Pavimentación para áreas industriales',
+                    icon: 'fas fa-industry'
+                },
+                { 
+                    category: 'paving', 
+                    img: 'https://i.ibb.co/5Wp8Vycy/20190603-123649.jpg', 
+                    title: 'Pavimentación Comercial', 
+                    desc: 'Pavimentación para espacios comerciales',
+                    icon: 'fas fa-store'
+                },
+                { 
+                    category: 'pools', 
+                    img: 'https://i.ibb.co/6CbGqQ4/Whats-App-Image-2024-01-03-at-3-51-21-PM-2.jpg', 
+                    title: 'Piscina Arquitectónica', 
+                    desc: 'Diseño y construcción especializada',
+                    icon: 'fas fa-swimming-pool'
+                },
+                { 
+                    category: 'pools', 
+                    img: 'https://i.ibb.co/Csv8wjF3/Whats-App-Image-2024-01-03-at-3-51-29-PM.jpg', 
+                    title: 'Sistema de Piscina', 
+                    desc: 'Tecnología avanzada en construcción',
+                    icon: 'fas fa-water'
+                },
+                { 
+                    category: 'pools', 
+                    img: 'https://i.ibb.co/PZbkfF6W/Whats-App-Image-2024-01-03-at-3-51-28-PM.jpg', 
+                    title: 'Piscina Moderna', 
+                    desc: 'Estilo contemporáneo y funcional',
+                    icon: 'fas fa-umbrella-beach'
+                },
+                { 
+                    category: 'recreational', 
+                    img: 'https://i.ibb.co/gZ3XZ2t9/Whats-App-Image-2024-01-12-at-5-19-36-PM.jpg', 
+                    title: 'Pista Recreacional', 
+                    desc: 'Espacio para actividades recreativas',
+                    icon: 'fas fa-hiking'
+                },
+                { 
+                    category: 'recreational', 
+                    img: 'https://i.ibb.co/691DNgW/Whats-App-Image-2024-01-03-at-3-51-29-PM-2.jpg', 
+                    title: 'Pista Deportiva', 
+                    desc: 'Superficie profesional para deportes',
+                    icon: 'fas fa-basketball-ball'
+                },
+                { 
+                    category: 'recreational', 
+                    img: 'https://i.ibb.co/WNfBprMH/Whats-App-Image-2024-01-03-at-3-51-29-PM-1.jpg', 
+                    title: 'Área Recreativa', 
+                    desc: 'Diseño funcional y seguro',
+                    icon: 'fas fa-gamepad'
+                },
+                { 
+                    category: 'clubs', 
+                    img: 'https://i.ibb.co/d0DzcC1k/Whats-App-Image-2026-01-09-at-9-53-51-AM-1.jpg', 
+                    title: 'Country Club', 
+                    desc: 'Proyecto integral de alta gama',
+                    icon: 'fas fa-golf-ball'
+                },
+                { 
+                    category: 'clubs', 
+                    img: 'https://i.ibb.co/XZq9PCTM/Whats-App-Image-2026-01-09-at-9-53-51-AM.jpg', 
+                    title: 'Instalaciones Premium', 
+                    desc: 'Primera categoría en acabados',
+                    icon: 'fas fa-star'
+                }
             ];
            
             function initGallery() {
@@ -2231,6 +2404,8 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
                         galleryItem.setAttribute('data-category', item.category);
                         galleryItem.innerHTML = `
                             <img src="${item.img}" alt="${item.title}" loading="lazy" style="object-position: center 30%;">
+                            <div class="gallery-category">${item.category}</div>
+                            <div class="gallery-icon"><i class="${item.icon}"></i></div>
                             <div class="gallery-overlay">
                                 <h4 class="gallery-title">${item.title}</h4>
                                 <p class="gallery-description">${item.desc}</p>
