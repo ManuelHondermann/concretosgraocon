@@ -576,7 +576,7 @@
             box-shadow: 0 4px 12px rgba(26, 93, 26, 0.2);
         }
 
-        /* GALERÍA MEJORADA - IMÁGENES MÁS GRANDES Y VISIBLES */
+        /* GALERÍA MEJORADA - FORMATO HORIZONTAL (LANDSCAPE) */
         .gallery-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -587,10 +587,11 @@
             position: relative;
             border-radius: 15px;
             overflow: hidden;
-            height: 380px; /* Aumentado de 280px */
+            height: 300px; /* Reducida para formato más horizontal */
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
             isolation: isolate;
             transition: all 0.4s ease;
+            aspect-ratio: 16/9; /* Forzar relación de aspecto horizontal */
         }
 
         .gallery-item:hover {
@@ -604,7 +605,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            height: 180px; /* Aumentado para mejor gradiente */
+            height: 150px; /* Reducida para formato horizontal */
             background: linear-gradient(to top, 
                 rgba(0, 0, 0, 0.85) 0%, 
                 rgba(0, 0, 0, 0.5) 50%, 
@@ -616,7 +617,7 @@
         .gallery-item img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: cover; /* Mantiene el formato horizontal sin distorsión */
             transition: transform 0.6s ease;
         }
 
@@ -629,14 +630,14 @@
             bottom: 0;
             left: 0;
             right: 0;
-            padding: 30px 25px;
+            padding: 20px 25px; /* Reducido verticalmente */
             background: linear-gradient(to top, 
                 rgba(13, 59, 13, 0.95) 0%, 
                 rgba(13, 59, 13, 0.7) 60%, 
                 transparent 100%);
             color: var(--blanco);
             z-index: 2;
-            min-height: 140px;
+            min-height: 120px; /* Reducido para formato horizontal */
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
@@ -647,13 +648,13 @@
                 rgba(13, 59, 13, 0.98) 0%, 
                 rgba(13, 59, 13, 0.8) 70%, 
                 transparent 100%);
-            padding: 35px 25px;
+            padding: 25px 25px; /* Mantenemos reducción vertical */
         }
 
         .gallery-title {
-            font-size: 1.7rem; /* Aumentado de 1.5rem */
+            font-size: 1.5rem; /* Ajustado para formato horizontal */
             font-weight: 900;
-            margin-bottom: 12px;
+            margin-bottom: 8px; /* Reducido */
             color: #ffffff;
             text-shadow: 
                 0 2px 12px rgba(0, 0, 0, 0.9),
@@ -672,33 +673,33 @@
             position: absolute;
             bottom: 0;
             left: 0;
-            width: 60px; /* Aumentado de 50px */
-            height: 4px; /* Aumentado de 3px */
+            width: 50px;
+            height: 3px;
             background: var(--dorado);
             border-radius: 2px;
         }
 
         .gallery-description {
-            font-size: 1.2rem; /* Aumentado de 1.1rem */
+            font-size: 1.1rem; /* Ajustado para formato horizontal */
             opacity: 0.95;
             font-weight: 600;
             color: #f5f5f5;
             text-shadow: 
                 0 1px 8px rgba(0, 0, 0, 0.9),
                 0 2px 15px rgba(0, 0, 0, 0.7);
-            line-height: 1.5;
-            padding: 10px 0;
+            line-height: 1.4; /* Reducido */
+            padding: 8px 0; /* Reducido */
             background: rgba(0, 0, 0, 0.25);
             border-radius: 6px;
-            margin-top: 8px;
-            padding-left: 12px;
-            border-left: 4px solid var(--dorado); /* Aumentado de 3px */
+            margin-top: 5px; /* Reducido */
+            padding-left: 10px;
+            border-left: 3px solid var(--dorado);
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
 
         .gallery-item:hover .gallery-title {
-            font-size: 1.8rem; /* Aumentado de 1.6rem */
+            font-size: 1.6rem; /* Ajustado */
             text-shadow: 
                 0 3px 18px rgba(0, 0, 0, 1),
                 0 5px 30px rgba(0, 0, 0, 0.9);
@@ -706,7 +707,7 @@
 
         .gallery-item:hover .gallery-description {
             opacity: 1;
-            font-size: 1.25rem; /* Aumentado de 1.15rem */
+            font-size: 1.15rem; /* Ajustado */
             background: rgba(0, 0, 0, 0.35);
         }
 
@@ -1167,22 +1168,23 @@
                 gap: 35px;
             }
 
-            /* GALERÍA MEJORADA PARA TABLETS */
+            /* GALERÍA MEJORADA PARA TABLETS - FORMATO HORIZONTAL */
             .gallery-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 30px;
             }
 
             .gallery-item {
-                height: 450px; /* Aumentado para tablets */
+                height: 280px; /* Más horizontal para tablets */
+                aspect-ratio: 16/9;
             }
 
             .gallery-title {
-                font-size: 1.8rem;
+                font-size: 1.5rem;
             }
 
             .gallery-description {
-                font-size: 1.25rem;
+                font-size: 1.1rem;
             }
 
             .clients-grid {
@@ -1270,22 +1272,23 @@
                 gap: 40px;
             }
 
-            /* GALERÍA MEJORADA PARA DESKTOP */
+            /* GALERÍA MEJORADA PARA DESKTOP - FORMATO HORIZONTAL */
             .gallery-grid {
                 grid-template-columns: repeat(3, 1fr);
                 gap: 35px;
             }
 
             .gallery-item {
-                height: 500px; /* Aumentado para desktop */
+                height: 280px; /* Mantenemos horizontal */
+                aspect-ratio: 16/9;
             }
 
             .gallery-title {
-                font-size: 1.9rem;
+                font-size: 1.5rem;
             }
 
             .gallery-description {
-                font-size: 1.3rem;
+                font-size: 1.1rem;
             }
 
             .clients-grid {
@@ -1316,14 +1319,23 @@
         }
 
         @media (min-width: 1200px) {
-            /* GALERÍA MEJORADA PARA PANTALLAS EXTRA GRANDES */
+            /* GALERÍA MEJORADA PARA PANTALLAS EXTRA GRANDES - FORMATO HORIZONTAL */
             .gallery-grid {
                 grid-template-columns: repeat(4, 1fr);
-                gap: 40px;
+                gap: 30px;
             }
 
             .gallery-item {
-                height: 550px; /* Aumentado para pantallas extra grandes */
+                height: 260px; /* Más horizontal en pantallas grandes */
+                aspect-ratio: 16/8; /* Aún más horizontal */
+            }
+
+            .gallery-title {
+                font-size: 1.4rem; /* Reducido para pantallas grandes con más elementos */
+            }
+
+            .gallery-description {
+                font-size: 1rem; /* Reducido para pantallas grandes con más elementos */
             }
 
             .hero h1 {
@@ -1372,7 +1384,22 @@
             }
 
             .gallery-item {
-                height: 320px; /* Ajustado para móviles pequeños */
+                height: 250px; /* Más horizontal para móviles pequeños */
+                aspect-ratio: 16/9;
+            }
+            
+            .gallery-overlay {
+                padding: 15px 20px;
+                min-height: 100px;
+            }
+            
+            .gallery-title {
+                font-size: 1.3rem;
+            }
+            
+            .gallery-description {
+                font-size: 1rem;
+                padding: 6px 0 6px 8px;
             }
 
             .clients-grid {
@@ -1461,7 +1488,7 @@
             }
 
             .gallery-overlay {
-                padding: 25px 20px;
+                padding: 20px 20px; /* Cambiado de 25px 20px */
                 background: linear-gradient(to top, 
                     rgba(13, 59, 13, 0.98) 0%, 
                     rgba(13, 59, 13, 0.8) 50%, 
@@ -1469,14 +1496,14 @@
             }
             
             .gallery-title {
-                font-size: 1.5rem;
+                font-size: 1.4rem; /* Reducido de 1.5rem */
                 text-shadow: 
                     0 2px 10px rgba(0, 0, 0, 0.9),
                     0 3px 15px rgba(0, 0, 0, 0.8);
             }
             
             .gallery-description {
-                font-size: 1.1rem;
+                font-size: 1rem; /* Reducido de 1.1rem */
                 padding: 8px 0 8px 10px;
             }
         }
@@ -1488,11 +1515,11 @@
             }
             
             .gallery-title {
-                font-size: 1.8rem;
+                font-size: 1.5rem; /* Reducido de 1.8rem */
             }
             
             .gallery-description {
-                font-size: 1.25rem;
+                font-size: 1.1rem; /* Reducido de 1.25rem */
             }
         }
 
@@ -2203,7 +2230,7 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
                         galleryItem.className = 'gallery-item fade-in';
                         galleryItem.setAttribute('data-category', item.category);
                         galleryItem.innerHTML = `
-                            <img src="${item.img}" alt="${item.title}" loading="lazy">
+                            <img src="${item.img}" alt="${item.title}" loading="lazy" style="object-position: center 30%;">
                             <div class="gallery-overlay">
                                 <h4 class="gallery-title">${item.title}</h4>
                                 <p class="gallery-description">${item.desc}</p>
