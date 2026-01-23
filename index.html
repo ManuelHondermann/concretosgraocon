@@ -80,7 +80,8 @@
             --blanco: #ffffff;
             --gris-claro: #f8f9fa;
             --gris-medio: #e9ecef;
-            --gris-texto: #333333;
+            --gris-texto: #222222;
+            --gris-texto-claro: #444444;
             --dorado: #c8a951;
             --dorado-claro: #e6d29c;
             --sombra-sutil: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -105,7 +106,7 @@
             font-family: 'Open Sans', sans-serif;
             background-color: var(--blanco);
             color: var(--gris-texto);
-            line-height: 1.6;
+            line-height: 1.7;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
             padding-top: 80px;
@@ -113,21 +114,23 @@
 
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
+            font-weight: 800;
             line-height: 1.3;
             color: var(--verde-oscuro);
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.3px;
         }
 
         p {
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            color: var(--gris-texto-claro);
         }
 
         .container {
             width: 100%;
             max-width: 1400px;
             margin: 0 auto;
-            padding: 0 15px;
+            padding: 0 20px;
         }
 
         img {
@@ -155,8 +158,8 @@
         .top-bar {
             background: linear-gradient(135deg, var(--verde-oscuro) 0%, #0a2f0a 100%);
             color: var(--blanco);
-            padding: 8px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
             position: fixed;
             top: 0;
             left: 0;
@@ -174,16 +177,16 @@
         .contact-info {
             display: flex;
             align-items: center;
-            gap: 20px;
-            font-size: 0.9rem;
+            gap: 25px;
+            font-size: 0.95rem;
         }
 
         .phone-link {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
             color: var(--dorado-claro);
-            font-weight: 600;
+            font-weight: 700;
             transition: var(--transicion);
         }
 
@@ -193,18 +196,18 @@
         }
 
         .phone-link i {
-            font-size: 1rem;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 6px;
+            font-size: 1.1rem;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px;
             border-radius: 50%;
         }
 
         .whatsapp-link {
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
             color: #25D366;
-            font-weight: 600;
+            font-weight: 700;
             transition: var(--transicion);
         }
 
@@ -216,22 +219,22 @@
         .schedule {
             display: flex;
             align-items: center;
-            gap: 8px;
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 0.85rem;
+            gap: 10px;
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 0.9rem;
         }
 
         .header {
             background: linear-gradient(135deg, var(--verde-oscuro) 0%, #0a2f0a 100%);
             color: var(--blanco);
-            padding: 15px 0;
+            padding: 18px 0;
             position: fixed;
-            top: 40px;
+            top: 50px;
             left: 0;
             width: 100%;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-            border-bottom: 2px solid var(--dorado);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border-bottom: 3px solid var(--dorado);
         }
 
         .header-content {
@@ -243,16 +246,16 @@
         .logo-wrapper {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
         }
 
         .logo {
-            height: 50px;
+            height: 55px;
             width: auto;
-            border-radius: 6px;
-            padding: 2px;
+            border-radius: 8px;
+            padding: 3px;
             background: var(--blanco);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
         }
 
         .brand {
@@ -262,26 +265,28 @@
 
         .brand-name {
             font-family: 'Montserrat', sans-serif;
-            font-weight: 800;
-            font-size: 1.2rem;
+            font-weight: 900;
+            font-size: 1.4rem;
             color: var(--blanco);
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .brand-tagline {
-            font-size: 0.7rem;
+            font-size: 0.8rem;
             color: var(--dorado-claro);
-            letter-spacing: 1.5px;
-            font-weight: 300;
+            letter-spacing: 1.8px;
+            font-weight: 400;
+            margin-top: 3px;
         }
 
         .menu-toggle {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            width: 30px;
-            height: 24px;
+            width: 32px;
+            height: 26px;
             background: transparent;
             border: none;
             cursor: pointer;
@@ -335,18 +340,18 @@
         .nav-menu {
             display: flex;
             flex-direction: column;
-            padding: 20px 15px;
+            padding: 25px 20px;
         }
 
         .nav-item {
-            padding: 15px 20px;
+            padding: 18px 25px;
             color: var(--blanco);
-            font-size: 1.1rem;
-            font-weight: 600;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 1.15rem;
+            font-weight: 700;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 15px;
             transition: var(--transicion);
         }
 
@@ -357,77 +362,85 @@
         .nav-item:hover,
         .nav-item.active {
             color: var(--dorado);
-            background: rgba(255, 255, 255, 0.05);
-            padding-left: 25px;
+            background: rgba(255, 255, 255, 0.08);
+            padding-left: 30px;
         }
 
         .nav-item-cotizar {
             background: linear-gradient(135deg, var(--dorado), var(--dorado-claro));
             color: var(--verde-oscuro);
-            font-weight: 700;
-            margin-top: 20px;
-            border-radius: 8px;
+            font-weight: 800;
+            margin-top: 25px;
+            border-radius: 10px;
             text-align: center;
+            box-shadow: 0 4px 15px rgba(200, 169, 81, 0.3);
         }
 
         .nav-item-cotizar:hover {
             background: linear-gradient(135deg, var(--dorado-claro), var(--dorado));
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(200, 169, 81, 0.4);
         }
 
         .main-content {
-            padding: 20px 0 40px;
+            padding: 30px 0 60px;
         }
 
         .hero {
-            background: linear-gradient(rgba(13, 59, 13, 0.45), rgba(13, 59, 13, 0.35)), url('https://i.ibb.co/JRZRx9bt/Whats-App-Image-2026-01-17-at-1-12-26-PM.jpg') center/cover no-repeat;
+            background: linear-gradient(rgba(13, 59, 13, 0.85), rgba(13, 59, 13, 0.7)), url('https://i.ibb.co/JRZRx9bt/Whats-App-Image-2026-01-17-at-1-12-26-PM.jpg') center/cover no-repeat;
             color: var(--blanco);
-            padding: 60px 20px;
-            border-radius: 15px;
-            margin-bottom: 40px;
+            padding: 100px 25px;
+            border-radius: 18px;
+            margin-bottom: 60px;
             text-align: center;
             position: relative;
             overflow: hidden;
-            min-height: 400px;
+            min-height: 450px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
         .hero h1 {
-            font-size: 2rem;
-            margin-bottom: 20px;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
             color: var(--blanco);
             font-weight: 900;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            text-shadow: 0 3px 12px rgba(0, 0, 0, 0.9);
+            line-height: 1.2;
+            max-width: 900px;
         }
 
         .hero p {
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.95);
-            max-width: 700px;
-            margin: 0 auto 30px;
-            line-height: 1.6;
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.98);
+            max-width: 900px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+            font-weight: 500;
         }
 
         .hero-cta {
             display: flex;
-            gap: 15px;
+            gap: 20px;
             flex-wrap: wrap;
             justify-content: center;
-            margin-top: 20px;
+            margin-top: 35px;
         }
 
         .section {
-            margin-bottom: 50px;
+            margin-bottom: 70px;
         }
 
         .section-title {
-            font-size: 1.8rem;
+            font-size: 2rem;
             text-align: center;
-            margin-bottom: 15px;
+            margin-bottom: 25px;
             position: relative;
-            padding-bottom: 10px;
+            padding-bottom: 15px;
         }
 
         .section-title::after {
@@ -436,78 +449,84 @@
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
+            width: 80px;
+            height: 4px;
             background: linear-gradient(90deg, var(--dorado), var(--verde-medio));
-            border-radius: 2px;
+            border-radius: 3px;
         }
 
         .section-subtitle {
-            font-size: 1rem;
-            color: #666;
+            font-size: 1.15rem;
+            color: #555;
             text-align: center;
-            margin-bottom: 30px;
-            max-width: 800px;
+            margin-bottom: 40px;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
-            padding: 0 10px;
+            padding: 0 20px;
+            line-height: 1.7;
+            font-weight: 500;
         }
 
         .grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 20px;
-            margin-top: 30px;
+            gap: 30px;
+            margin-top: 40px;
         }
 
         .card {
             background: var(--blanco);
-            border-radius: 15px;
+            border-radius: 18px;
             overflow: hidden;
             box-shadow: var(--sombra-sutil);
             transition: var(--transicion);
-            border: 1px solid rgba(0,0,0,0.05);
+            border: 1px solid rgba(0,0,0,0.08);
         }
 
         .card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
             box-shadow: var(--sombra-hover);
         }
 
         .card-header {
             background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro));
             color: var(--blanco);
-            padding: 20px;
+            padding: 25px;
             text-align: center;
         }
 
         .card-header h3 {
             color: var(--blanco);
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             margin: 0;
+            font-weight: 800;
+            letter-spacing: -0.2px;
         }
 
         .card-body {
-            padding: 25px 20px;
+            padding: 30px 25px;
         }
 
         .card-body p {
-            color: #555;
-            font-size: 0.95rem;
-            line-height: 1.5;
+            color: var(--gris-texto-claro);
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
         }
 
         .card-body ul {
-            padding-left: 20px;
+            padding-left: 25px;
+            margin-top: 20px;
         }
 
         .card-body li {
             position: relative;
-            padding-left: 25px;
-            margin-bottom: 10px;
-            color: #555;
-            font-size: 0.9rem;
-            line-height: 1.4;
+            padding-left: 30px;
+            margin-bottom: 12px;
+            color: var(--gris-texto-claro);
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
         .card-body li::before {
@@ -516,15 +535,16 @@
             left: 0;
             color: var(--verde-medio);
             font-weight: bold;
+            font-size: 1.1rem;
         }
 
         .gallery-filters {
             display: flex;
             flex-wrap: nowrap;
             overflow-x: auto;
-            gap: 10px;
-            margin-bottom: 25px;
-            padding-bottom: 10px;
+            gap: 15px;
+            margin-bottom: 35px;
+            padding-bottom: 15px;
             -webkit-overflow-scrolling: touch;
         }
 
@@ -533,13 +553,13 @@
         }
 
         .filter-btn {
-            padding: 10px 20px;
+            padding: 12px 25px;
             background: var(--gris-claro);
             border: 2px solid transparent;
-            border-radius: 25px;
+            border-radius: 30px;
             font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-            font-size: 0.9rem;
+            font-weight: 700;
+            font-size: 1rem;
             color: var(--gris-texto);
             white-space: nowrap;
             flex-shrink: 0;
@@ -551,19 +571,21 @@
             background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro));
             color: var(--blanco);
             border-color: var(--dorado);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(26, 93, 26, 0.2);
         }
 
         .gallery-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 20px;
+            gap: 25px;
         }
 
         .gallery-item {
             position: relative;
-            border-radius: 12px;
+            border-radius: 15px;
             overflow: hidden;
-            height: 250px;
+            height: 280px;
             box-shadow: var(--sombra-sutil);
         }
 
@@ -583,45 +605,52 @@
             bottom: 0;
             left: 0;
             right: 0;
-            padding: 20px;
-            background: linear-gradient(to top, rgba(13, 59, 13, 0.9), transparent);
+            padding: 25px;
+            background: linear-gradient(to top, rgba(13, 59, 13, 0.95), transparent);
             color: var(--blanco);
         }
 
         .gallery-title {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: 5px;
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 8px;
         }
 
         .gallery-description {
-            font-size: 0.85rem;
-            opacity: 0.9;
+            font-size: 0.95rem;
+            opacity: 0.95;
+            font-weight: 500;
         }
 
         .clients-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-top: 30px;
+            gap: 25px;
+            margin-top: 40px;
         }
 
         .client-item {
             background: var(--blanco);
-            padding: 25px 20px;
-            border-radius: 12px;
+            padding: 30px 25px;
+            border-radius: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
             box-shadow: var(--sombra-sutil);
             border: 1px solid rgba(0,0,0,0.05);
+            transition: var(--transicion);
+        }
+
+        .client-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--sombra-hover);
         }
 
         .client-item img {
-            max-height: 60px;
+            max-height: 70px;
             width: auto;
             filter: grayscale(100%);
-            opacity: 0.7;
+            opacity: 0.8;
             transition: var(--transicion);
         }
 
@@ -632,33 +661,33 @@
 
         .calculator-container {
             background: var(--blanco);
-            padding: 30px 25px;
-            border-radius: 15px;
+            padding: 40px 35px;
+            border-radius: 18px;
             box-shadow: var(--sombra-sutil);
             border: 1px solid rgba(0,0,0,0.05);
         }
 
         .form-group {
-            margin-bottom: 25px;
+            margin-bottom: 30px;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
+            margin-bottom: 12px;
+            font-weight: 700;
             color: var(--verde-oscuro);
-            font-size: 1rem;
+            font-size: 1.05rem;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
 
         .form-control {
             width: 100%;
-            padding: 15px 20px;
+            padding: 18px 25px;
             border: 2px solid var(--gris-medio);
-            border-radius: 10px;
-            font-size: 1rem;
+            border-radius: 12px;
+            font-size: 1.05rem;
             transition: var(--transicion);
             background: var(--blanco);
             font-family: 'Open Sans', sans-serif;
@@ -668,198 +697,206 @@
         .form-control:focus {
             border-color: var(--verde-medio);
             outline: none;
-            box-shadow: 0 0 0 3px rgba(26, 93, 26, 0.1);
+            box-shadow: 0 0 0 4px rgba(26, 93, 26, 0.15);
         }
 
         select.form-control {
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%231a5d1a' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
             background-repeat: no-repeat;
-            background-position: right 15px center;
-            background-size: 12px;
-            padding-right: 40px;
+            background-position: right 20px center;
+            background-size: 14px;
+            padding-right: 50px;
         }
 
         .btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            padding: 15px 30px;
-            border-radius: 10px;
-            font-weight: 700;
-            font-size: 1rem;
+            gap: 12px;
+            padding: 18px 35px;
+            border-radius: 12px;
+            font-weight: 800;
+            font-size: 1.05rem;
             transition: var(--transicion);
             border: none;
             cursor: pointer;
             font-family: 'Montserrat', sans-serif;
             text-align: center;
             width: 100%;
+            letter-spacing: 0.5px;
         }
 
         .btn-primary {
             background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro));
             color: var(--blanco);
-            border: 2px solid var(--dorado);
+            border: 3px solid var(--dorado);
+            box-shadow: 0 4px 15px rgba(26, 93, 26, 0.2);
         }
 
         .btn-primary:hover {
             background: linear-gradient(135deg, var(--verde-claro), var(--verde-medio));
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(26, 93, 26, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(26, 93, 26, 0.3);
         }
 
         .btn-whatsapp {
             background: linear-gradient(135deg, #25D366, #128C7E);
             color: var(--blanco);
-            border: 2px solid white;
+            border: 3px solid white;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.2);
         }
 
         .btn-whatsapp:hover {
             background: linear-gradient(135deg, #128C7E, #25D366);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
         }
 
         .calculator-result {
             background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro));
             color: var(--blanco);
-            padding: 30px 25px;
-            border-radius: 15px;
-            margin-top: 30px;
+            padding: 40px 35px;
+            border-radius: 18px;
+            margin-top: 40px;
             display: none;
-            border: 2px solid var(--dorado);
+            border: 3px solid var(--dorado);
+            box-shadow: 0 8px 25px rgba(26, 93, 26, 0.2);
         }
 
         .result-value {
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: 900;
-            margin: 20px 0;
+            margin: 25px 0;
             color: var(--dorado);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
 
         .whatsapp-float {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 60px;
-            height: 60px;
+            bottom: 25px;
+            right: 25px;
+            width: 70px;
+            height: 70px;
             background: linear-gradient(135deg, #25D366, #128C7E);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            text-decoration: none;
+            transition: var(--transicion);
+            border: 4px solid white;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.15);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+        }
+
+        .phone-float {
+            position: fixed;
+            bottom: 105px;
+            right: 25px;
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro));
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 28px;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            box-shadow: 0 6px 20px rgba(26, 93, 26, 0.3);
             z-index: 999;
             text-decoration: none;
             transition: var(--transicion);
-            border: 3px solid white;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
-        }
-
-        .phone-float {
-            position: fixed;
-            bottom: 90px;
-            right: 20px;
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro));
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            box-shadow: 0 4px 15px rgba(26, 93, 26, 0.3);
-            z-index: 999;
-            text-decoration: none;
-            transition: var(--transicion);
-            border: 3px solid white;
+            border: 4px solid white;
         }
 
         .phone-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(26, 93, 26, 0.4);
+            transform: scale(1.15);
+            box-shadow: 0 8px 25px rgba(26, 93, 26, 0.4);
         }
 
         .footer {
             background: linear-gradient(135deg, var(--verde-oscuro), #0a2f0a);
             color: var(--blanco);
-            padding: 40px 0 30px;
-            margin-top: 60px;
+            padding: 50px 0 35px;
+            margin-top: 80px;
         }
 
         .footer-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 30px;
-            margin-bottom: 30px;
+            gap: 40px;
+            margin-bottom: 40px;
         }
 
         .footer-section h3 {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             color: var(--blanco);
-            margin-bottom: 20px;
-            padding-bottom: 10px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
             border-bottom: 2px solid var(--dorado);
         }
 
         .footer-links li {
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
 
         .footer-links a {
-            color: rgba(255, 255, 255, 0.85);
-            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             transition: var(--transicion);
+            font-weight: 500;
         }
 
         .footer-links a:hover {
             color: var(--dorado);
-            padding-left: 5px;
+            padding-left: 8px;
         }
 
         .footer-logo {
-            max-width: 180px;
-            margin-bottom: 20px;
+            max-width: 200px;
+            margin-bottom: 25px;
         }
 
         .footer-text {
             color: rgba(255, 255, 255, 0.9);
-            font-size: 0.95rem;
-            line-height: 1.6;
+            font-size: 1rem;
+            line-height: 1.7;
+            font-weight: 400;
         }
 
         .footer-bottom {
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
             text-align: center;
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
         .text-center {
             text-align: center;
         }
 
-        .mt-1 { margin-top: 10px; }
-        .mt-2 { margin-top: 20px; }
-        .mt-3 { margin-top: 30px; }
-        .mb-1 { margin-bottom: 10px; }
-        .mb-2 { margin-bottom: 20px; }
-        .mb-3 { margin-bottom: 30px; }
+        .mt-1 { margin-top: 15px; }
+        .mt-2 { margin-top: 30px; }
+        .mt-3 { margin-top: 45px; }
+        .mb-1 { margin-bottom: 15px; }
+        .mb-2 { margin-bottom: 30px; }
+        .mb-3 { margin-bottom: 45px; }
 
         .fade-in {
             opacity: 0;
-            transform: translateY(20px);
+            transform: translateY(25px);
             transition: opacity 0.6s ease, transform 0.6s ease;
         }
 
@@ -870,7 +907,7 @@
 
         .page-content {
             display: none;
-            animation: fadeIn 0.4s ease;
+            animation: fadeIn 0.5s ease;
         }
 
         .page-content.active {
@@ -880,7 +917,7 @@
         @keyframes fadeIn {
             from {
                 opacity: 0;
-                transform: translateY(10px);
+                transform: translateY(15px);
             }
             to {
                 opacity: 1;
@@ -894,8 +931,8 @@
         }
 
         .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
         }
 
         .service-card:hover .card-header {
@@ -904,24 +941,24 @@
 
         @media (min-width: 768px) {
             body {
-                padding-top: 120px;
+                padding-top: 140px;
             }
 
             .header {
-                top: 40px;
-                padding: 20px 0;
+                top: 50px;
+                padding: 22px 0;
             }
 
             .logo {
-                height: 60px;
+                height: 65px;
             }
 
             .brand-name {
-                font-size: 1.5rem;
+                font-size: 1.7rem;
             }
 
             .brand-tagline {
-                font-size: 0.8rem;
+                font-size: 0.9rem;
             }
 
             .menu-toggle {
@@ -931,7 +968,7 @@
             .nav-container {
                 display: flex;
                 align-items: center;
-                gap: 15px;
+                gap: 20px;
             }
 
             .nav {
@@ -952,96 +989,97 @@
             .nav-menu {
                 flex-direction: row;
                 padding: 0;
-                gap: 5px;
+                gap: 8px;
             }
 
             .nav-item {
-                padding: 10px 15px;
+                padding: 12px 18px;
                 border-bottom: none;
-                font-size: 0.95rem;
-                border-radius: 8px;
+                font-size: 1rem;
+                border-radius: 10px;
                 white-space: nowrap;
             }
 
             .nav-item:hover,
             .nav-item.active {
-                padding-left: 15px;
-                background: rgba(255, 255, 255, 0.1);
+                padding-left: 18px;
+                background: rgba(255, 255, 255, 0.12);
             }
 
             .nav-item-cotizar {
                 margin-top: 0;
                 background: linear-gradient(135deg, var(--dorado), var(--dorado-claro));
                 color: var(--verde-oscuro);
-                padding: 10px 20px;
-                border-radius: 8px;
-                font-weight: 700;
+                padding: 12px 25px;
+                border-radius: 10px;
+                font-weight: 800;
             }
 
             .hero {
-                padding: 80px 40px;
-                min-height: 500px;
-                margin-bottom: 60px;
+                padding: 120px 50px;
+                min-height: 550px;
+                margin-bottom: 80px;
+                border-radius: 20px;
             }
 
             .hero h1 {
-                font-size: 2.8rem;
+                font-size: 3.2rem;
             }
 
             .hero p {
-                font-size: 1.3rem;
+                font-size: 1.5rem;
             }
 
             .section-title {
-                font-size: 2.2rem;
+                font-size: 2.5rem;
             }
 
             .section-subtitle {
-                font-size: 1.1rem;
+                font-size: 1.25rem;
             }
 
             .grid {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 30px;
+                gap: 35px;
             }
 
             .gallery-grid {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 25px;
+                gap: 30px;
             }
 
             .gallery-item {
-                height: 280px;
+                height: 320px;
             }
 
             .clients-grid {
                 grid-template-columns: repeat(3, 1fr);
-                gap: 25px;
+                gap: 30px;
             }
 
             .calculator-container {
-                padding: 40px 35px;
+                padding: 45px 40px;
             }
 
             .whatsapp-float {
-                width: 70px;
-                height: 70px;
-                font-size: 32px;
-                bottom: 30px;
-                right: 30px;
+                width: 75px;
+                height: 75px;
+                font-size: 36px;
+                bottom: 35px;
+                right: 35px;
             }
 
             .phone-float {
-                width: 70px;
-                height: 70px;
-                font-size: 28px;
-                bottom: 110px;
-                right: 30px;
+                width: 75px;
+                height: 75px;
+                font-size: 32px;
+                bottom: 125px;
+                right: 35px;
             }
 
             .footer-grid {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 40px;
+                gap: 50px;
             }
         }
 
@@ -1051,86 +1089,87 @@
             }
 
             .top-bar {
-                padding: 10px 0;
+                padding: 12px 0;
             }
 
             .contact-info {
-                font-size: 1rem;
+                font-size: 1.05rem;
+                gap: 30px;
             }
 
             .nav-container {
-                gap: 20px;
+                gap: 25px;
             }
 
             .nav-menu {
-                gap: 10px;
+                gap: 12px;
             }
 
             .nav-item {
-                padding: 12px 20px;
-                font-size: 1rem;
+                padding: 14px 22px;
+                font-size: 1.05rem;
             }
 
             .hero {
-                padding: 100px 60px;
-                min-height: 600px;
-                margin-bottom: 80px;
+                padding: 150px 70px;
+                min-height: 650px;
+                margin-bottom: 100px;
             }
 
             .hero h1 {
-                font-size: 3.5rem;
+                font-size: 4rem;
             }
 
             .hero p {
-                font-size: 1.5rem;
+                font-size: 1.7rem;
             }
 
             .section {
-                margin-bottom: 80px;
+                margin-bottom: 100px;
             }
 
             .section-title {
-                font-size: 2.5rem;
+                font-size: 3rem;
             }
 
             .grid {
                 grid-template-columns: repeat(3, 1fr);
-                gap: 35px;
+                gap: 40px;
             }
 
             .gallery-grid {
                 grid-template-columns: repeat(3, 1fr);
-                gap: 30px;
+                gap: 35px;
             }
 
             .gallery-item {
-                height: 300px;
+                height: 350px;
             }
 
             .clients-grid {
                 grid-template-columns: repeat(4, 1fr);
-                gap: 30px;
+                gap: 35px;
             }
 
             .footer-grid {
                 grid-template-columns: repeat(4, 1fr);
-                gap: 50px;
+                gap: 60px;
             }
 
             .whatsapp-float {
-                width: 75px;
-                height: 75px;
-                font-size: 36px;
-                bottom: 40px;
-                right: 40px;
+                width: 80px;
+                height: 80px;
+                font-size: 38px;
+                bottom: 45px;
+                right: 45px;
             }
 
             .phone-float {
-                width: 75px;
-                height: 75px;
-                font-size: 32px;
-                bottom: 130px;
-                right: 40px;
+                width: 80px;
+                height: 80px;
+                font-size: 34px;
+                bottom: 140px;
+                right: 45px;
             }
         }
 
@@ -1140,52 +1179,52 @@
             }
 
             .hero h1 {
-                font-size: 4rem;
+                font-size: 4.5rem;
             }
         }
 
         @media (max-width: 360px) {
             .container {
-                padding: 0 10px;
+                padding: 0 15px;
             }
 
             .top-bar {
-                padding: 6px 0;
+                padding: 8px 0;
             }
 
             .contact-info {
-                font-size: 0.8rem;
-                gap: 10px;
+                font-size: 0.85rem;
+                gap: 12px;
             }
 
             .logo {
-                height: 45px;
+                height: 50px;
             }
 
             .brand-name {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
             }
 
             .brand-tagline {
-                font-size: 0.6rem;
-                letter-spacing: 1px;
+                font-size: 0.7rem;
+                letter-spacing: 1.2px;
             }
 
             .hero {
-                padding: 40px 15px;
-                min-height: 350px;
+                padding: 70px 20px;
+                min-height: 400px;
             }
 
             .hero h1 {
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
 
             .hero p {
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
 
             .gallery-item {
-                height: 220px;
+                height: 250px;
             }
 
             .clients-grid {
@@ -1193,19 +1232,19 @@
             }
 
             .whatsapp-float {
-                width: 55px;
-                height: 55px;
-                font-size: 24px;
-                bottom: 15px;
-                right: 15px;
+                width: 60px;
+                height: 60px;
+                font-size: 28px;
+                bottom: 20px;
+                right: 20px;
             }
 
             .phone-float {
-                width: 55px;
-                height: 55px;
-                font-size: 20px;
-                bottom: 80px;
-                right: 15px;
+                width: 60px;
+                height: 60px;
+                font-size: 24px;
+                bottom: 95px;
+                right: 20px;
             }
         }
 
@@ -1226,6 +1265,29 @@
             .phone-float:hover {
                 transform: none;
             }
+        }
+
+        /* Mejoras adicionales de legibilidad */
+        strong, b {
+            color: var(--verde-oscuro);
+            font-weight: 700;
+        }
+
+        .highlight-text {
+            color: var(--verde-medio);
+            font-weight: 700;
+        }
+
+        .card-body h4 {
+            color: var(--verde-oscuro);
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        /* Mejora de contraste para listas */
+        .card-body ul:not(:last-child) {
+            margin-bottom: 25px;
         }
     </style>
 </head>
@@ -1294,7 +1356,7 @@
         <section id="home" class="page-content active">
             <div class="container">
                 <div class="hero fade-in">
-                    <h1>VENTA DE CONCRETO PREMEZCLADO </h1>
+                    <h1>VENTA DE CONCRETO PREMEZCLADO</h1>
                     <p>Con más de 25 años de experiencia, ofrecemos concreto premezclado de alta calidad en Lima y todo el Perú, con precios competitivos y cumplimiento riguroso de los estándares técnicos en todas las resistencias, garantizando precisión y confiabilidad en cada proyecto</p>
                    
                     <div class="hero-cta">
@@ -1331,31 +1393,7 @@
                             </div>
                         </div>
 
-                        <!-- SEGUNDO: Planta Móvil (antes estaba primero) -->
-                        <div class="card fade-in service-card" data-service="planta-movil">
-                            <div class="card-header">
-                                <h3>Alquiler de Planta Móvil Dosificadora</h3>
-                            </div>
-                            <div class="card-body">
-                                <p>Alquiler de planta móvil dosificadora de concreto semi automatizada, con capacidad de producción de hasta 40 m³/h, equipada con balanza electrónica para una dosificación precisa y comandos electrónicos. Permite la producción de concreto premezclado in situ, con control de calidad garantizado, operación continua en obra y una reducción significativa de los costos logísticos y de transporte.</p>
-                            </div>
-                        </div>
-
-                        <div class="card fade-in service-card" data-service="pisos-pulidos">
-                            <div class="card-header">
-                                <h3>Pisos de Concreto Pulido e Industriales</h3>
-                            </div>
-                            <div class="card-body">
-                                <p>Somos especialistas en el diseño e instalación de pisos de concreto pulido y semi pulido, ofreciendo soluciones durables y de alta calidad para espacios industriales, comerciales y residenciales, usando tecnología de última generación para garantizar precisión, resistencia y excelente acabado en cada proyecto. Realizamos corte y sellado de juntas de dilatación, asegurando mayor durabilidad y correcto desempeño del piso.</p>
-                                <ul>
-                                    <li>Pisos de concreto pulido</li>
-                                    <li>Pisos de concreto semi pulido</li>
-                                    <li>Pisos industriales de concreto</li>
-                                    <li>Corte y sellado de juntas de dilatación</li>
-                                </ul>
-                            </div>
-                        </div>
-
+                        <!-- AHORA Venta de Fibras para Concreto (antes Planta Móvil) -->
                         <div class="card fade-in service-card" data-service="fibras">
                             <div class="card-header">
                                 <h3>Venta de Fibras para Concreto</h3>
@@ -1379,32 +1417,57 @@
                                 </ul>
                             </div>
                         </div>
+
+                        <div class="card fade-in service-card" data-service="pisos-pulidos">
+                            <div class="card-header">
+                                <h3>Pisos de Concreto Pulido e Industriales</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>Somos especialistas en el diseño e instalación de pisos de concreto pulido y semi pulido, ofreciendo soluciones durables y de alta calidad para espacios industriales, comerciales y residenciales, usando tecnología de última generación para garantizar precisión, resistencia y excelente acabado en cada proyecto. Realizamos corte y sellado de juntas de dilatación, asegurando mayor durabilidad y correcto desempeño del piso.</p>
+                                <ul>
+                                    <li>Pisos de concreto pulido</li>
+                                    <li>Pisos de concreto semi pulido</li>
+                                    <li>Pisos industriales de concreto</li>
+                                    <li>Corte y sellado de juntas de dilatación</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- AHORA Alquiler de Planta Móvil Dosificadora (antes Venta de Fibras) -->
+                        <div class="card fade-in service-card" data-service="planta-movil">
+                            <div class="card-header">
+                                <h3>Alquiler de Planta Móvil Dosificadora</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>Alquiler de planta móvil dosificadora de concreto semi automatizada, con capacidad de producción de hasta 40 m³/h, equipada con balanza electrónica para una dosificación precisa y comandos electrónicos. Permite la producción de concreto premezclado in situ, con control de calidad garantizado, operación continua en obra y una reducción significativa de los costos logísticos y de transporte.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="section fade-in" style="background: var(--verde-sutil); padding: 40px 25px; border-radius: 15px;">
+                <div class="section fade-in" style="background: var(--verde-sutil); padding: 50px 35px; border-radius: 18px;">
                     <h2 class="section-title">¿Por qué elegir GRAOCON?</h2>
                     <div class="grid">
                         <div class="text-center">
-                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; color: white; margin: 0 auto 20px; border: 3px solid var(--dorado);">
+                            <div style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; color: white; margin: 0 auto 25px; border: 3px solid var(--dorado); box-shadow: 0 4px 12px rgba(26, 93, 26, 0.2);">
                                 <i class="fas fa-award"></i>
                             </div>
-                            <h3 style="font-size: 1.2rem;">Calidad Certificada</h3>
-                            <p style="color: #555;">Cumplimos con los más altos estándares de calidad en cada proyecto.</p>
+                            <h3 style="font-size: 1.3rem; color: var(--verde-oscuro); margin-bottom: 15px;">Calidad Certificada</h3>
+                            <p style="color: #555; line-height: 1.7;">Cumplimos con los más altos estándares de calidad en cada proyecto.</p>
                         </div>
                         <div class="text-center">
-                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; color: white; margin: 0 auto 20px; border: 3px solid var(--dorado);">
+                            <div style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; color: white; margin: 0 auto 25px; border: 3px solid var(--dorado); box-shadow: 0 4px 12px rgba(26, 93, 26, 0.2);">
                                 <i class="fas fa-clock"></i>
                             </div>
-                            <h3 style="font-size: 1.2rem;">Puntualidad</h3>
-                            <p style="color: #555;">Entregas a tiempo para cumplir con los cronogramas de construcción.</p>
+                            <h3 style="font-size: 1.3rem; color: var(--verde-oscuro); margin-bottom: 15px;">Puntualidad</h3>
+                            <p style="color: #555; line-height: 1.7;">Entregas a tiempo para cumplir con los cronogramas de construcción.</p>
                         </div>
                         <div class="text-center">
-                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; color: white; margin: 0 auto 20px; border: 3px solid var(--dorado);">
+                            <div style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; color: white; margin: 0 auto 25px; border: 3px solid var(--dorado); box-shadow: 0 4px 12px rgba(26, 93, 26, 0.2);">
                                 <i class="fas fa-headset"></i>
                             </div>
-                            <h3 style="font-size: 1.2rem;">Soporte 24/7</h3>
-                            <p style="color: #555;">Asesoría técnica permanente durante todo el proceso constructivo.</p>
+                            <h3 style="font-size: 1.3rem; color: var(--verde-oscuro); margin-bottom: 15px;">Soporte 24/7</h3>
+                            <p style="color: #555; line-height: 1.7;">Asesoría técnica permanente durante todo el proceso constructivo.</p>
                         </div>
                     </div>
                 </div>
@@ -1413,9 +1476,9 @@
 
         <section id="concrete" class="page-content">
             <div class="container">
-                <div class="hero fade-in" style="background: linear-gradient(rgba(13, 59, 13, 0.45), rgba(13, 59, 13, 0.35)), url('https://i.ibb.co/qYCXSz2b/Whats-App-Image-2026-01-22-at-12-39-20-PM.jpg') center/cover no-repeat;">
+                <div class="hero fade-in" style="background: linear-gradient(rgba(13, 59, 13, 0.85), rgba(13, 59, 13, 0.7)), url('https://i.ibb.co/qYCXSz2b/Whats-App-Image-2026-01-22-at-12-39-20-PM.jpg') center/cover no-repeat;">
                     <h1>CONCRETO PREMEZCLADO</h1>
-                    <p>Nuestra producción cumple con las normas nacionales e internacionales vigentes (NTP, RNC E.060, ASOCEM, ASTM, ACI y AASHTO), asegurando altos estándares de calidad, resistencia y durabilidad. Además, ofrecemos asesoramiento técnico permanente durante toda la ejecución del proyecto,</p>
+                    <p>Nuestra producción cumple con las normas nacionales e internacionales vigentes (NTP, RNC E.060, ASOCEM, ASTM, ACI y AASHTO), asegurando altos estándares de calidad, resistencia y durabilidad. Además, ofrecemos asesoramiento técnico permanente durante toda la ejecución del proyecto.</p>
                 </div>
 
                 <div class="section fade-in">
@@ -1489,7 +1552,7 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
 
         <section id="services" class="page-content">
             <div class="container">
-                <div class="hero fade-in" style="background: linear-gradient(rgba(13, 59, 13, 0.45), rgba(13, 59, 13, 0.35)), url('https://i.ibb.co/nMNmtwQg/Whats-App-Image-2026-01-22-at-12-36-34-PM.jpg') center/cover no-repeat;">
+                <div class="hero fade-in" style="background: linear-gradient(rgba(13, 59, 13, 0.85), rgba(13, 59, 13, 0.7)), url('https://i.ibb.co/nMNmtwQg/Whats-App-Image-2026-01-22-at-12-36-34-PM.jpg') center/cover no-repeat;">
                     <h1>SERVICIOS ESPECIALIZADOS</h1>
                     <p>Soluciones tecnológicas avanzadas para proyectos constructivos de alto impacto</p>
                 </div>
@@ -1518,31 +1581,7 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
                             </div>
                         </div>
 
-                        <!-- SEGUNDO: Planta Móvil -->
-                        <div class="card fade-in" id="planta-movil-service">
-                            <div class="card-header">
-                                <h3>Alquiler de Planta Móvil Dosificadora</h3>
-                            </div>
-                            <div class="card-body">
-                                <p>Alquiler de planta móvil dosificadora de concreto semi automatizada, con capacidad de producción de hasta 40 m³/h, equipada con balanza electrónica para una dosificación precisa y comandos electrónicos. Permite la producción de concreto premezclado in situ, con control de calidad garantizado, operación continua en obra y una reducción significativa de los costos logísticos y de transporte.</p>
-                            </div>
-                        </div>
-
-                        <div class="card fade-in" id="pisos-pulidos-service">
-                            <div class="card-header">
-                                <h3>Pisos de Concreto Pulido e Industriales</h3>
-                            </div>
-                            <div class="card-body">
-                                <p>Somos especialistas en el diseño e instalación de pisos de concreto pulido y semi pulido, ofreciendo soluciones durables y de alta calidad para espacios industriales, comerciales y residenciales, usando tecnología de última generación para garantizar precisión, resistencia y excelente acabado en cada proyecto. Realizamos corte y sellado de juntas de dilatación, asegurando mayor durabilidad y correcto desempeño del piso.</p>
-                                <ul>
-                                    <li>Pisos de concreto pulido</li>
-                                    <li>Pisos de concreto semi pulido</li>
-                                    <li>Pisos industriales de concreto</li>
-                                    <li>Corte y sellado de juntas de dilatación</li>
-                                </ul>
-                            </div>
-                        </div>
-
+                        <!-- AHORA Venta de Fibras para Concreto (antes Planta Móvil) -->
                         <div class="card fade-in" id="fibras-service">
                             <div class="card-header">
                                 <h3>Venta de Fibras para Concreto</h3>
@@ -1566,6 +1605,31 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
                                 </ul>
                             </div>
                         </div>
+
+                        <div class="card fade-in" id="pisos-pulidos-service">
+                            <div class="card-header">
+                                <h3>Pisos de Concreto Pulido e Industriales</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>Somos especialistas en el diseño e instalación de pisos de concreto pulido y semi pulido, ofreciendo soluciones durables y de alta calidad para espacios industriales, comerciales y residenciales, usando tecnología de última generación para garantizar precisión, resistencia y excelente acabado en cada proyecto. Realizamos corte y sellado de juntas de dilatación, asegurando mayor durabilidad y correcto desempeño del piso.</p>
+                                <ul>
+                                    <li>Pisos de concreto pulido</li>
+                                    <li>Pisos de concreto semi pulido</li>
+                                    <li>Pisos industriales de concreto</li>
+                                    <li>Corte y sellado de juntas de dilatación</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- AHORA Alquiler de Planta Móvil Dosificadora (antes Venta de Fibras) -->
+                        <div class="card fade-in" id="planta-movil-service">
+                            <div class="card-header">
+                                <h3>Alquiler de Planta Móvil Dosificadora</h3>
+                            </div>
+                            <div class="card-body">
+                                <p>Alquiler de planta móvil dosificadora de concreto semi automatizada, con capacidad de producción de hasta 40 m³/h, equipada con balanza electrónica para una dosificación precisa y comandos electrónicos. Permite la producción de concreto premezclado in situ, con control de calidad garantizado, operación continua en obra y una reducción significativa de los costos logísticos y de transporte.</p>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="text-center mt-3">
@@ -1579,7 +1643,7 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
 
         <section id="projects" class="page-content">
             <div class="container">
-                <div class="hero fade-in" style="background: linear-gradient(rgba(13, 59, 13, 0.45), rgba(13, 59, 13, 0.35)), url('https://i.ibb.co/MxDxDTmf/Whats-App-Image-2026-01-21-at-3-21-44-PM.jpg') center/cover no-repeat;">
+                <div class="hero fade-in" style="background: linear-gradient(rgba(13, 59, 13, 0.85), rgba(13, 59, 13, 0.7)), url('https://i.ibb.co/MxDxDTmf/Whats-App-Image-2026-01-21-at-3-21-44-PM.jpg') center/cover no-repeat;">
                     <h1>PORTAFOLIO DE PROYECTOS</h1>
                     <p>Una muestra representativa de nuestra excelencia en diferentes tipologías constructivas</p>
                 </div>
@@ -1605,7 +1669,7 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
 
         <section id="clients" class="page-content">
             <div class="container">
-                <div class="hero fade-in" style="background: linear-gradient(rgba(13, 59, 13, 0.45), rgba(13, 59, 13, 0.35)), url('https://i.ibb.co/pBLYBScx/Whats-App-Image-2026-01-22-at-12-41-59-PM.jpg') center/cover no-repeat;">
+                <div class="hero fade-in" style="background: linear-gradient(rgba(13, 59, 13, 0.85), rgba(13, 59, 13, 0.7)), url('https://i.ibb.co/pBLYBScx/Whats-App-Image-2026-01-22-at-12-41-59-PM.jpg') center/cover no-repeat;">
                     <h1>ALIANZAS ESTRATÉGICAS</h1>
                     <p>Empresas líderes que confían en nuestra excelencia y profesionalismo</p>
                 </div>
@@ -1655,10 +1719,10 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
                         </div>
                     </div>
 
-                    <div class="card mt-3" style="background: linear-gradient(135deg, rgba(26, 93, 26, 0.05), rgba(255, 255, 255, 0.95));">
+                    <div class="card mt-3" style="background: linear-gradient(135deg, rgba(26, 93, 26, 0.05), rgba(255, 255, 255, 0.95)); padding: 35px 30px;">
                         <div class="card-body text-center">
-                            <h3 style="color: var(--verde-oscuro); margin-bottom: 15px;">¿Listo para ser nuestro próximo caso de éxito?</h3>
-                            <p style="color: #555; margin-bottom: 25px;">Únase a las organizaciones líderes que ya confían en GRAOCON para transformar sus proyectos constructivos.</p>
+                            <h3 style="color: var(--verde-oscuro); margin-bottom: 20px; font-size: 1.5rem;">¿Listo para ser nuestro próximo caso de éxito?</h3>
+                            <p style="color: #555; margin-bottom: 30px; font-size: 1.05rem; line-height: 1.7;">Únase a las organizaciones líderes que ya confían en GRAOCON para transformar sus proyectos constructivos.</p>
                             <button class="btn btn-primary" data-page="quote">
                                 <i class="fab fa-whatsapp"></i> COTIZAR PROYECTO
                             </button>
@@ -1670,7 +1734,7 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
 
         <section id="calculator" class="page-content">
             <div class="container">
-                <div class="hero fade-in" style="background: linear-gradient(rgba(13, 59, 13, 0.45), rgba(13, 59, 13, 0.35)), url('https://i.ibb.co/V0Sd20hw/Whats-App-Image-2026-01-22-at-12-06-51-PM.jpg') center/cover no-repeat;">
+                <div class="hero fade-in" style="background: linear-gradient(rgba(13, 59, 13, 0.85), rgba(13, 59, 13, 0.7)), url('https://i.ibb.co/V0Sd20hw/Whats-App-Image-2026-01-22-at-12-06-51-PM.jpg') center/cover no-repeat;">
                     <h1>CALCULADORA DE PRESUPUESTO</h1>
                     <p>Estime rápidamente el costo aproximado de su proyecto de construcción</p>
                 </div>
@@ -1713,26 +1777,26 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
                         </form>
 
                         <div id="resultContainer" class="calculator-result">
-                            <div style="font-size: 1.2rem; margin-bottom: 15px; font-weight: 700;">ESTIMADO PARA SU PROYECTO</div>
-                            <div id="resultDetails" style="font-size: 1rem; margin-bottom: 20px; padding: 15px; background: rgba(255, 255, 255, 0.1); border-radius: 10px;">
+                            <div style="font-size: 1.3rem; margin-bottom: 20px; font-weight: 800;">ESTIMADO PARA SU PROYECTO</div>
+                            <div id="resultDetails" style="font-size: 1.05rem; margin-bottom: 25px; padding: 20px; background: rgba(255, 255, 255, 0.15); border-radius: 12px; line-height: 1.7;">
                                 Basado en los parámetros ingresados
                             </div>
                             <div class="result-value">S/ <span id="finalCost">0.00</span></div>
                            
-                            <p style="font-size: 0.9rem; margin-top: 15px; opacity: 0.9;">
+                            <p style="font-size: 0.95rem; margin-top: 20px; opacity: 0.95; line-height: 1.6;">
                                 * Este cálculo es un estimado aproximado. Incluye materiales, transporte y mano de obra básica.
                             </p>
                            
-                            <div style="background: rgba(255, 255, 255, 0.1); padding: 20px; border-radius: 10px; margin-top: 25px;">
-                                <p style="font-weight: 600; margin-bottom: 15px;">¿Desea un presupuesto exacta?</p>
-                                <div style="display: flex; flex-direction: column; gap: 10px;">
+                            <div style="background: rgba(255, 255, 255, 0.15); padding: 25px; border-radius: 12px; margin-top: 30px;">
+                                <p style="font-weight: 800; margin-bottom: 20px; font-size: 1.1rem;">¿Desea un presupuesto exacta?</p>
+                                <div style="display: flex; flex-direction: column; gap: 15px;">
                                     <a href="https://wa.me/51927571365?text=Hola%20GRAOCON,%20quiero%20una%20cotización%20exacta%20para%20mi%20proyecto"
                                        target="_blank" class="btn"
-                                       style="background: #25D366; color: white; border: 2px solid white;">
+                                       style="background: #25D366; color: white; border: 3px solid white; font-weight: 800;">
                                         <i class="fab fa-whatsapp"></i> WHATSAPP
                                     </a>
                                     <a href="tel:+51927571365" class="btn"
-                                       style="background: var(--blanco); color: var(--verde-oscuro); border: 2px solid var(--dorado);">
+                                       style="background: var(--blanco); color: var(--verde-oscuro); border: 3px solid var(--dorado); font-weight: 800;">
                                         <i class="fas fa-phone"></i> LLAMAR
                                     </a>
                                 </div>
@@ -1745,7 +1809,7 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
 
         <section id="contact" class="page-content">
             <div class="container">
-                <div class="hero fade-in" style="background: linear-gradient(rgba(13, 59, 13, 0.45), rgba(13, 59, 13, 0.35)), url('https://i.ibb.co/21x3X0BD/Whats-App-Image-2026-01-22-at-4-45-31-PM.jpg') center/cover no-repeat;">
+                <div class="hero fade-in" style="background: linear-gradient(rgba(13, 59, 13, 0.85), rgba(13, 59, 13, 0.7)), url('https://i.ibb.co/21x3X0BD/Whats-App-Image-2026-01-22-at-4-45-31-PM.jpg') center/cover no-repeat;">
                     <h1>CONTACTO DIRECTO</h1>
                     <p>Conecte con nuestro equipo de especialistas para atender sus necesidades específicas</p>
                 </div>
@@ -1757,13 +1821,13 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
                     <div class="grid">
                         <div class="card fade-in">
                             <div class="card-body text-center">
-                                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; color: white; margin: 0 auto 20px; border: 3px solid var(--dorado);">
+                                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; color: white; margin: 0 auto 25px; border: 3px solid var(--dorado); box-shadow: 0 4px 12px rgba(26, 93, 26, 0.2);">
                                     <i class="fas fa-map-marker-alt"></i>
                                 </div>
-                                <h3 style="margin-bottom: 15px;">Ubicación Principal</h3>
-                                <p style="color: #555; margin-bottom: 20px;">CONCRETERA GRAOCON<br>CONCRETO PREMEZCLADO</p>
+                                <h3 style="margin-bottom: 20px; color: var(--verde-oscuro);">Ubicación Principal</h3>
+                                <p style="color: #555; margin-bottom: 25px; line-height: 1.7; font-size: 1.05rem;">CONCRETERA GRAOCON<br>CONCRETO PREMEZCLADO</p>
                                 <a href="https://www.google.com/maps/place/CONCRETERA+GRAOCON+-+CONCRETO+PREMEZCLADO/@-12.2213086,-76.9776444,17z/data=!3m1!4b1!4m6!3m5!1s0x9105bbfdf8e55503:0x97b5fe2bcfa1b919!8m2!3d-12.2213139!4d-76.9727735!16s%2Fg%2F11h1091yl6?entry=ttu"
-                                   target="_blank" class="btn" style="background: var(--gris-claro); color: var(--verde-oscuro);">
+                                   target="_blank" class="btn" style="background: var(--gris-claro); color: var(--verde-oscuro); font-weight: 700;">
                                     <i class="fas fa-map"></i> VER EN MAPAS
                                 </a>
                             </div>
@@ -1771,12 +1835,12 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
 
                         <div class="card fade-in">
                             <div class="card-body text-center">
-                                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; color: white; margin: 0 auto 20px; border: 3px solid var(--dorado);">
+                                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; color: white; margin: 0 auto 25px; border: 3px solid var(--dorado); box-shadow: 0 4px 12px rgba(26, 93, 26, 0.2);">
                                     <i class="fas fa-phone"></i>
                                 </div>
-                                <h3 style="margin-bottom: 15px;">Teléfonos Directos</h3>
-                                <p style="font-size: 1.5rem; font-weight: 800; color: var(--verde-medio); margin: 15px 0;">+51 927 571 365</p>
-                                <a href="tel:+51927571365" class="btn btn-primary">
+                                <h3 style="margin-bottom: 20px; color: var(--verde-oscuro);">Teléfonos Directos</h3>
+                                <p style="font-size: 1.7rem; font-weight: 900; color: var(--verde-medio); margin: 20px 0; text-shadow: 0 2px 4px rgba(0,0,0,0.1);">+51 927 571 365</p>
+                                <a href="tel:+51927571365" class="btn btn-primary" style="font-weight: 800;">
                                     <i class="fas fa-phone"></i> LLAMAR AHORA
                                 </a>
                             </div>
@@ -1784,12 +1848,12 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
 
                         <div class="card fade-in">
                             <div class="card-body text-center">
-                                <div style="width: 70px; height: 70px; background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; color: white; margin: 0 auto 20px; border: 3px solid var(--dorado);">
+                                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 32px; color: white; margin: 0 auto 25px; border: 3px solid var(--dorado); box-shadow: 0 4px 12px rgba(26, 93, 26, 0.2);">
                                     <i class="fas fa-envelope"></i>
                                 </div>
-                                <h3 style="margin-bottom: 15px;">Correo Corporativo</h3>
-                                <p style="font-size: 1.2rem; font-weight: 700; color: var(--verde-medio); margin: 15px 0;">VENTAS@GRAOCON.COM</p>
-                                <a href="mailto:VENTAS@GRAOCON.COM" class="btn btn-primary">
+                                <h3 style="margin-bottom: 20px; color: var(--verde-oscuro);">Correo Corporativo</h3>
+                                <p style="font-size: 1.3rem; font-weight: 900; color: var(--verde-medio); margin: 20px 0; text-shadow: 0 2px 4px rgba(0,0,0,0.1);">VENTAS@GRAOCON.COM</p>
+                                <a href="mailto:VENTAS@GRAOCON.COM" class="btn btn-primary" style="font-weight: 800;">
                                     <i class="fas fa-envelope"></i> ENVIAR CORREO
                                 </a>
                             </div>
@@ -1801,7 +1865,7 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
 
         <section id="quote" class="page-content">
             <div class="container">
-                <div class="hero fade-in" style="background: linear-gradient(rgba(13, 59, 13, 0.45), rgba(13, 59, 13, 0.35)), url('https://i.ibb.co/gLYSqcvt/Whats-App-Image-2026-01-22-at-2-52-36-PM.jpg') center/cover no-repeat;">
+                <div class="hero fade-in" style="background: linear-gradient(rgba(13, 59, 13, 0.85), rgba(13, 59, 13, 0.7)), url('https://i.ibb.co/gLYSqcvt/Whats-App-Image-2026-01-22-at-2-52-36-PM.jpg') center/cover no-repeat;">
                     <h1>COTIZACIÓN PREMIUM</h1>
                     <p>Reciba una cotización detallada en menos de 15 minutos</p>
                 </div>
@@ -1810,23 +1874,23 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
                     <h2 class="section-title">Solicitud de Cotización</h2>
                     <p class="section-subtitle">Contáctenos directamente para una propuesta técnica y comercial personalizada</p>
                    
-                    <div class="card" style="max-width: 600px; margin: 0 auto;">
-                        <div class="card-body text-center">
-                            <div style="width: 90px; height: 90px; background: linear-gradient(135deg, #25D366, #128C7E); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 40px; color: white; margin: 0 auto 25px; border: 4px solid white;">
+                    <div class="card" style="max-width: 650px; margin: 0 auto; border: 3px solid var(--dorado); border-radius: 18px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                        <div class="card-body text-center" style="padding: 40px 35px;">
+                            <div style="width: 100px; height: 100px; background: linear-gradient(135deg, #25D366, #128C7E); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 45px; color: white; margin: 0 auto 30px; border: 4px solid white; box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);">
                                 <i class="fab fa-whatsapp"></i>
                             </div>
                            
-                            <h3 style="margin-bottom: 15px;">Cotización por WhatsApp</h3>
-                            <p style="color: #555; margin-bottom: 25px; line-height: 1.5;">Nuestro equipo comercial responderá con una propuesta detallada incluyendo especificaciones técnicas, cronograma y condiciones.</p>
+                            <h3 style="margin-bottom: 20px; color: var(--verde-oscuro); font-size: 1.6rem;">Cotización por WhatsApp</h3>
+                            <p style="color: #555; margin-bottom: 30px; line-height: 1.7; font-size: 1.1rem;">Nuestro equipo comercial responderá con una propuesta detallada incluyendo especificaciones técnicas, cronograma y condiciones.</p>
                            
-                            <div style="background: var(--gris-claro); padding: 20px; border-radius: 10px; margin: 25px 0; border: 2px solid var(--dorado);">
-                                <h4 style="color: var(--verde-medio); margin-bottom: 10px;">Número Oficial</h4>
-                                <p style="font-size: 1.8rem; font-weight: 900; color: var(--verde-oscuro);">+51 927 571 365</p>
-                                <p style="color: #666; font-size: 0.9rem; margin-top: 5px;">Atención: Lunes a Sábado 7:00 am - 7:00 pm</p>
+                            <div style="background: var(--gris-claro); padding: 25px; border-radius: 12px; margin: 30px 0; border: 3px solid var(--dorado);">
+                                <h4 style="color: var(--verde-medio); margin-bottom: 15px; font-size: 1.2rem;">Número Oficial</h4>
+                                <p style="font-size: 2rem; font-weight: 900; color: var(--verde-oscuro);">+51 927 571 365</p>
+                                <p style="color: #666; font-size: 1rem; margin-top: 8px; font-weight: 500;">Atención: Lunes a Sábado 7:00 am - 7:00 pm</p>
                             </div>
                            
                             <a href="https://wa.me/51927571365?text=Hola%20GRAOCON,%20solicito%20cotización%20para%20mi%20proyecto%20constructivo"
-                               target="_blank" class="btn btn-primary" style="font-size: 1.1rem; padding: 18px 40px;">
+                               target="_blank" class="btn btn-primary" style="font-size: 1.2rem; padding: 20px 45px; font-weight: 900;">
                                 <i class="fab fa-whatsapp"></i> INICIAR COTIZACIÓN
                             </a>
                         </div>
@@ -1878,7 +1942,7 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
            
             <div class="footer-bottom">
                 <p>&copy; <span id="currentYear">2024</span> GRAOCON S.A. - Todos los derechos reservados.</p>
-                <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.8;">Servicio de concreto premezclado en: Lima, Lurín, Pachacamac, Villa El Salvador, Surco, Miraflores, San Isidro, La Molina y todo Perú.</p>
+                <p style="font-size: 0.95rem; margin-top: 15px; opacity: 0.9; line-height: 1.6;">Servicio de concreto premezclado en: Lima, Lurín, Pachacamac, Villa El Salvador, Surco, Miraflores, San Isidro, La Molina y todo Perú.</p>
             </div>
         </div>
     </footer>
