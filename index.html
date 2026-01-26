@@ -192,7 +192,7 @@
     <link rel="icon" type="image/x-icon" href="https://i.ibb.co/VWFt2f67/Whats-App-Image-2026-01-02-at-11-19-53-AM.jpg">
     <link rel="apple-touch-icon" href="https://i.ibb.co/VWFt2f67/Whats-App-Image-2026-01-02-at-11-19-53-AM.jpg">
     
-    <!-- ESTILOS CSS -->
+    <!-- ESTILOS CSS MEJORADOS -->
     <style>
         :root {
             --verde-oscuro: #0d3b0d;
@@ -508,9 +508,9 @@
             padding: 30px 0 60px;
         }
 
-        /* HERO SECTIONS */
+        /* HERO SECTIONS MEJORADAS - IMÁGENES MÁS VISIBLES */
         .hero {
-            background: linear-gradient(rgba(13, 59, 13, 0.02), rgba(13, 59, 13, 0.01)), url('https://i.ibb.co/JRZRx9bt/Whats-App-Image-2026-01-17-at-1-12-26-PM.jpg') center/cover no-repeat;
+            background: var(--blanco);
             color: var(--blanco);
             padding: 60px 25px;
             border-radius: 18px;
@@ -534,7 +534,10 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(13, 59, 13, 0.5) 0%, rgba(13, 59, 13, 0.3) 50%, rgba(13, 59, 13, 0.1) 100%);
+            background: linear-gradient(135deg, 
+                rgba(13, 59, 13, 0.3) 0%, 
+                rgba(13, 59, 13, 0.15) 50%, 
+                rgba(13, 59, 13, 0.05) 100%);
             z-index: 1;
         }
 
@@ -1419,36 +1422,41 @@
             background: linear-gradient(135deg, var(--verde-claro), var(--verde-medio));
         }
 
-        /* FONDOS CON MÁXIMA VISIBILIDAD DE IMÁGENES */
+        /* FONDOS CON MÁXIMA VISIBILIDAD DE IMÁGENES - MEJORADO */
+        #home .hero {
+            background: url('https://i.ibb.co/JRZRx9bt/Whats-App-Image-2026-01-17-at-1-12-26-PM.jpg') center/cover no-repeat;
+        }
+
         #concrete .hero {
-            background: linear-gradient(rgba(13, 59, 13, 0.02), rgba(13, 59, 13, 0.01)), url('https://i.ibb.co/qYCXSz2b/Whats-App-Image-2026-01-22-at-12-39-20-PM.jpg') center/cover no-repeat;
+            background: url('https://i.ibb.co/qYCXSz2b/Whats-App-Image-2026-01-22-at-12-39-20-PM.jpg') center/cover no-repeat;
         }
 
         #services .hero {
-            background: linear-gradient(rgba(13, 59, 13, 0.02), rgba(13, 59, 13, 0.01)), url('https://i.ibb.co/nMNmtwQg/Whats-App-Image-2026-01-22-at-12-36-34-PM.jpg') center/cover no-repeat;
+            background: url('https://i.ibb.co/nMNmtwQg/Whats-App-Image-2026-01-22-at-12-36-34-PM.jpg') center/cover no-repeat;
         }
 
         #projects .hero {
-            background: linear-gradient(rgba(13, 59, 13, 0.02), rgba(13, 59, 13, 0.01)), url('https://i.ibb.co/MxDxDTmf/Whats-App-Image-2026-01-21-at-3-21-44-PM.jpg') center/cover no-repeat;
+            background: url('https://i.ibb.co/MxDxDTmf/Whats-App-Image-2026-01-21-at-3-21-44-PM.jpg') center/cover no-repeat;
         }
 
         #clients .hero {
-            background: linear-gradient(rgba(13, 59, 13, 0.02), rgba(13, 59, 13, 0.01)), url('https://i.ibb.co/pBLYBScx/Whats-App-Image-2026-01-22-at-12-41-59-PM.jpg') center/cover no-repeat;
+            background: url('https://i.ibb.co/pBLYBScx/Whats-App-Image-2026-01-22-at-12-41-59-PM.jpg') center/cover no-repeat;
         }
 
         #calculator .hero {
-            background: linear-gradient(rgba(13, 59, 13, 0.02), rgba(13, 59, 13, 0.01)), url('https://i.ibb.co/V0Sd20hw/Whats-App-Image-2026-01-22-at-12-06-51-PM.jpg') center/cover no-repeat;
+            background: url('https://i.ibb.co/V0Sd20hw/Whats-App-Image-2026-01-22-at-12-06-51-PM.jpg') center/cover no-repeat;
         }
 
         #contact .hero {
-            background: linear-gradient(rgba(13, 59, 13, 0.02), rgba(13, 59, 13, 0.01)), url('https://i.ibb.co/21x3X0BD/Whats-App-Image-2026-01-22-at-4-45-31-PM.jpg') center/cover no-repeat;
+            background: url('https://i.ibb.co/21x3X0BD/Whats-App-Image-2026-01-22-at-4-45-31-PM.jpg') center/cover no-repeat;
         }
 
         #quote .hero {
-            background: linear-gradient(rgba(13, 59, 13, 0.02), rgba(13, 59, 13, 0.01)), url('https://i.ibb.co/gLYSqcvt/Whats-App-Image-2026-01-22-at-2-52-36-PM.jpg') center/cover no-repeat;
+            background: url('https://i.ibb.co/gLYSqcvt/Whats-App-Image-2026-01-22-at-2-52-36-PM.jpg') center/cover no-repeat;
         }
 
         /* Overlay mínimo para todas las páginas */
+        #home .hero::before,
         #concrete .hero::before,
         #services .hero::before,
         #projects .hero::before,
@@ -1462,7 +1470,10 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(135deg, rgba(13, 59, 13, 0.5) 0%, rgba(13, 59, 13, 0.3) 50%, rgba(13, 59, 13, 0.1) 100%);
+            background: linear-gradient(135deg, 
+                rgba(13, 59, 13, 0.3) 0%, 
+                rgba(13, 59, 13, 0.15) 50%, 
+                rgba(13, 59, 13, 0.05) 100%);
             z-index: 1;
         }
 
@@ -3550,4 +3561,4 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
         });
     </script>
 </body>
-</html> 
+</html>
