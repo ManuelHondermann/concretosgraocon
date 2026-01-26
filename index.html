@@ -696,35 +696,6 @@
             font-size: 1.1rem;
         }
 
-        /* MEJORAS PARA LAS SECCIONES DE FIBRAS Y PISOS */
-        .fibra-content {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 30px;
-            margin-top: 25px;
-        }
-
-        .pisos-content {
-            max-width: 800px;
-            margin: 25px auto 0;
-        }
-
-        .pisos-content .check-list {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 15px;
-        }
-
-        @media (min-width: 768px) {
-            .fibra-content {
-                grid-template-columns: 1fr 1fr;
-            }
-            
-            .pisos-content .check-list {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
         /* GALERÍA DE ÉXITOS */
         .gallery-filters {
             display: flex;
@@ -2406,52 +2377,40 @@
                             <div class="card-header">
                                 <h3><i class="fas fa-hard-hat" aria-hidden="true"></i> Pisos de Concreto Pulido e Industriales</h3>
                             </div>
-                            <div class="card-body">
+                            <div class="card-body text-center">
                                 <p>Somos especialistas en el diseño e instalación de <strong>pisos de concreto pulido y semi pulido</strong>, ofreciendo soluciones durables y de alta calidad para espacios industriales, comerciales y residenciales, usando tecnología de última generación para garantizar precisión, resistencia y excelente acabado en cada proyecto. Realizamos corte y sellado de juntas de dilatación, asegurando mayor durabilidad y correcto desempeño del piso.</p>
                                 
-                                <div class="pisos-content">
-                                    <ul class="check-list">
-                                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Pisos de concreto pulido</li>
-                                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Pisos de concreto semi pulido</li>
-                                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Pisos industriales de concreto</li>
-                                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Corte y sellado de juntas de dilatación</li>
-                                    </ul>
-                                </div>
+                                <ul class="check-list">
+                                    <li><i class="fas fa-check-circle" aria-hidden="true"></i>Pisos de concreto pulido</li>
+                                    <li><i class="fas fa-check-circle" aria-hidden="true"></i>Pisos de concreto semi pulido</li>
+                                    <li><i class="fas fa-check-circle" aria-hidden="true"></i>Pisos industriales de concreto</li>
+                                    <li><i class="fas fa-check-circle" aria-hidden="true"></i>Corte y sellado de juntas de dilatación</li>
+                                </ul>
                             </div>
                         </div>
 
-                        <!-- AHORA Venta de Fibras para Concreto - MEJORADA -->
+                        <!-- AHORA Venta de Fibras para Concreto -->
                         <div class="card fade-in service-card" data-service="fibras">
                             <div class="card-header">
-                                <h3><i class="fas fa-bolt" aria-hidden="true"></i> Venta de Fibras para Concreto</h3>
+                                <h3><i class="fas fa-fiber" aria-hidden="true"></i> Venta de Fibras para Concreto</h3>
                             </div>
                             <div class="card-body">
                                 <p>Ofrecemos <strong>micro fibra de polipropileno y macro-fibra sintética estructural para concreto</strong>, una fibra inerte y químicamente estable diseñada para la prevención de rajaduras y fisuras en el concreto. Es ideal para mejorar el desempeño del concreto, aumentando su durabilidad y resistencia.</p>
-                                
-                                <div class="fibra-content">
-                                    <div class="fibra-ventajas">
-                                        <h4 style="color: var(--verde-oscuro); margin-bottom: 15px;">Ventajas de la fibra:</h4>
-                                        <ul class="check-list">
-                                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Disminuye la contracción plástica</li>
-                                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Mejora la resistencia al impacto</li>
-                                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Controla propagación de fisuras</li>
-                                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Resistente a álcalis y no corrosiva</li>
-                                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> No afecta hidratación del cemento</li>
-                                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Alta resistencia a la abrasión</li>
-                                        </ul>
-                                    </div>
-                                    <div class="fibra-usos">
-                                        <h4 style="color: var(--verde-oscuro); margin-bottom: 15px;">Usos principales:</h4>
-                                        <ul class="check-list">
-                                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Pisos de concreto</li>
-                                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Losas deportivas</li>
-                                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Control de fisuras</li>
-                                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Muros delgados</li>
-                                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Elementos esbeltos</li>
-                                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Superficies expuestas</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                <p><strong>Ventajas de la fibra:</strong></p>
+                                <ul>
+                                    <li>Disminuye la contracción plástica.</li>
+                                    <li>Mejora la resistencia al impacto y la ductilidad.</li>
+                                    <li>Controla y bloquea la propagación de fisuras (micro rajaduras).</li>
+                                    <li>Resistente a álcalis y no corrosiva.</li>
+                                    <li>No afecta la hidratación del cemento.</li>
+                                    <li>Alta resistencia a la abrasión.</li>
+                                </ul>
+                                <p><strong>Usos:</strong></p>
+                                <ul>
+                                    <li>Pisos de concreto.</li>
+                                    <li>Losas deportivas.</li>
+                                    <li>Control de fisuras.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -2613,57 +2572,45 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
                             </div>
                         </div>
 
-                        <!-- CORREGIDO: Pisos de Concreto Pulido e Industriales en servicios - MEJORADA -->
+                        <!-- CORREGIDO: Pisos de Concreto Pulido e Industriales en servicios -->
                         <div class="card fade-in" id="pisos-pulidos-service">
                             <div class="card-header">
                                 <h3><i class="fas fa-hard-hat" aria-hidden="true"></i> Pisos de Concreto Pulido e Industriales</h3>
                             </div>
-                            <div class="card-body">
+                            <div class="card-body text-center">
                                 <p>Somos especialistas en el diseño e instalación de <strong>pisos de concreto pulido y semi pulido</strong>, ofreciendo soluciones durables y de alta calidad para espacios industriales, comerciales y residenciales, usando tecnología de última generación para garantizar precisión, resistencia y excelente acabado en cada proyecto. Realizamos corte y sellado de juntas de dilatación, asegurando mayor durabilidad y correcto desempeño del piso.</p>
                                 
-                                <div class="pisos-content">
-                                    <ul class="check-list">
-                                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Pisos de concreto pulido</li>
-                                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Pisos de concreto semi pulido</li>
-                                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Pisos industriales de concreto</li>
-                                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Corte y sellado de juntas de dilatación</li>
-                                    </ul>
-                                </div>
+                                <ul class="check-list">
+                                    <li><i class="fas fa-check-circle" aria-hidden="true"></i>Pisos de concreto pulido</li>
+                                    <li><i class="fas fa-check-circle" aria-hidden="true"></i>Pisos de concreto semi pulido</li>
+                                    <li><i class="fas fa-check-circle" aria-hidden="true"></i>Pisos industriales de concreto</li>
+                                    <li><i class="fas fa-check-circle" aria-hidden="true"></i>Corte y sellado de juntas de dilatación</li>
+                                </ul>
                             </div>
                         </div>
 
-                        <!-- AHORA Venta de Fibras para Concreto - MEJORADA -->
+                        <!-- AHORA Venta de Fibras para Concreto -->
                         <div class="card fade-in" id="fibras-service">
                             <div class="card-header">
-                                <h3><i class="fas fa-bolt" aria-hidden="true"></i> Venta de Fibras para Concreto</h3>
+                                <h3><i class="fas fa-fiber" aria-hidden="true"></i> Venta de Fibras para Concreto</h3>
                             </div>
                             <div class="card-body">
                                 <p>Ofrecemos <strong>micro fibra de polipropileno y macro-fibra sintética estructural para concreto</strong>, una fibra inerte y químicamente estable diseñada para la prevención de rajaduras y fisuras en el concreto. Es ideal para mejorar el desempeño del concreto, aumentando su durabilidad y resistencia.</p>
-                                
-                                <div class="fibra-content">
-                                    <div class="fibra-ventajas">
-                                        <h4 style="color: var(--verde-oscuro); margin-bottom: 15px;">Ventajas de la fibra:</h4>
-                                        <ul class="check-list">
-                                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Disminuye la contracción plástica</li>
-                                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Mejora la resistencia al impacto</li>
-                                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Controla propagación de fisuras</li>
-                                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Resistente a álcalis y no corrosiva</li>
-                                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> No afecta hidratación del cemento</li>
-                                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Alta resistencia a la abrasión</li>
-                                        </ul>
-                                    </div>
-                                    <div class="fibra-usos">
-                                        <h4 style="color: var(--verde-oscuro); margin-bottom: 15px;">Usos principales:</h4>
-                                        <ul class="check-list">
-                                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Pisos de concreto</li>
-                                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Losas deportivas</li>
-                                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Control de fisuras</li>
-                                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Muros delgados</li>
-                                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Elementos esbeltos</li>
-                                            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Superficies expuestas</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                <p><strong>Ventajas de la fibra:</strong></p>
+                                <ul>
+                                    <li>Disminuye la contracción plástica.</li>
+                                    <li>Mejora la resistencia al impacto y la ductilidad.</li>
+                                    <li>Controla y bloquea la propagación de fisuras (micro rajaduras).</li>
+                                    <li>Resistente a álcalis y no corrosiva.</li>
+                                    <li>No afecta la hidratación del cemento.</li>
+                                    <li>Alta resistencia a la abrasión.</li>
+                                </ul>
+                                <p><strong>Usos:</strong></p>
+                                <ul>
+                                    <li>Pisos de concreto.</li>
+                                    <li>Losas deportivas.</li>
+                                    <li>Control de fisuras.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -2990,7 +2937,7 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
                         <li><a href="#" data-page="concrete" title="Concreto Premezclado"><i class="fas fa-cubes" aria-hidden="true"></i> Concreto Premezclado</a></li>
                         <li><a href="#" data-page="services" title="Bombeo de Concreto"><i class="fas fa-pump" aria-hidden="true"></i> Bombeo de Concreto</a></li>
                         <li><a href="#" data-page="services" title="Pisos de Concreto"><i class="fas fa-hard-hat" aria-hidden="true"></i> Pisos de Concreto</a></li>
-                        <li><a href="#" data-page="services" title="Fibras para Concreto"><i class="fas fa-bolt" aria-hidden="true"></i> Fibras para Concreto</a></li>
+                        <li><a href="#" data-page="services" title="Fibras para Concreto"><i class="fas fa-fiber" aria-hidden="true"></i> Fibras para Concreto</a></li>
                         <li><a href="#" data-page="calculator" title="Calculadora de Presupuesto"><i class="fas fa-calculator" aria-hidden="true"></i> Calculadora</a></li>
                     </ul>
                 </div>
@@ -3603,4 +3550,4 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
         });
     </script>
 </body>
-</html>
+</html> 
