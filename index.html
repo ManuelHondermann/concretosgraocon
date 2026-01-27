@@ -587,10 +587,26 @@
             margin-top: 35px;
         }
 
-        /* FONDO DE HERO ESPECÍFICO PARA INICIO - IMAGEN ACTUALIZADA */
+        /* CAMBIO CRÍTICO: FONDO DE HERO ESPECÍFICO PARA INICIO - IMAGEN MÁS HORIZONTAL PARA VER EL MIXER */
         #home .hero {
-            background: url('https://i.ibb.co/7txF47fN/Whats-App-Image-2026-01-27-at-3-09-42-PM.jpg') center/cover no-repeat;
+            background: url('https://i.ibb.co/7txF47fN/Whats-App-Image-2026-01-27-at-3-09-42-PM.jpg') center 40%/cover no-repeat;
             background-attachment: fixed;
+        }
+
+        /* Overlay más oscuro para mejor contraste del texto */
+        #home .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to right, 
+                rgba(13, 59, 13, 0.7) 0%, 
+                rgba(13, 59, 13, 0.4) 40%, 
+                rgba(13, 59, 13, 0.2) 70%, 
+                rgba(13, 59, 13, 0) 100%);
+            z-index: 1;
         }
 
         /* Ajustar posición del texto para no tapar elementos importantes */
@@ -601,7 +617,7 @@
 
         #home .hero h2 {
             max-width: 75%;
-            background: linear-gradient(90deg, rgba(13, 59, 13, 0.3) 0%, transparent 100%);
+            background: linear-gradient(90deg, rgba(13, 59, 13, 0.5) 0%, transparent 100%);
             padding: 20px 40px;
             border-radius: 10px;
             margin-left: -40px;
@@ -610,7 +626,7 @@
 
         #home .hero p {
             max-width: 65%;
-            background: linear-gradient(90deg, rgba(13, 59, 13, 0.2) 0%, transparent 100%);
+            background: linear-gradient(90deg, rgba(13, 59, 13, 0.3) 0%, transparent 100%);
             padding: 15px 30px;
             border-radius: 8px;
             margin-left: -30px;
@@ -619,58 +635,54 @@
 
         /* Otros héroes mantienen sus fondos */
         #concrete .hero {
-            background: url('https://i.ibb.co/qYCXSz2b/Whats-App-Image-2026-01-22-at-12-39-20-PM.jpg') center/cover no-repeat;
+            background: url('https://i.ibb.co/qYCXSz2b/Whats-App-Image-2026-01-22-at-12-39-20-PM.jpg') center 30%/cover no-repeat;
         }
 
         #services .hero {
-            background: url('https://i.ibb.co/mVJy5887/Whats-App-Image-2026-01-27-at-1-00-37-PM.jpg') center/cover no-repeat;
+            background: url('https://i.ibb.co/mVJy5887/Whats-App-Image-2026-01-27-at-1-00-37-PM.jpg') center 30%/cover no-repeat;
         }
 
         /* FONDO DE PROYECTOS ACTUALIZADO */
         #projects .hero {
-            background: url('https://i.ibb.co/sv3C6mL8/Whats-App-Image-2026-01-26-at-11-35-53-AM.jpg') center/cover no-repeat;
+            background: url('https://i.ibb.co/sv3C6mL8/Whats-App-Image-2026-01-26-at-11-35-53-AM.jpg') center 30%/cover no-repeat;
         }
 
         #clients .hero {
-            background: url('https://i.ibb.co/pBLYBScx/Whats-App-Image-2026-01-22-at-12-41-59-PM.jpg') center/cover no-repeat;
+            background: url('https://i.ibb.co/pBLYBScx/Whats-App-Image-2026-01-22-at-12-41-59-PM.jpg') center 30%/cover no-repeat;
         }
 
         #calculator .hero {
-            background: url('https://i.ibb.co/V0Sd20hw/Whats-App-Image-2026-01-22-at-12-06-51-PM.jpg') center/cover no-repeat;
+            background: url('https://i.ibb.co/V0Sd20hw/Whats-App-Image-2026-01-22-at-12-06-51-PM.jpg') center 30%/cover no-repeat;
         }
 
         #contact .hero {
-            background: url('https://i.ibb.co/21x3X0BD/Whats-App-Image-2026-01-22-at-4-45-31-PM.jpg') center/cover no-repeat;
+            background: url('https://i.ibb.co/21x3X0BD/Whats-App-Image-2026-01-22-at-4-45-31-PM.jpg') center 30%/cover no-repeat;
         }
 
         #quote .hero {
-            background: url('https://i.ibb.co/hRspNQDZ/Whats-App-Image-2026-01-27-at-2-19-04-PM.jpg') center/cover no-repeat;
-        }
-
-        /* Overlay para todos los héroes - MÁS TRANSPARENTE */
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(to right, 
-                rgba(13, 59, 13, 0.3) 0%, 
-                rgba(13, 59, 13, 0.15) 30%, 
-                rgba(13, 59, 13, 0.05) 70%, 
-                rgba(13, 59, 13, 0) 100%);
-            z-index: 1;
+            background: url('https://i.ibb.co/hRspNQDZ/Whats-App-Image-2026-01-27-at-2-19-04-PM.jpg') center 30%/cover no-repeat;
         }
 
         /* Ajustes para móviles en el diseño del hero */
         @media (max-width: 768px) {
+            #home .hero {
+                background: url('https://i.ibb.co/7txF47fN/Whats-App-Image-2026-01-27-at-3-09-42-PM.jpg') center 35%/cover no-repeat !important;
+                background-attachment: scroll !important;
+            }
+            
+            #home .hero::before {
+                background: linear-gradient(to right, 
+                    rgba(13, 59, 13, 0.8) 0%, 
+                    rgba(13, 59, 13, 0.5) 50%, 
+                    rgba(13, 59, 13, 0.2) 100%);
+            }
+            
             #home .hero h2 {
                 max-width: 100%;
                 margin-left: 0;
                 padding: 15px 20px;
                 font-size: 2.2rem;
-                background: rgba(13, 59, 13, 0.4);
+                background: rgba(13, 59, 13, 0.6);
             }
             
             #home .hero p {
@@ -678,7 +690,7 @@
                 margin-left: 0;
                 padding: 12px 20px;
                 font-size: 1.2rem;
-                background: rgba(13, 59, 13, 0.3);
+                background: rgba(13, 59, 13, 0.5);
             }
             
             #home .hero .hero-content {
