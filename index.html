@@ -508,7 +508,7 @@
             padding: 30px 0 60px;
         }
 
-        /* HERO MEJORADO - CAMBIO DE COLOR EN TEXTO */
+        /* HERO MEJORADO - BOTONES EN LADO DERECHO */
         .hero {
             background-color: #0a2a0a;
             color: var(--blanco);
@@ -527,73 +527,72 @@
             border: none;
         }
 
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(to right, 
-                rgba(13, 59, 13, 0.4) 0%, 
-                rgba(13, 59, 13, 0.2) 30%, 
-                rgba(13, 59, 13, 0.1) 70%, 
-                rgba(13, 59, 13, 0) 100%);
-            z-index: 1;
-        }
-
         .hero-content {
             position: relative;
             z-index: 2;
             width: 100%;
             max-width: 1400px;
             margin: 0 auto;
-            padding: 80px 20px;
-            transform: translateY(0);
+            padding: 60px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
         }
 
         .hero h2 {
             font-size: clamp(2rem, 5vw, 4.5rem);
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             color: var(--blanco);
             font-weight: 900;
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
             line-height: 1.1;
-            max-width: 800px;
+            max-width: 600px;
         }
 
-        /* CAMBIO PRINCIPAL: Color del texto del párrafo en hero */
         .hero p {
             font-size: clamp(1rem, 2vw, 1.5rem);
             color: #f0fff0;
-            max-width: 700px;
-            margin: 0 0 35px;
+            max-width: 500px;
+            margin: 0 0 30px;
             line-height: 1.7;
             font-weight: 600;
             text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
             opacity: 0.95;
         }
 
-        /* Color más claro para las palabras resaltadas */
         .hero p strong {
             color: var(--dorado-claro);
             font-weight: 800;
         }
 
+        /* CONTENEDOR DE BOTONES EN FILA */
         .hero-cta {
             display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin-top: 35px;
+            gap: 15px;
+            flex-wrap: nowrap;
+            margin-top: 25px;
+            width: 100%;
+            max-width: 500px;
         }
 
-        /* CAMBIO CRÍTICO: FONDO DE HERO ESPECÍFICO PARA INICIO - IMAGEN MÁS HORIZONTAL PARA VER EL MIXER */
+        .hero-cta .btn {
+            min-width: auto;
+            flex: 1;
+            padding: 16px 20px;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        /* FONDO DE HERO ESPECÍFICO PARA INICIO */
         #home .hero {
-            background: url('https://i.ibb.co/7txF47fN/Whats-App-Image-2026-01-27-at-3-09-42-PM.jpg') center 40%/cover no-repeat;
+            background: url('https://i.ibb.co/7txF47fN/Whats-App-Image-2026-01-27-at-3-09-42-PM.jpg') center 35%/cover no-repeat;
             background-attachment: fixed;
         }
 
-        /* Overlay más oscuro para mejor contraste del texto */
+        /* Overlay más claro para mejor visualización de la imagen */
         #home .hero::before {
             content: '';
             position: absolute;
@@ -602,35 +601,40 @@
             right: 0;
             bottom: 0;
             background: linear-gradient(to right, 
-                rgba(13, 59, 13, 0.7) 0%, 
-                rgba(13, 59, 13, 0.4) 40%, 
-                rgba(13, 59, 13, 0.2) 70%, 
-                rgba(13, 59, 13, 0) 100%);
+                rgba(13, 59, 13, 0.6) 0%, 
+                rgba(13, 59, 13, 0.3) 30%, 
+                rgba(13, 59, 13, 0.1) 60%, 
+                transparent 100%);
             z-index: 1;
         }
 
-        /* Ajustar posición del texto para no tapar elementos importantes */
+        /* Ajuste del contenido para mostrar más imagen */
         #home .hero .hero-content {
-            padding-left: 8%;
-            padding-right: 8%;
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-top: 80px;
+            padding-bottom: 80px;
         }
 
         #home .hero h2 {
-            max-width: 75%;
-            background: linear-gradient(90deg, rgba(13, 59, 13, 0.5) 0%, transparent 100%);
-            padding: 20px 40px;
+            max-width: 60%;
+            background: linear-gradient(90deg, rgba(13, 59, 13, 0.6) 0%, transparent 100%);
+            padding: 20px 30px;
             border-radius: 10px;
-            margin-left: -40px;
             backdrop-filter: blur(2px);
         }
 
         #home .hero p {
-            max-width: 65%;
-            background: linear-gradient(90deg, rgba(13, 59, 13, 0.3) 0%, transparent 100%);
-            padding: 15px 30px;
+            max-width: 55%;
+            background: linear-gradient(90deg, rgba(13, 59, 13, 0.4) 0%, transparent 100%);
+            padding: 15px 25px;
             border-radius: 8px;
-            margin-left: -30px;
             backdrop-filter: blur(2px);
+        }
+
+        #home .hero .hero-cta {
+            max-width: 400px;
+            margin-top: 30px;
         }
 
         /* Otros héroes mantienen sus fondos */
@@ -642,7 +646,6 @@
             background: url('https://i.ibb.co/mVJy5887/Whats-App-Image-2026-01-27-at-1-00-37-PM.jpg') center 30%/cover no-repeat;
         }
 
-        /* FONDO DE PROYECTOS ACTUALIZADO */
         #projects .hero {
             background: url('https://i.ibb.co/sv3C6mL8/Whats-App-Image-2026-01-26-at-11-35-53-AM.jpg') center 30%/cover no-repeat;
         }
@@ -663,75 +666,106 @@
             background: url('https://i.ibb.co/hRspNQDZ/Whats-App-Image-2026-01-27-at-2-19-04-PM.jpg') center 30%/cover no-repeat;
         }
 
-        /* Ajustes para móviles en el diseño del hero */
-        @media (max-width: 768px) {
-            #home .hero {
-                background: url('https://i.ibb.co/7txF47fN/Whats-App-Image-2026-01-27-at-3-09-42-PM.jpg') center 35%/cover no-repeat !important;
-                background-attachment: scroll !important;
-            }
-            
-            #home .hero::before {
-                background: linear-gradient(to right, 
-                    rgba(13, 59, 13, 0.8) 0%, 
-                    rgba(13, 59, 13, 0.5) 50%, 
-                    rgba(13, 59, 13, 0.2) 100%);
-            }
-            
+        /* RESPONSIVE: Para tablets */
+        @media (max-width: 992px) {
             #home .hero h2 {
+                max-width: 70%;
+                font-size: 2.8rem;
+            }
+            
+            #home .hero p {
+                max-width: 65%;
+                font-size: 1.3rem;
+            }
+            
+            .hero-cta {
+                gap: 10px;
+            }
+            
+            .hero-cta .btn {
+                padding: 14px 18px;
+                font-size: 0.95rem;
+            }
+        }
+
+        /* RESPONSIVE: Para móviles */
+        @media (max-width: 768px) {
+            .hero-content {
+                padding: 50px 20px;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .hero h2 {
+                text-align: center;
+                width: 100%;
                 max-width: 100%;
                 margin-left: 0;
                 padding: 15px 20px;
                 font-size: 2.2rem;
-                background: rgba(13, 59, 13, 0.6);
+                background: rgba(13, 59, 13, 0.7);
             }
             
-            #home .hero p {
+            .hero p {
+                text-align: center;
+                width: 100%;
                 max-width: 100%;
                 margin-left: 0;
                 padding: 12px 20px;
-                font-size: 1.2rem;
-                background: rgba(13, 59, 13, 0.5);
+                font-size: 1.1rem;
+                background: rgba(13, 59, 13, 0.6);
             }
             
-            #home .hero .hero-content {
-                padding-left: 5%;
-                padding-right: 5%;
-                text-align: center;
-                align-items: center;
+            /* En móviles, botones apilados verticalmente */
+            .hero-cta {
+                flex-direction: column;
+                width: 100%;
+                max-width: 300px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .hero-cta .btn {
+                width: 100%;
+                padding: 16px 20px;
+            }
+            
+            #home .hero {
+                background-attachment: scroll !important;
+                background-position: center 40% !important;
+            }
+            
+            #home .hero::before {
+                background: linear-gradient(to right, 
+                    rgba(13, 59, 13, 0.7) 0%, 
+                    rgba(13, 59, 13, 0.5) 50%, 
+                    rgba(13, 59, 13, 0.3) 100%);
             }
             
             .hero {
                 min-height: 60vh;
                 background-attachment: scroll !important;
             }
-            
-            .hero h2 {
-                text-align: center;
-            }
-            
-            .hero p {
-                text-align: center;
-            }
-            
-            .hero-cta {
-                justify-content: center;
-            }
         }
 
         /* Para pantallas muy pequeñas */
         @media (max-width: 480px) {
-            #home .hero h2 {
+            .hero {
+                min-height: 60vh;
+            }
+            
+            .hero h2 {
                 font-size: 1.8rem;
                 padding: 12px 15px;
             }
             
-            #home .hero p {
+            .hero p {
                 font-size: 1rem;
                 padding: 10px 15px;
             }
             
-            .hero {
-                min-height: 50vh;
+            .hero-cta {
+                max-width: 280px;
             }
         }
 
@@ -1982,15 +2016,6 @@
                 text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
             }
             
-            .hero-cta {
-                flex-direction: column;
-                width: 100%;
-            }
-            
-            .hero-cta .btn {
-                width: 100%;
-            }
-            
             .gallery-filters {
                 padding-left: 20px;
                 padding-right: 20px;
@@ -2178,10 +2203,6 @@
         /* MEJORAS DE INTERFAZ ADICIONALES */
         .card-header h3 i {
             margin-right: 10px;
-        }
-        
-        .hero-cta .btn {
-            min-width: 200px;
         }
         
         /* Mejoras en la calculadora */
@@ -2443,7 +2464,7 @@
                 <div class="hero fade-in">
                     <div class="hero-content">
                         <h2>VENTA DE CONCRETO PREMEZCLADO</h2>
-                        <p>Con más de 25 años de experiencia, somos líderes en la venta de <strong>concreto premezclado de alta calidad</strong>. Ofrecemos <strong>precios competitivos</strong>, cumplimiento riguroso de estándares técnicos en todas las resistencias y garantizamos <strong>precisión, confiabilidad y puntualidad</strong> en cada proyecto. 
+                        <p>Con más de 25 años de experiencia, somos líderes en la venta de <strong>concreto premezclado de alta calidad</strong>. Ofrecemos <strong>precios competitivos</strong>, cumplimiento riguroso de estándares técnicos en todas las resistencias y garantizamos <strong>precisión, confiabilidad y puntualidad</strong> en cada proyecto.</p>
                         <div class="hero-cta">
                             <a href="tel:+51927571365" class="btn btn-primary" aria-label="Llamar ahora a GRAOCON">
                                 <i class="fas fa-phone" aria-hidden="true"></i> LLAMAR AHORA
@@ -3670,5 +3691,3 @@ Es ideal para estructuras complejas y esbeltas, así como para tanques de agua p
     </script>
 </body>
 </html>
-
-
