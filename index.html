@@ -1059,7 +1059,7 @@
             height: 320px;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
             cursor: pointer;
-            background: transparent; /* Cambiado de fondo verde a transparente */
+            background: transparent;
             transition: all 0.4s ease;
         }
 
@@ -1073,7 +1073,7 @@
             height: 100%;
             object-fit: cover;
             transition: all 0.8s ease;
-            opacity: 1; /* Cambiado de 0.95 a 1 para máxima visibilidad */
+            opacity: 1;
         }
 
         .gallery-item:hover img {
@@ -1081,7 +1081,7 @@
             opacity: 1;
         }
 
-        /* OVERLAY MEJORADO - MUCHO MÁS TRANSPARENTE */
+        /* OVERLAY MEJORADO - MUCHO MÁS TRANSPARENTE PARA MEJOR VISIBILIDAD */
         .gallery-overlay {
             position: absolute;
             top: 0;
@@ -1094,9 +1094,9 @@
             padding: 30px 25px;
             background: linear-gradient(
                 to top, 
-                rgba(13, 59, 13, 0.7) 0%, /* Reducido significativamente para más transparencia */
-                rgba(13, 59, 13, 0.5) 30%, 
-                rgba(13, 59, 13, 0.1) 70%, 
+                rgba(13, 59, 13, 0.3) 0%,  /* Reducido de 0.7 a 0.3 para mayor visibilidad */
+                rgba(13, 59, 13, 0.15) 30%, /* Reducido de 0.5 a 0.15 */
+                rgba(13, 59, 13, 0.05) 70%, /* Reducido de 0.1 a 0.05 */
                 transparent 100%
             );
             z-index: 2;
@@ -1106,9 +1106,9 @@
         .gallery-item:hover .gallery-overlay {
             background: linear-gradient(
                 to top, 
-                rgba(13, 59, 13, 0.8) 0%, 
-                rgba(13, 59, 13, 0.6) 40%, 
-                rgba(13, 59, 13, 0.2) 80%, 
+                rgba(13, 59, 13, 0.5) 0%,  /* Reducido de 0.8 a 0.5 */
+                rgba(13, 59, 13, 0.3) 40%,  /* Reducido de 0.6 a 0.3 */
+                rgba(13, 59, 13, 0.1) 80%,  /* Reducido de 0.2 a 0.1 */
                 transparent 100%
             );
             padding: 35px 30px;
