@@ -2234,12 +2234,12 @@
                     <p class="section-subtitle">Proyectos que demuestran nuestra capacidad técnica y compromiso con la calidad</p>
                    
                     <div class="gallery-filters">
-                        <button class="filter-btn active" data-filter="all">Todos</button>
-                        <button class="filter-btn" data-filter="sports">Deportivos</button>
+                        <button class="filter-btn active" data-filter="clubs">Clubs</button>
                         <button class="filter-btn" data-filter="paving">Pavimentación</button>
                         <button class="filter-btn" data-filter="pools">Piscinas</button>
                         <button class="filter-btn" data-filter="recreational">Pista Recreacional</button>
-                        <button class="filter-btn" data-filter="clubs">Clubs</button>
+                        <button class="filter-btn" data-filter="sports">Deportivos</button>
+                        <button class="filter-btn" data-filter="residential">Residencial</button>
                     </div>
 
                     <div class="gallery-grid" id="galleryContainer">
@@ -2562,62 +2562,279 @@
            
             // Datos de la galería
             const galleryItems = [
+                // COUNTRY CLUB EL BOSQUE (categoría: clubs)
                 { 
-                    category: 'sports', 
-                    img: 'https://i.ibb.co/N6vN5Wgk/Whats-App-Image-2024-01-03-at-3-51-31-PM.jpg', 
-                    title: 'Centro Deportivo', 
-                    desc: 'Construcción completa de instalaciones deportivas',
-                    fullDesc: 'Proyecto integral de construcción de centro deportivo con canchas multifuncionales, áreas de entrenamiento y espacios complementarios.'
-                },
-                { 
-                    category: 'sports', 
-                    img: 'https://i.ibb.co/5Wpd52SW/Whats-App-Image-2024-01-03-at-3-51-31-PM-1.jpg', 
-                    title: 'Estructuras Deportivas', 
-                    desc: 'Detalles de construcción especializada',
-                    fullDesc: 'Detalles constructivos de estructuras deportivas, mostrando la precisión en el vaciado y acabado de elementos estructurales.'
-                },
-                { 
-                    category: 'paving', 
-                    img: 'https://i.ibb.co/vCrt7DHk/Whats-App-Image-2024-01-03-at-3-51-33-PM-1.jpg', 
-                    title: 'Pavimentación Vial', 
-                    desc: 'Trabajos de pavimentación de alta resistencia',
-                    fullDesc: 'Proyecto de pavimentación vial con concreto de alta resistencia al desgaste y condiciones climáticas adversas.'
-                },
-                { 
-                    category: 'paving', 
-                    img: 'https://i.ibb.co/pvKhXYzm/Whats-App-Image-2024-01-03-at-3-51-32-PM.jpg', 
-                    title: 'Pavimentación Urbana', 
-                    desc: 'Soluciones urbanas modernas y duraderas',
-                    fullDesc: 'Trabajos de pavimentación urbana que combinan funcionalidad y estética.'
-                },
-                { 
-                    category: 'pools', 
-                    img: 'https://i.ibb.co/6CbGqQ4/Whats-App-Image-2024-01-03-at-3-51-21-PM-2.jpg', 
-                    title: 'Piscina Arquitectónica', 
-                    desc: 'Diseño y construcción especializada',
-                    fullDesc: 'Construcción de piscina arquitectónica con diseño personalizado y acabados de lujo.'
-                },
-                { 
-                    category: 'recreational', 
-                    img: 'https://i.ibb.co/gZ3XZ2t9/Whats-App-Image-2024-01-12-at-5-19-36-PM.jpg', 
-                    title: 'Pista Recreacional', 
-                    desc: 'Espacio para actividades recreativas',
-                    fullDesc: 'Construcción de pista recreacional con superficie de concreto especialmente diseñada para actividades deportivas y recreativas.'
+                    category: 'clubs', 
+                    img: 'https://i.ibb.co/wbSgk80/2.png', 
+                    title: 'Country Club El Bosque', 
+                    desc: 'Proyecto integral en club exclusivo',
+                    fullDesc: 'Trabajos de concreto premezclado para instalaciones de alto nivel en Country Club El Bosque. Estructuras de alta calidad con acabados premium.'
                 },
                 { 
                     category: 'clubs', 
-                    img: 'https://i.ibb.co/d0DzcC1k/Whats-App-Image-2026-01-09-at-9-53-51-AM-1.jpg', 
-                    title: 'Country Club', 
-                    desc: 'Proyecto integral de alta gama',
-                    fullDesc: 'Proyecto integral para country club de alta gama, incluyendo áreas sociales, deportivas y de esparcimiento.'
+                    img: 'https://i.ibb.co/BVJC1tZn/5138e7a4-84fd-4d40-b6e9-f9fcbe591bfb.png', 
+                    title: 'Country Club El Bosque', 
+                    desc: 'Estructuras y pavimentos de alta gama',
+                    fullDesc: 'Construcción de pavimentos y estructuras en áreas sociales y deportivas del Country Club El Bosque.'
+                },
+                { 
+                    category: 'clubs', 
+                    img: 'https://i.ibb.co/JWYWY084/4.jpg', 
+                    title: 'Country Club El Bosque', 
+                    desc: 'Detalles arquitectónicos en concreto',
+                    fullDesc: 'Elementos arquitectónicos especiales realizados con concreto premezclado de alta resistencia.'
+                },
+                { 
+                    category: 'clubs', 
+                    img: 'https://i.ibb.co/Y4qWPLvz/3.jpg', 
+                    title: 'Country Club El Bosque', 
+                    desc: 'Ampliación de instalaciones',
+                    fullDesc: 'Trabajos de ampliación y renovación de instalaciones deportivas y recreativas.'
+                },
+                
+                // JARDINES DE LA PAZ (categoría: paving)
+                { 
+                    category: 'paving', 
+                    img: 'https://i.ibb.co/Nggy5Rrw/camposanto-lurin-1.jpg', 
+                    title: 'Jardines de la Paz', 
+                    desc: 'Pavimentación en camposanto',
+                    fullDesc: 'Trabajos de pavimentación y estructuras en el camposanto Jardines de la Paz en Lurín.'
+                },
+                { 
+                    category: 'paving', 
+                    img: 'https://i.ibb.co/LX49n3LQ/2.png', 
+                    title: 'Jardines de la Paz', 
+                    desc: 'Estructuras y caminos',
+                    fullDesc: 'Construcción de caminos y estructuras complementarias en áreas de memorial.'
+                },
+                { 
+                    category: 'paving', 
+                    img: 'https://i.ibb.co/VpN3nbtn/1.png', 
+                    title: 'Jardines de la Paz', 
+                    desc: 'Detalles de construcción',
+                    fullDesc: 'Detalles constructivos y acabados especiales en áreas de servicio.'
+                },
+                { 
+                    category: 'paving', 
+                    img: 'https://i.ibb.co/MDz9Ksf3/Whats-App-Image-2026-01-30-at-3-34-02-PM.jpg', 
+                    title: 'Jardines de la Paz', 
+                    desc: 'Vaciado de concreto en situ',
+                    fullDesc: 'Proceso de vaciado de concreto premezclado para estructuras específicas.'
+                },
+                { 
+                    category: 'paving', 
+                    img: 'https://i.ibb.co/5gkQj1YB/Whats-App-Image-2026-01-30-at-3-34-56-PM.jpg', 
+                    title: 'Jardines de la Paz', 
+                    desc: 'Trabajos de terminación',
+                    fullDesc: 'Fases finales de construcción y acabados en pavimentos.'
+                },
+                
+                // LOSAS (categoría: paving)
+                { 
+                    category: 'paving', 
+                    img: 'https://i.ibb.co/xq4SnmSS/6.jpg', 
+                    title: 'Losas Estructurales', 
+                    desc: 'Losas de concreto reforzado',
+                    fullDesc: 'Construcción de losas estructurales de alta resistencia para diferentes tipos de edificaciones.'
+                },
+                { 
+                    category: 'paving', 
+                    img: 'https://i.ibb.co/PvHJd29Q/5.jpg', 
+                    title: 'Losas Industriales', 
+                    desc: 'Pisos industriales de concreto',
+                    fullDesc: 'Instalación de losas industriales con concreto de alta resistencia al desgaste.'
+                },
+                { 
+                    category: 'paving', 
+                    img: 'https://i.ibb.co/Nn1M2CZj/4.jpg', 
+                    title: 'Losas Arquitectónicas', 
+                    desc: 'Acabados especiales en losas',
+                    fullDesc: 'Losas con acabados arquitectónicos especiales para proyectos de alta gama.'
+                },
+                { 
+                    category: 'paving', 
+                    img: 'https://i.ibb.co/99JkDwSz/3.jpg', 
+                    title: 'Losas Deportivas', 
+                    desc: 'Superficies para actividades deportivas',
+                    fullDesc: 'Construcción de losas especiales para canchas deportivas y áreas de entrenamiento.'
+                },
+                { 
+                    category: 'paving', 
+                    img: 'https://i.ibb.co/RknwmSXT/2.jpg', 
+                    title: 'Losas Residenciales', 
+                    desc: 'Viviendas y edificios multifamiliares',
+                    fullDesc: 'Losas para proyectos residenciales con control de calidad estricto.'
+                },
+                { 
+                    category: 'paving', 
+                    img: 'https://i.ibb.co/kVYkf7yh/1.jpg', 
+                    title: 'Losas Comerciales', 
+                    desc: 'Centros comerciales y edificios de oficinas',
+                    fullDesc: 'Estructuras de concreto para edificaciones comerciales de gran envergadura.'
+                },
+                
+                // COLEGIO MATRISTA (categoría: sports)
+                { 
+                    category: 'sports', 
+                    img: 'https://i.ibb.co/Wvvx6XXB/Whats-App-Image-2026-01-30-at-4-05-44-PM.jpg', 
+                    title: 'Colegio Matrista', 
+                    desc: 'Instalaciones educativas',
+                    fullDesc: 'Construcción de infraestructura educativa con concreto premezclado de calidad.'
+                },
+                { 
+                    category: 'sports', 
+                    img: 'https://i.ibb.co/gZrg174N/Whats-App-Image-2026-01-30-at-4-05-57-PM.jpg', 
+                    title: 'Colegio Matrista', 
+                    desc: 'Áreas deportivas escolares',
+                    fullDesc: 'Canchas y áreas deportivas para instituciones educativas.'
+                },
+                { 
+                    category: 'sports', 
+                    img: 'https://i.ibb.co/W4CZFqVv/Whats-App-Image-2026-01-30-at-4-06-19-PM.jpg', 
+                    title: 'Colegio Matrista', 
+                    desc: 'Pavimentos educativos',
+                    fullDesc: 'Pavimentación de patios y áreas comunes en instituciones educativas.'
+                },
+                { 
+                    category: 'sports', 
+                    img: 'https://i.ibb.co/nJ16F9R/Whats-App-Image-2026-01-30-at-4-06-36-PM.jpg', 
+                    title: 'Colegio Matrista', 
+                    desc: 'Estructuras escolares',
+                    fullDesc: 'Elementos estructurales para edificaciones educativas.'
+                },
+                { 
+                    category: 'sports', 
+                    img: 'https://i.ibb.co/7x8kVw6R/Whats-App-Image-2026-01-30-at-4-06-51-PM.jpg', 
+                    title: 'Colegio Matrista', 
+                    desc: 'Infraestructura completa',
+                    fullDesc: 'Proyecto integral de infraestructura educativa con concreto premezclado.'
+                },
+                
+                // PISCINA RECREACIONAL (categoría: pools)
+                { 
+                    category: 'pools', 
+                    img: 'https://i.ibb.co/23QJFzjP/4.jpg', 
+                    title: 'Piscina Recreacional', 
+                    desc: 'Estructuras para piscinas',
+                    fullDesc: 'Construcción de estructuras de concreto para piscinas recreativas y deportivas.'
+                },
+                { 
+                    category: 'pools', 
+                    img: 'https://i.ibb.co/wZ54J77d/3.jpg', 
+                    title: 'Piscina Recreacional', 
+                    desc: 'Vasos de concreto para piscinas',
+                    fullDesc: 'Vaciado de vasos de piscina con concreto especial impermeable.'
+                },
+                { 
+                    category: 'pools', 
+                    img: 'https://i.ibb.co/Rk0VsFrP/2.jpg', 
+                    title: 'Piscina Recreacional', 
+                    desc: 'Acabados en áreas de piscina',
+                    fullDesc: 'Trabajos de terminación y acabados en áreas perimetrales de piscinas.'
+                },
+                { 
+                    category: 'pools', 
+                    img: 'https://i.ibb.co/svRJ7WwT/1.jpg', 
+                    title: 'Piscina Recreacional', 
+                    desc: 'Proyecto completo de piscina',
+                    fullDesc: 'Desarrollo integral de proyectos de piscinas desde cimentación hasta acabados.'
+                },
+                
+                // REP PISTAS (categoría: recreational)
+                { 
+                    category: 'recreational', 
+                    img: 'https://i.ibb.co/tT0WMrSr/4.png', 
+                    title: 'Pistas Recreacionales', 
+                    desc: 'Pistas para actividades deportivas',
+                    fullDesc: 'Construcción de pistas recreacionales con superficies de concreto especial.'
+                },
+                { 
+                    category: 'recreational', 
+                    img: 'https://i.ibb.co/Jwds5BT3/3.jpg', 
+                    title: 'Pistas Recreacionales', 
+                    desc: 'Superficies de entrenamiento',
+                    fullDesc: 'Pistas diseñadas para entrenamiento deportivo y actividades recreativas.'
+                },
+                { 
+                    category: 'recreational', 
+                    img: 'https://i.ibb.co/XfqyHK7K/1.jpg', 
+                    title: 'Pistas Recreacionales', 
+                    desc: 'Infraestructura deportiva',
+                    fullDesc: 'Desarrollo de infraestructura completa para complejos deportivos.'
+                },
+                { 
+                    category: 'recreational', 
+                    img: 'https://i.ibb.co/Kxy48C9P/Whats-App-Image-2026-01-30-at-4-14-39-PM.jpg', 
+                    title: 'Pistas Recreacionales', 
+                    desc: 'Detalles constructivos',
+                    fullDesc: 'Detalles técnicos y constructivos en pistas recreacionales profesionales.'
+                },
+                
+                // UNIVERSIDAD NACIONAL AGRARIA LA MOLINA (categoría: sports)
+                { 
+                    category: 'sports', 
+                    img: 'https://i.ibb.co/JR7csw22/Whats-App-Image-2026-01-30-at-4-19-35-PM.jpg', 
+                    title: 'Universidad Nacional Agraria La Molina', 
+                    desc: 'Infraestructura universitaria',
+                    fullDesc: 'Proyectos de construcción para la prestigiosa Universidad Nacional Agraria La Molina.'
+                },
+                { 
+                    category: 'sports', 
+                    img: 'https://i.ibb.co/HDW6R8KJ/3.png', 
+                    title: 'Universidad Nacional Agraria La Molina', 
+                    desc: 'Instalaciones deportivas universitarias',
+                    fullDesc: 'Canchas y áreas deportivas para la comunidad universitaria.'
+                },
+                
+                // VIVIENDA MULTIFAMILIAR (nueva categoría: residential)
+                { 
+                    category: 'residential', 
+                    img: 'https://i.ibb.co/QvRY4JJc/2.png', 
+                    title: 'Vivienda Multifamiliar', 
+                    desc: 'Proyectos residenciales',
+                    fullDesc: 'Construcción de edificios multifamiliares con concreto premezclado de alta calidad.'
+                },
+                { 
+                    category: 'residential', 
+                    img: 'https://i.ibb.co/MkXQdrm2/1.png', 
+                    title: 'Vivienda Multifamiliar', 
+                    desc: 'Estructuras residenciales',
+                    fullDesc: 'Estructuras de concreto para proyectos de vivienda de mediana y gran escala.'
+                },
+                { 
+                    category: 'residential', 
+                    img: 'https://i.ibb.co/TxSr0P3b/3.png', 
+                    title: 'Vivienda Multifamiliar', 
+                    desc: 'Desarrollo habitacional',
+                    fullDesc: 'Proyectos integrales de desarrollo habitacional con tecnología de concreto avanzada.'
                 }
             ];
+           
+            // Obtener nombre de categoría
+            function getCategoryName(category) {
+                const categories = {
+                    'sports': 'Deportivos',
+                    'paving': 'Pavimentación',
+                    'pools': 'Piscinas',
+                    'recreational': 'Pista Recreacional',
+                    'clubs': 'Clubs',
+                    'residential': 'Residencial'
+                };
+                return categories[category] || category;
+            }
            
             // Inicializar galería
             function initGallery() {
                 if (galleryContainer) {
                     galleryContainer.innerHTML = '';
-                    galleryItems.forEach((item, index) => {
+                    
+                    // Filtrar solo elementos de la categoría activa inicial (clubs)
+                    const activeFilter = document.querySelector('.filter-btn.active');
+                    const initialCategory = activeFilter ? activeFilter.getAttribute('data-filter') : 'clubs';
+                    
+                    const filteredItems = galleryItems.filter(item => item.category === initialCategory);
+                    
+                    filteredItems.forEach((item, index) => {
                         const galleryItem = document.createElement('div');
                         galleryItem.className = 'gallery-item fade-in';
                         galleryItem.setAttribute('data-category', item.category);
@@ -2630,24 +2847,18 @@
                                 <span class="gallery-category">${getCategoryName(item.category)}</span>
                             </div>
                         `;
-                        galleryItem.addEventListener('click', () => openLightbox(index));
+                        galleryItem.addEventListener('click', () => {
+                            // Encontrar el índice real en galleryItems
+                            const realIndex = galleryItems.findIndex(gItem => 
+                                gItem.img === item.img && gItem.title === item.title);
+                            openLightbox(realIndex);
+                        });
                         galleryContainer.appendChild(galleryItem);
                     });
-                    filteredGalleryItems = [...galleryItems];
+                    
+                    filteredGalleryItems = [...filteredItems];
                     initAnimations();
                 }
-            }
-           
-            // Obtener nombre de categoría
-            function getCategoryName(category) {
-                const categories = {
-                    'sports': 'Deportivos',
-                    'paving': 'Pavimentación',
-                    'pools': 'Piscinas',
-                    'recreational': 'Pista Recreacional',
-                    'clubs': 'Clubs'
-                };
-                return categories[category] || category;
             }
            
             // Abrir lightbox
@@ -2690,24 +2901,36 @@
             // Filtrar galería
             function filterGallery(category) {
                 const items = document.querySelectorAll('.gallery-item');
-               
-                filteredGalleryItems = category === 'all' 
-                    ? [...galleryItems] 
-                    : galleryItems.filter(item => item.category === category);
-               
-                items.forEach(item => {
-                    if (category === 'all' || item.getAttribute('data-category') === category) {
-                        item.style.display = 'block';
-                        setTimeout(() => {
-                            item.classList.add('visible');
-                        }, 10);
-                    } else {
-                        item.classList.remove('visible');
-                        setTimeout(() => {
-                            item.style.display = 'none';
-                        }, 300);
-                    }
+                const galleryItemsToShow = galleryItems.filter(item => item.category === category);
+                
+                // Limpiar contenedor
+                galleryContainer.innerHTML = '';
+                
+                // Agregar nuevos items filtrados
+                galleryItemsToShow.forEach((item, index) => {
+                    const galleryItem = document.createElement('div');
+                    galleryItem.className = 'gallery-item fade-in';
+                    galleryItem.setAttribute('data-category', item.category);
+                    galleryItem.setAttribute('data-index', index);
+                    galleryItem.innerHTML = `
+                        <img src="${item.img}" alt="${item.title}" loading="lazy">
+                        <div class="gallery-overlay">
+                            <h4 class="gallery-title">${item.title}</h4>
+                            <p class="gallery-description">${item.desc}</p>
+                            <span class="gallery-category">${getCategoryName(item.category)}</span>
+                        </div>
+                    `;
+                    galleryItem.addEventListener('click', () => {
+                        // Encontrar el índice real en galleryItems
+                        const realIndex = galleryItems.findIndex(gItem => 
+                            gItem.img === item.img && gItem.title === item.title);
+                        openLightbox(realIndex);
+                    });
+                    galleryContainer.appendChild(galleryItem);
                 });
+                
+                filteredGalleryItems = [...galleryItemsToShow];
+                initAnimations();
             }
            
             // Mostrar página
