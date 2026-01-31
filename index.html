@@ -2267,7 +2267,7 @@
                    
                     <div class="clients-grid">
                         <div class="client-item fade-in">
-                            <img src="https://i.ibb.co/d4dbhcKk/Gemini-Generated-Image-g1oxa3g1oxa3g1ox.png" alt="Universidad Nacional Agraria La Molina" loading="lazy">
+                            <img src="https://i.ibb.co/wbSgk80/2.png" alt="Universidad Nacional Agraria La Molina" loading="lazy">
                         </div>
                         <div class="client-item fade-in">
                             <img src="https://i.ibb.co/BVptTXd0/Gemini-Generated-Image-d1o3zwd1o3zwd1o3.png" alt="Travex" loading="lazy">
@@ -2298,7 +2298,7 @@
             </div>
         </section>
 
-        <!-- SECCIÓN CALCULADORA -->
+        <!-- SECCIÓN CALCULADORA - ACTUALIZADA -->
         <section id="calculator" class="page-content">
             <div class="container">
                 <div class="hero fade-in">
@@ -2322,23 +2322,17 @@
                             </div>
                            
                             <div class="form-group">
-                                <label for="type"><i class="fas fa-home" aria-hidden="true"></i> Tipo de Construcción</label>
-                                <select id="type" class="form-control">
-                                    <option value="house">Losa para vivienda</option>
-                                    <option value="building">Losa para edificio</option>
-                                    <option value="industrial">Estructura industrial</option>
-                                    <option value="light">Techos ligeros</option>
-                                    <option value="foundation">Cimientos y bases</option>
-                                </select>
-                            </div>
-                           
-                            <div class="form-group">
-                                <label for="quality"><i class="fas fa-star" aria-hidden="true"></i> Nivel de Calidad</label>
+                                <label for="quality"><i class="fas fa-star" aria-hidden="true"></i> Resistencia de concreto</label>
                                 <select id="quality" class="form-control">
-                                    <option value="standard">Estándar - Concreto 210 kg/cm²</option>
-                                    <option value="high">Alta - Concreto 280 kg/cm²</option>
-                                    <option value="premium">Premium - Concreto 350 kg/cm²</option>
-                                    <option value="superior">Grado Superior - Concreto 420 kg/cm²</option>
+                                    <option value="230">CONCRETO 100 kg/cm² (230 soles/m³)</option>
+                                    <option value="245">CONCRETO 140 kg/cm² (245 soles/m³)</option>
+                                    <option value="260">CONCRETO 175 kg/cm² (260 soles/m³)</option>
+                                    <option value="270">CONCRETO 210 kg/cm² (270 soles/m³)</option>
+                                    <option value="280">CONCRETO 245 kg/cm² (280 soles/m³)</option>
+                                    <option value="310">CONCRETO 280 kg/cm² (310 soles/m³)</option>
+                                    <option value="340">CONCRETO 310 kg/cm² (340 soles/m³)</option>
+                                    <option value="360">CONCRETO 350 kg/cm² (360 soles/m³)</option>
+                                    <option value="395">CONCRETO 420 kg/cm² (395 soles/m³)</option>
                                 </select>
                             </div>
                            
@@ -3025,10 +3019,9 @@
                 });
             }
            
-            // Calcular costo
+            // Calcular costo - ACTUALIZADO SEGÚN NUEVA FÓRMULA
             function calculateCost() {
                 const area = parseFloat(document.getElementById('area').value);
-                const type = document.getElementById('type').value;
                 const quality = document.getElementById('quality').value;
                
                 if (!area || area <= 0) {
@@ -3036,40 +3029,26 @@
                     return;
                 }
                
-                let pricePerM3, qualityText;
-                switch(quality) {
-                    case 'standard': pricePerM3 = 320; qualityText = "Estándar"; break;
-                    case 'high': pricePerM3 = 360; qualityText = "Alta"; break;
-                    case 'premium': pricePerM3 = 420; qualityText = "Premium"; break;
-                    case 'superior': pricePerM3 = 480; qualityText = "Superior"; break;
-                    default: pricePerM3 = 320; qualityText = "Estándar";
-                }
-               
-                let thickness, typeText;
-                switch(type) {
-                    case 'house': thickness = 0.10; typeText = "Losa para vivienda"; break;
-                    case 'building': thickness = 0.15; typeText = "Losa para edificio"; break;
-                    case 'industrial': thickness = 0.20; typeText = "Estructura industrial"; break;
-                    case 'light': thickness = 0.08; typeText = "Techos ligeros"; break;
-                    case 'foundation': thickness = 0.30; typeText = "Cimientos y bases"; break;
-                    default: thickness = 0.10; typeText = "Losa para vivienda";
-                }
-               
-                const volume = area * thickness;
-                const concreteCost = volume * pricePerM3;
-                const additionalCosts = concreteCost * 0.15;
-                const finalCost = concreteCost + additionalCosts;
-                const roundedCost = Math.round(finalCost / 10) * 10;
-               
+                // Obtener el texto completo de la opción seleccionada
+                const qualitySelect = document.getElementById('quality');
+                const qualityText = qualitySelect.options[qualitySelect.selectedIndex].text;
+                
+                // Precio por m³ según resistencia seleccionada
+                const pricePerM3 = parseFloat(quality);
+                
+                // NUEVA FÓRMULA: Área * Precio por m³ * 0.15
+                const finalCost = area * pricePerM3 * 0.15;
+                const roundedCost = Math.round(finalCost);
+
                 document.getElementById('resultDetails').innerHTML = `
-                    <strong>${area.toLocaleString()} m²</strong> de ${typeText}<br>
-                    Calidad: <strong>${qualityText}</strong><br>
-                    Volumen: <strong>${volume.toFixed(1)} m³</strong>
+                    <strong>${area.toLocaleString()} m²</strong> de área<br>
+                    Resistencia: <strong>${qualityText}</strong><br>
+                    Fórmula: Área × Precio por m³ × 0.15
                 `;
-               
+
                 document.getElementById('finalCost').textContent = roundedCost.toLocaleString('es-PE');
                 document.getElementById('resultContainer').style.display = 'block';
-               
+
                 document.getElementById('resultContainer').scrollIntoView({
                     behavior: 'smooth',
                     block: 'center'
