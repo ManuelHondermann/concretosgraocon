@@ -1969,7 +1969,7 @@
                     <p class="section-subtitle">Soluciones integrales diseñadas para maximizar la eficiencia y calidad de su proyecto constructivo</p>
                    
                     <div class="grid">
-                        <div class="card fade-in service-card" data-service="concreto-prem">
+                        <div class="card fade-in service-card" data-service="concreto-prem" data-page="concrete">
                             <div class="card-header">
                                 <h3><i class="fas fa-cubes" aria-hidden="true"></i> Concreto Premezclado</h3>
                             </div>
@@ -1978,7 +1978,7 @@
                             </div>
                         </div>
 
-                        <div class="card fade-in service-card" data-service="bombeo">
+                        <div class="card fade-in service-card" data-service="bombeo" data-page="services">
                             <div class="card-header">
                                 <h3><i class="fas fa-pump" aria-hidden="true"></i> Servicio de Bombeo de Concreto</h3>
                             </div>
@@ -1987,7 +1987,7 @@
                             </div>
                         </div>
 
-                        <div class="card fade-in service-card" data-service="planta-movil">
+                        <div class="card fade-in service-card" data-service="planta-movil" data-page="services">
                             <div class="card-header">
                                 <h3><i class="fas fa-industry" aria-hidden="true"></i> Alquiler de Planta Móvil Dosificadora</h3>
                             </div>
@@ -1996,7 +1996,7 @@
                             </div>
                         </div>
 
-                        <div class="card fade-in service-card" data-service="pisos-pulidos">
+                        <div class="card fade-in service-card" data-service="pisos-pulidos" data-page="services">
                             <div class="card-header">
                                 <h3><i class="fas fa-hard-hat" aria-hidden="true"></i> Pisos de Concreto Pulido e Industriales</h3>
                             </div>
@@ -2012,7 +2012,7 @@
                             </div>
                         </div>
 
-                        <div class="card fade-in service-card" data-service="fibras">
+                        <div class="card fade-in service-card" data-service="fibras" data-page="services">
                             <div class="card-header">
                                 <h3><i class="fas fa-fiber" aria-hidden="true"></i> Venta de Fibras para Concreto</h3>
                             </div>
@@ -2976,37 +2976,17 @@
                 const serviceCards = document.querySelectorAll('.service-card');
                 serviceCards.forEach(card => {
                     card.addEventListener('click', function() {
+                        const targetPage = this.getAttribute('data-page');
                         const service = this.getAttribute('data-service');
-                        let targetPage = 'services';
-                        let targetElement = null;
-                       
-                        switch(service) {
-                            case 'planta-movil':
-                                targetPage = 'services';
-                                targetElement = 'planta-movil-service';
-                                break;
-                            case 'bombeo':
-                                targetPage = 'services';
-                                targetElement = 'bombeo-service';
-                                break;
-                            case 'concreto-prem':
-                                targetPage = 'services';
-                                targetElement = 'concreto-prem-service';
-                                break;
-                            case 'pisos-pulidos':
-                                targetPage = 'services';
-                                targetElement = 'pisos-pulidos-service';
-                                break;
-                            case 'fibras':
-                                targetPage = 'services';
-                                targetElement = 'fibras-service';
-                                break;
-                        }
-                       
+                        
+                        // Mostrar la página correspondiente
                         showPage(targetPage);
-                        if (targetElement) {
+                        
+                        // Si la página es services, hacer scroll al elemento específico después de un breve retraso
+                        if (targetPage === 'services' && service) {
                             setTimeout(() => {
-                                const element = document.getElementById(targetElement);
+                                const elementId = service + '-service';
+                                const element = document.getElementById(elementId);
                                 if (element) {
                                     element.scrollIntoView({
                                         behavior: 'smooth',
@@ -3232,5 +3212,3 @@
     </script>
 </body>
 </html>
-
-
