@@ -980,6 +980,51 @@
             font-size: 1rem;
         }
 
+        /* Estilo para listas tipo check */
+        .check-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Alineado a la izquierda para que coincida con el contenido */
+            gap: 10px;
+        }
+
+        .check-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--gris-texto-claro);
+            background: rgba(46, 139, 87, 0.05);
+            padding: 8px 15px;
+            border-radius: 8px;
+            width: 100%;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .check-list li:hover {
+            background: rgba(46, 139, 87, 0.1);
+            border-color: var(--dorado-claro);
+        }
+
+        .check-list li i {
+            color: var(--verde-medio);
+            background: rgba(255, 255, 255, 0.9);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            flex-shrink: 0;
+        }
+
         /* GALERÍA RESPONSIVE MEJORADA - IMÁGENES MÁS VISIBLES */
         .gallery-filters {
             display: flex;
@@ -1649,52 +1694,6 @@
             max-width: 400px;
         }
 
-        .check-list {
-            list-style: none;
-            padding-left: 0;
-            margin: 20px 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .check-list li {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--verde-oscuro);
-            background: rgba(46, 139, 87, 0.08);
-            padding: 15px 20px;
-            border-radius: 10px;
-            width: 100%;
-            max-width: 300px;
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
-        }
-
-        .check-list li:hover {
-            background: rgba(46, 139, 87, 0.12);
-            border-color: var(--dorado);
-            transform: translateX(5px);
-        }
-
-        .check-list li i {
-            color: var(--verde-medio);
-            background: rgba(255, 255, 255, 0.9);
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.9rem;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            flex-shrink: 0;
-        }
-
         /* MEJORAS SEO Y ACCESIBILIDAD */
         .sr-only {
             position: absolute;
@@ -2144,7 +2143,7 @@
             </div>
         </section>
 
-        <!-- SECCIÓN SERVICIOS -->
+        <!-- SECCIÓN SERVICIOS - MODIFICADA SEGÚN INDICACIONES -->
         <section id="services" class="page-content">
             <div class="container">
                 <div class="hero fade-in">
@@ -2167,6 +2166,15 @@
                             </div>
                             <div class="card-body">
                                 <p>Somos proveedores de <strong>concreto premezclado de alta calidad en Lima</strong>, con diseños de mezcla optimizados para todo tipo de obras y estructuras como cimentaciones, losas, columnas, pisos y obras civiles, garantizando resistencia, durabilidad y cumplimiento normativo. Resistencias: desde 100 hasta 420 kg/cm².</p>
+                                <!-- Lista de tipos añadida aquí -->
+                                <ul class="check-list">
+                                    <li><i class="fas fa-check-circle" aria-hidden="true"></i>Concreto Convencional</li>
+                                    <li><i class="fas fa-check-circle" aria-hidden="true"></i>Alta Resistencia</li>
+                                    <li><i class="fas fa-check-circle" aria-hidden="true"></i>Concreto Fibroreforzado</li>
+                                    <li><i class="fas fa-check-circle" aria-hidden="true"></i>Resistencia Acelerada</li>
+                                    <li><i class="fas fa-check-circle" aria-hidden="true"></i>Concreto Autocompactante</li>
+                                    <li><i class="fas fa-check-circle" aria-hidden="true"></i>Fraguado Acelerado</li>
+                                </ul>
                             </div>
                         </div>
 
@@ -2176,6 +2184,11 @@
                             </div>
                             <div class="card-body">
                                 <p>Ofrecemos <strong>servicio de bombeo de concreto</strong> con equipos modernos y tecnológicamente avanzados, ideales para vaciados en zonas de difícil acceso. Contamos con bombas pluma de 32 y 42 metros, capacidades de 80 a 120 m³/h, operadores certificados y asesoría técnica permanente, garantizando vaciados precisos, seguros y eficientes en cada obra.</p>
+                                <!-- Lista de tipos de bomba añadida aquí -->
+                                <ul class="check-list">
+                                    <li><i class="fas fa-check-circle" aria-hidden="true"></i>Bomba pluma</li>
+                                    <li><i class="fas fa-check-circle" aria-hidden="true"></i>Bomba estacionaria</li>
+                                </ul>
                             </div>
                         </div>
 
@@ -2210,6 +2223,11 @@
                             </div>
                             <div class="card-body">
                                 <p>Ofrecemos <strong>micro fibra de polipropileno y macro-fibra sintética estructural para concreto</strong>, una fibra inerte y químicamente estable diseñada para la prevención de rajaduras y fisuras en el concreto.</p>
+                                <!-- Lista de tipos de fibra añadida aquí -->
+                                <ul class="check-list">
+                                    <li><i class="fas fa-check-circle" aria-hidden="true"></i>Microfibra sintética</li>
+                                    <li><i class="fas fa-check-circle" aria-hidden="true"></i>Macro fibra estructural</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -2554,7 +2572,7 @@
             let currentGalleryIndex = 0;
             let filteredGalleryItems = [];
            
-            // Datos de la galería COMPLETA con TODAS las imágenes del documento
+            // Datos de la galería COMPLETA con TODAS las imágenes del documento (se mantiene igual)
             const galleryItems = [
                 // COUNTRY CLUB EL BOSQUE (4 imágenes) - categoría: clubs
                 { 
