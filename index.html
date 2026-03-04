@@ -607,6 +607,36 @@
             background: rgba(255, 255, 255, 0.08);
         }
 
+        /* --- ESTILOS PARA TEXTO EN DOS LÍNEAS (CALCULADORA Y CONCRETO) --- */
+        .nav-item .split-text {
+            display: inline-flex;
+            flex-direction: column;
+            line-height: 1.2;
+            text-align: left;
+        }
+        .nav-item .split-text .line1 {
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+        .nav-item .split-text .line2 {
+            font-size: 1rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+        }
+
+        @media (min-width: 768px) {
+            .nav-item .split-text {
+                flex-direction: row;
+                align-items: center;
+                gap: 4px;
+            }
+            .nav-item .split-text .line1,
+            .nav-item .split-text .line2 {
+                font-size: 1rem;
+                font-weight: 700;
+            }
+        }
+
         .nav-item-cotizar {
             background: linear-gradient(135deg, var(--dorado), var(--dorado-claro));
             color: var(--verde-oscuro);
@@ -987,7 +1017,7 @@
             margin: 20px 0;
             display: flex;
             flex-direction: column;
-            align-items: flex-start; /* Alineado a la izquierda para que coincida con el contenido */
+            align-items: flex-start;
             gap: 10px;
         }
 
@@ -1025,7 +1055,7 @@
             flex-shrink: 0;
         }
 
-        /* GALERÍA RESPONSIVE MEJORADA - IMÁGENES MÁS VISIBLES */
+        /* GALERÍA RESPONSIVE MEJORADA */
         .gallery-filters {
             display: flex;
             flex-wrap: nowrap;
@@ -1096,7 +1126,7 @@
             }
         }
 
-        /* GALERÍA MEJORADA - IMÁGENES MÁS VISIBLES */
+        /* GALERÍA MEJORADA */
         .gallery-item {
             position: relative;
             border-radius: 15px;
@@ -1126,7 +1156,6 @@
             opacity: 1;
         }
 
-        /* OVERLAY MEJORADO - MUCHO MÁS TRANSPARENTE PARA MEJOR VISIBILIDAD */
         .gallery-overlay {
             position: absolute;
             top: 0;
@@ -1139,9 +1168,9 @@
             padding: 30px 25px;
             background: linear-gradient(
                 to top, 
-                rgba(13, 59, 13, 0.3) 0%,  /* Reducido de 0.7 a 0.3 para mayor visibilidad */
-                rgba(13, 59, 13, 0.15) 30%, /* Reducido de 0.5 a 0.15 */
-                rgba(13, 59, 13, 0.05) 70%, /* Reducido de 0.1 a 0.05 */
+                rgba(13, 59, 13, 0.3) 0%,
+                rgba(13, 59, 13, 0.15) 30%,
+                rgba(13, 59, 13, 0.05) 70%,
                 transparent 100%
             );
             z-index: 2;
@@ -1151,9 +1180,9 @@
         .gallery-item:hover .gallery-overlay {
             background: linear-gradient(
                 to top, 
-                rgba(13, 59, 13, 0.5) 0%,  /* Reducido de 0.8 a 0.5 */
-                rgba(13, 59, 13, 0.3) 40%,  /* Reducido de 0.6 a 0.3 */
-                rgba(13, 59, 13, 0.1) 80%,  /* Reducido de 0.2 a 0.1 */
+                rgba(13, 59, 13, 0.5) 0%,
+                rgba(13, 59, 13, 0.3) 40%,
+                rgba(13, 59, 13, 0.1) 80%,
                 transparent 100%
             );
             padding: 35px 30px;
@@ -1915,11 +1944,33 @@
                 <nav class="nav" id="mainNav" aria-label="Navegación principal" itemscope itemtype="https://schema.org/SiteNavigationElement">
                     <ul class="nav-menu">
                         <li><a href="#" class="nav-item active" data-page="home" aria-current="page"><i class="fas fa-home" aria-hidden="true"></i> INICIO</a></li>
-                        <li><a href="#" class="nav-item" data-page="concrete"><i class="fas fa-cubes" aria-hidden="true"></i> CONCRETO</a></li>
+                        
+                        <!-- MODIFICACIÓN: Pestaña CONCRETO ahora en dos líneas -->
+                        <li>
+                            <a href="#" class="nav-item" data-page="concrete">
+                                <i class="fas fa-cubes" aria-hidden="true"></i>
+                                <span class="split-text">
+                                    <span class="line1">TIPOS DE</span>
+                                    <span class="line2">CONCRETO</span>
+                                </span>
+                            </a>
+                        </li>
+                        
                         <li><a href="#" class="nav-item" data-page="services"><i class="fas fa-concierge-bell" aria-hidden="true"></i> SERVICIOS</a></li>
                         <li><a href="#" class="nav-item" data-page="projects"><i class="fas fa-images" aria-hidden="true"></i> PROYECTOS</a></li>
                         <li><a href="#" class="nav-item" data-page="clients"><i class="fas fa-building" aria-hidden="true"></i> CLIENTES</a></li>
-                        <li><a href="#" class="nav-item" data-page="calculator"><i class="fas fa-calculator" aria-hidden="true"></i> CALCULADORA</a></li>
+                        
+                        <!-- Enlace de Calculadora con texto en dos líneas -->
+                        <li>
+                            <a href="#" class="nav-item" data-page="calculator">
+                                <i class="fas fa-calculator" aria-hidden="true"></i>
+                                <span class="split-text">
+                                    <span class="line1">CALCULA TU</span>
+                                    <span class="line2">PRESUPUESTO</span>
+                                </span>
+                            </a>
+                        </li>
+                        
                         <li><a href="#" class="nav-item" data-page="contact"><i class="fas fa-address-book" aria-hidden="true"></i> CONTACTO</a></li>
                     </ul>
                 </nav>
@@ -2068,7 +2119,7 @@
             </div>
         </section>
 
-        <!-- SECCIÓN CONCRETO -->
+        <!-- SECCIÓN TIPOS DE CONCRETO (antes "CONCRETO") -->
         <section id="concrete" class="page-content">
             <div class="container">
                 <div class="hero fade-in">
@@ -2143,7 +2194,7 @@
             </div>
         </section>
 
-        <!-- SECCIÓN SERVICIOS - MODIFICADA SEGÚN INDICACIONES -->
+        <!-- SECCIÓN SERVICIOS - MODIFICADA CON EL INTERCAMBIO DE POSICIONES -->
         <section id="services" class="page-content">
             <div class="container">
                 <div class="hero fade-in">
@@ -2166,7 +2217,6 @@
                             </div>
                             <div class="card-body">
                                 <p>Somos proveedores de <strong>concreto premezclado de alta calidad en Lima</strong>, con diseños de mezcla optimizados para todo tipo de obras y estructuras como cimentaciones, losas, columnas, pisos y obras civiles, garantizando resistencia, durabilidad y cumplimiento normativo. Resistencias: desde 100 hasta 420 kg/cm².</p>
-                                <!-- Lista de tipos añadida aquí -->
                                 <ul class="check-list">
                                     <li><i class="fas fa-check-circle" aria-hidden="true"></i>Concreto Convencional</li>
                                     <li><i class="fas fa-check-circle" aria-hidden="true"></i>Alta Resistencia</li>
@@ -2184,7 +2234,6 @@
                             </div>
                             <div class="card-body">
                                 <p>Ofrecemos <strong>servicio de bombeo de concreto</strong> con equipos modernos y tecnológicamente avanzados, ideales para vaciados en zonas de difícil acceso. Contamos con bombas pluma de 32 y 42 metros, capacidades de 80 a 120 m³/h, operadores certificados y asesoría técnica permanente, garantizando vaciados precisos, seguros y eficientes en cada obra.</p>
-                                <!-- Lista de tipos de bomba añadida aquí -->
                                 <ul class="check-list">
                                     <li><i class="fas fa-check-circle" aria-hidden="true"></i>Bomba pluma</li>
                                     <li><i class="fas fa-check-circle" aria-hidden="true"></i>Bomba estacionaria</li>
@@ -2192,21 +2241,13 @@
                             </div>
                         </div>
 
-                        <div class="card fade-in" id="planta-movil-service">
-                            <div class="card-header">
-                                <h3><i class="fas fa-industry" aria-hidden="true"></i> Alquiler de Planta Móvil Dosificadora</h3>
-                            </div>
-                            <div class="card-body">
-                                <p><strong>Alquiler de planta móvil dosificadora de concreto</strong> semi automatizada, con capacidad de producción de hasta 40 m³/h, equipada con balanza electrónica para una dosificación precisa y comandos electrónicos.</p>
-                            </div>
-                        </div>
-
+                        <!-- INTERCAMBIO: Ahora Pisos Pulidos va antes que Planta Móvil -->
                         <div class="card fade-in" id="pisos-pulidos-service">
                             <div class="card-header">
                                 <h3><i class="fas fa-hard-hat" aria-hidden="true"></i> Pisos de Concreto Pulido e Industriales</h3>
                             </div>
                             <div class="card-body text-center">
-                                <p>Somos especialistas en el diseño e instalación de <strong>pisos de concreto pulido y semi pulido</strong>, ofreciendo soluciones durables y de alta calidad para espacios industriales, comerciales y residenciales.</p>
+                                <p>Somos especialistas en el diseño e instalación de <strong>pisos de concreto pulido y semi pulido</strong>, ofreciendo soluciones durables y de alta calidad para espacios industriales, comerciales y residenciales, usando tecnología de última generación para garantizar precisión, resistencia y excelente acabado en cada proyecto. Realizamos corte y sellado de juntas de dilatación, asegurando mayor durabilidad y correcto desempeño del piso.</p>
                                 
                                 <ul class="check-list">
                                     <li><i class="fas fa-check-circle" aria-hidden="true"></i>Pisos de concreto pulido</li>
@@ -2217,13 +2258,21 @@
                             </div>
                         </div>
 
+                        <div class="card fade-in" id="planta-movil-service">
+                            <div class="card-header">
+                                <h3><i class="fas fa-industry" aria-hidden="true"></i> Alquiler de Planta Móvil Dosificadora</h3>
+                            </div>
+                            <div class="card-body">
+                                <p><strong>Alquiler de planta móvil dosificadora de concreto</strong> semi automatizada, con capacidad de producción de hasta 40 m³/h, equipada con balanza electrónica para una dosificación precisa y comandos electrónicos. Permite la producción de concreto premezclado in situ, con control de calidad garantizado, operación continua en obra y una reducción significativa de los costos logísticos y de transporte.</p>
+                            </div>
+                        </div>
+
                         <div class="card fade-in" id="fibras-service">
                             <div class="card-header">
                                 <h3><i class="fas fa-fiber" aria-hidden="true"></i> Venta de Fibras para Concreto</h3>
                             </div>
                             <div class="card-body">
                                 <p>Ofrecemos <strong>micro fibra de polipropileno y macro-fibra sintética estructural para concreto</strong>, una fibra inerte y químicamente estable diseñada para la prevención de rajaduras y fisuras en el concreto.</p>
-                                <!-- Lista de tipos de fibra añadida aquí -->
                                 <ul class="check-list">
                                     <li><i class="fas fa-check-circle" aria-hidden="true"></i>Microfibra sintética</li>
                                     <li><i class="fas fa-check-circle" aria-hidden="true"></i>Macro fibra estructural</li>
@@ -2321,7 +2370,7 @@
             <div class="container">
                 <div class="hero fade-in">
                     <div class="hero-content">
-                        <h2>CALCULADORA DE PRESUPUESTO DE CONCRETO</h2>
+                        <h2>CALCULA TU PRESUPUESTO</h2>
                         <p>Estime rápidamente el costo aproximado de su proyecto de construcción</p>
                     </div>
                 </div>
