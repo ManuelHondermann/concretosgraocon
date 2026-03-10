@@ -1099,7 +1099,7 @@
             transform: translateY(-2px);
         }
 
-        /* GRID DE PROYECTOS - ESTILO TARJETAS CON MINIATURAS */
+        /* GRID DE PROYECTOS - ESTILO TARJETAS CON MINIATURAS VISIBLES EN HORIZONTAL */
         .proyectos-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -1172,23 +1172,42 @@
             border-left: 4px solid var(--dorado);
         }
 
-        /* mini galería de todas las fotos del proyecto */
+        /* mini galería de todas las fotos del proyecto - AHORA EN HORIZONTAL */
         .proyecto-mini-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
             gap: 0.5rem;
             margin-top: 0.5rem;
             padding: 0 1.5rem 1.5rem 1.5rem;
+            scrollbar-width: thin;
+            scrollbar-color: var(--dorado) var(--gris-medio);
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .proyecto-mini-grid::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .proyecto-mini-grid::-webkit-scrollbar-track {
+            background: var(--gris-medio);
+            border-radius: 10px;
+        }
+
+        .proyecto-mini-grid::-webkit-scrollbar-thumb {
+            background: var(--dorado);
+            border-radius: 10px;
         }
 
         .proyecto-mini-img {
-            width: 100%;
-            aspect-ratio: 1/1;
+            width: 80px;
+            height: 80px;
             object-fit: cover;
             border-radius: 10px;
             border: 2px solid var(--gris-medio);
             transition: 0.2s;
             cursor: pointer;
+            flex-shrink: 0;
         }
 
         .proyecto-mini-img:hover {
@@ -1206,7 +1225,7 @@
             font-size: 0.85rem;
             cursor: pointer;
             width: fit-content;
-            margin: 0.5rem 1.5rem 1.5rem 1.5rem;
+            margin: 0 1.5rem 1.5rem 1.5rem;
             transition: 0.2s;
             border: 2px solid var(--dorado);
         }
@@ -1309,18 +1328,17 @@
             border-radius: 8px;
         }
 
-        /* Galería de miniaturas en el modal */
+        /* Galería de miniaturas en el modal (horizontal también) */
         .lightbox-thumbnails {
             display: flex;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
+            overflow-x: auto;
             gap: 10px;
             margin: 20px 0;
-            justify-content: center;
-            max-height: 120px;
-            overflow-y: auto;
             padding: 10px;
             background: #f0f0f0;
             border-radius: 8px;
+            scrollbar-width: thin;
         }
 
         .thumb-item {
@@ -1331,6 +1349,7 @@
             cursor: pointer;
             border: 3px solid transparent;
             transition: all 0.2s ease;
+            flex-shrink: 0;
         }
 
         .thumb-item.active {
@@ -2147,7 +2166,7 @@
                 <h2 class="lightbox-title" id="lightboxTitle"></h2>
                 <div class="lightbox-description" id="lightboxDescription"></div>
                 
-                <!-- Galería de miniaturas del proyecto -->
+                <!-- Galería de miniaturas del proyecto en horizontal -->
                 <div class="lightbox-thumbnails" id="lightboxThumbnails"></div>
                 
                 <div class="lightbox-full-description" id="lightboxFullDescription"></div>
@@ -2540,7 +2559,7 @@
             </div>
         </section>
 
-        <!-- SECCIÓN PROYECTOS MEJORADA CON MINIATURAS VISIBLES -->
+        <!-- SECCIÓN PROYECTOS MEJORADA CON MINIATURAS VISIBLES EN HORIZONTAL Y CADA PROYECTO SEPARADO -->
         <section id="projects" class="page-content">
             <div class="container">
                 <div class="hero fade-in">
@@ -2566,7 +2585,7 @@
                         <button class="filter-btn" data-filter="education">Educación</button>
                     </div>
 
-                    <!-- GRID DE PROYECTOS CON MINIATURAS VISIBLES -->
+                    <!-- GRID DE PROYECTOS CON MINIATURAS VISIBLES EN HORIZONTAL -->
                     <div id="proyectosGridContainer" class="proyectos-grid"></div>
                 </div>
             </div>
@@ -2907,7 +2926,7 @@
         </div>
     </footer>
 
-    <!-- JAVASCRIPT MEJORADO CON MINIATURAS EN MODAL Y GALERÍA TIPO TARJETAS -->
+    <!-- JAVASCRIPT MEJORADO CON MINIATURAS EN MODAL Y GALERÍA TIPO TARJETAS, CADA PROYECTO SEPARADO -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Elementos del DOM
@@ -2946,7 +2965,7 @@
             let currentProject = null;
             let currentImageIndex = 0;
            
-            // ---------- DATOS DE PROYECTOS (8 proyectos con TODAS las imágenes) ----------
+            // ---------- DATOS DE PROYECTOS (9 proyectos separados - Jardines de la Paz y Pavimentación ahora son dos proyectos distintos) ----------
             const proyectosData = [
                 {
                     titulo: "EDIFICACION CLUB DEL BOSQUE",
@@ -2986,7 +3005,7 @@
                     ]
                 },
                 {
-                    titulo: "PAVIMENTACION",
+                    titulo: "PAVIMENTACION AV. MAGISTERIO",
                     descripcion: "Pavimentación de Concreto – Av. Magisterio, Villa El Salvador",
                     detalle: "Ejecución de pavimentación de concreto en la Av. Magisterio, Villa El Salvador, utilizando concreto premezclado de GRAOCON S.A., cumpliendo con los estándares de calidad y especificaciones técnicas del proyecto.",
                     categoria: "paving",
@@ -3087,7 +3106,7 @@
                         <div class="proyecto-detalle">${proyecto.detalle}</div>
                     `;
 
-                    // mini-grid con todas las imágenes (visibles)
+                    // mini-grid con todas las imágenes (horizontal)
                     const miniGrid = document.createElement('div');
                     miniGrid.className = 'proyecto-mini-grid';
                     proyecto.imagenes.forEach((imgSrc, idx) => {
@@ -3137,7 +3156,7 @@
                 lightboxDescription.textContent = currentProject.descripcion;
                 lightboxFullDescription.textContent = currentProject.detalle;
 
-                // miniaturas
+                // miniaturas en el modal (horizontal)
                 lightboxThumbnails.innerHTML = '';
                 currentProject.imagenes.forEach((src, i) => {
                     const thumb = document.createElement('div');
