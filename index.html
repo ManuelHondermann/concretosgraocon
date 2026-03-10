@@ -2903,78 +2903,78 @@
             let currentGalleryIndex = 0;
             let filteredGalleryItems = [];
            
-            // --- DATOS DE LA GALERÍA ACTUALIZADOS SEGÚN SOLICITUD (8 ítems con descripciones del PPT) ---
+            // --- DATOS DE LA GALERÍA ACTUALIZADOS SEGÚN SOLICITUD (8 ítems con TODOS los enlaces de imágenes) ---
             const galleryItems = [
-                // 1. EDIFICACION CLUB DEL BOSQUE
+                // 1. EDIFICACION CLUB DEL BOSQUE - con todas sus fotos
                 { 
                     category: 'clubs', 
                     img: 'https://i.ibb.co/wbSgk80/2.png', 
                     title: 'EDIFICACION CLUB DEL BOSQUE', 
                     desc: 'Edificación – Club del Bosque',
-                    fullDesc: 'Ejecución de estructura de edificación parte de infraestructura en el Club del Bosque. El proyecto fue abastecido con concreto premezclado GRAOCON S.A. producido en nuestra planta concretera, garantizando control de calidad, resistencia según especificaciones técnicas y cumplimiento de los plazos establecidos.'
+                    fullDesc: 'Ejecución de estructura de edificación parte de infraestructura en el Club del Bosque. El proyecto fue abastecido con concreto premezclado GRAOCON S.A. producido en nuestra planta concretera, garantizando control de calidad, resistencia según especificaciones técnicas y cumplimiento de los plazos establecidos.\n\nFotos del proyecto:\n• https://i.ibb.co/wbSgk80/2.png\n• https://i.ibb.co/BVJC1tZn/5138e7a4-84fd-4d40-b6e9-f9fcbe591bfb.png\n• https://i.ibb.co/JWYWY084/4.jpg\n• https://i.ibb.co/Y4qWPLvz/3.jpg'
                 },
                 
-                // 2. CONSTRUCCION DE NICHOS JARDINES DE LA PAZ
+                // 2. CONSTRUCCION DE NICHOS JARDINES DE LA PAZ - con todas sus fotos
                 { 
                     category: 'paving', 
                     img: 'https://i.ibb.co/Nggy5Rrw/camposanto-lurin-1.jpg', 
                     title: 'CONSTRUCCION DE NICHOS JARDINES DE LA PAZ', 
                     desc: 'Construcción de Nichos – Jardines de la Paz, Lurín',
-                    fullDesc: 'Ejecución de nichos en el cementerio Jardines de la Paz, en Lurín, utilizando concreto premezclado de GRAOCON S.A., garantizando calidad, resistencia y cumplimiento de las especificaciones del proyecto.'
+                    fullDesc: 'Ejecución de nichos en el cementerio Jardines de la Paz, en Lurín, utilizando concreto premezclado de GRAOCON S.A., garantizando calidad, resistencia y cumplimiento de las especificaciones del proyecto.\n\nFotos del proyecto:\n• https://i.ibb.co/Nggy5Rrw/camposanto-lurin-1.jpg\n• https://i.ibb.co/LX49n3LQ/2.png\n• https://i.ibb.co/VpN3nbtn/1.png\n• https://i.ibb.co/MDz9Ksf3/Whats-App-Image-2026-01-30-at-3-34-02-PM.jpg\n• https://i.ibb.co/5gkQj1YB/Whats-App-Image-2026-01-30-at-3-34-56-PM.jpg'
                 },
                 
-                // 3. PISCINA RECREACIONAL
+                // 3. PISCINA RECREACIONAL - con todas sus fotos
                 { 
                     category: 'pools', 
                     img: 'https://i.ibb.co/23QJFzjP/4.jpg', 
                     title: 'PISCINA RECREACIONAL', 
                     desc: 'Piscina Recreacional – Pachacámac',
-                    fullDesc: 'Construcción de piscina recreacional en Pachacámac para la empresa Inka Global S.A.C., utilizando concreto premezclado de GRAOCON S.A., garantizando calidad y resistencia según las especificaciones del proyecto.'
+                    fullDesc: 'Construcción de piscina recreacional en Pachacámac para la empresa Inka Global S.A.C., utilizando concreto premezclado de GRAOCON S.A., garantizando calidad y resistencia según las especificaciones del proyecto.\n\nFotos del proyecto:\n• https://i.ibb.co/23QJFzjP/4.jpg (Foto principal)\n• https://i.ibb.co/wZ54J77d/3.jpg\n• https://i.ibb.co/Rk0VsFrP/2.jpg\n• https://i.ibb.co/svRJ7WwT/1.jpg'
                 },
                 
-                // 4. PAVIMENTACION
+                // 4. PAVIMENTACION - con todas sus fotos
                 { 
                     category: 'paving', 
                     img: 'https://i.ibb.co/xq4SnmSS/6.jpg', 
                     title: 'PAVIMENTACION', 
                     desc: 'Pavimentación de Concreto – Av. Magisterio, Villa El Salvador',
-                    fullDesc: 'Ejecución de pavimentación de concreto en la Av. Magisterio, Villa El Salvador, utilizando concreto premezclado de GRAOCON S.A., cumpliendo con los estándares de calidad y especificaciones técnicas del proyecto.'
+                    fullDesc: 'Ejecución de pavimentación de concreto en la Av. Magisterio, Villa El Salvador, utilizando concreto premezclado de GRAOCON S.A., cumpliendo con los estándares de calidad y especificaciones técnicas del proyecto.\n\nFotos del proyecto:\n• https://i.ibb.co/xq4SnmSS/6.jpg\n• https://i.ibb.co/PvHJd29Q/5.jpg\n• https://i.ibb.co/Nn1M2CZj/4.jpg\n• https://i.ibb.co/99JkDwSz/3.jpg\n• https://i.ibb.co/RknwmSXT/2.jpg\n• https://i.ibb.co/kVYkf7yh/1.jpg'
                 },
                 
-                // 5. LOSA DEPORTIVA COLEGIO MARISTAS
+                // 5. LOSA DEPORTIVA COLEGIO MARISTAS - con todas sus fotos
                 { 
                     category: 'sports', 
                     img: 'https://i.ibb.co/Wvvx6XXB/Whats-App-Image-2026-01-30-at-4-05-44-PM.jpg', 
                     title: 'LOSA DEPORTIVA COLEGIO MARISTAS', 
                     desc: 'Losa Deportiva – Colegio Maristas, SJM',
-                    fullDesc: 'Ejecución de losa deportiva en el Colegio Maristas, San Juan de Miraflores, desde movimiento de tierras hasta el vaciado de concreto, cumpliendo con los estándares de calidad del proyecto.'
+                    fullDesc: 'Ejecución de losa deportiva en el Colegio Maristas, San Juan de Miraflores, desde movimiento de tierras hasta el vaciado de concreto, cumpliendo con los estándares de calidad del proyecto.\n\nFotos del proyecto:\n• https://i.ibb.co/Wvvx6XXB/Whats-App-Image-2026-01-30-at-4-05-44-PM.jpg\n• https://i.ibb.co/gZrg174N/Whats-App-Image-2026-01-30-at-4-05-57-PM.jpg\n• https://i.ibb.co/W4CZFqVv/Whats-App-Image-2026-01-30-at-4-06-19-PM.jpg\n• https://i.ibb.co/nJ16F9R/Whats-App-Image-2026-01-30-at-4-06-36-PM.jpg\n• https://i.ibb.co/7x8kVw6R/Whats-App-Image-2026-01-30-at-4-06-51-PM.jpg'
                 },
                 
-                // 6. EFICACION UNIVERSIDAD NACIONAL AGRARIA LA MOLINA
+                // 6. EDIFICACION UNIVERSIDAD NACIONAL AGRARIA LA MOLINA - con todas sus fotos
                 { 
                     category: 'education', 
                     img: 'https://i.ibb.co/JR7csw22/Whats-App-Image-2026-01-30-at-4-19-35-PM.jpg', 
                     title: 'EDIFICACION UNIVERSIDAD NACIONAL AGRARIA LA MOLINA', 
                     desc: 'Edificación – Universidad Nacional Agraria La Molina',
-                    fullDesc: 'Suministro de concreto premezclado y servicio de bombeo para la construcción del módulo de la Facultad de Zootecnia en la Universidad Nacional Agraria La Molina, cumpliendo con las especificaciones técnicas del proyecto.'
+                    fullDesc: 'Suministro de concreto premezclado y servicio de bombeo para la construcción del módulo de la Facultad de Zootecnia en la Universidad Nacional Agraria La Molina, cumpliendo con las especificaciones técnicas del proyecto.\n\nFotos del proyecto:\n• https://i.ibb.co/JR7csw22/Whats-App-Image-2026-01-30-at-4-19-35-PM.jpg\n• https://i.ibb.co/HDW6R8KJ/3.png'
                 },
                 
-                // 7. ESTACIONAMIENTO COLEGIO ALPAYO
+                // 7. ESTACIONAMIENTO COLEGIO ALPAYO - con todas sus fotos
                 { 
                     category: 'education', 
-                    img: 'https://i.ibb.co/2L5jMxx/Whats-App-Image-2026-01-26-at-1-18-24-PM.jpg', 
+                    img: 'https://i.ibb.co/XfS1sFqc/Whats-App-Image-2026-03-09-at-10-29-20-PM.jpg', 
                     title: 'ESTACIONAMIENTO COLEGIO ALPAYO', 
                     desc: 'Estacionamiento – Colegio Alpayo, La Molina',
-                    fullDesc: 'Ejecución de estacionamiento en el Colegio Alpayo, La Molina, desde movimiento de tierras y nivelación hasta la colocación de concreto fibroreforzado, cumpliendo con las especificaciones del proyecto.'
+                    fullDesc: 'Ejecución de estacionamiento en el Colegio Alpayo, La Molina, desde movimiento de tierras y nivelación hasta la colocación de concreto fibroreforzado, cumpliendo con las especificaciones del proyecto.\n\nFotos del proyecto:\n• https://i.ibb.co/XfS1sFqc/Whats-App-Image-2026-03-09-at-10-29-20-PM.jpg\n• https://i.ibb.co/6kBp4n6/Whats-App-Image-2026-03-09-at-10-29-19-PM.jpg\n• https://i.ibb.co/FLd1G6r1/Whats-App-Image-2026-03-09-at-10-29-19-PM-2.jpg\n• https://i.ibb.co/ZRGd6CFN/Whats-App-Image-2026-03-09-at-10-29-19-PM-1.jpg'
                 },
                 
-                // 8. CONSTRUCCION DE VIVIENDAS MULTIFAMILIARES
+                // 8. CONSTRUCCION DE VIVIENDAS MULTIFAMILIARES - con todas sus fotos
                 { 
                     category: 'residential', 
                     img: 'https://i.ibb.co/QvRY4JJc/2.png', 
                     title: 'CONSTRUCCION DE VIVIENDAS MULTIFAMILIARES', 
                     desc: 'Construcción de Viviendas Multifamiliares – Lima Metropolitana',
-                    fullDesc: 'Ejecución de proyectos de viviendas multifamiliares en diferentes distritos de Lima, utilizando concreto premezclado y cumpliendo con los estándares de calidad y especificaciones técnicas de cada obra.'
+                    fullDesc: 'Ejecución de proyectos de viviendas multifamiliares en diferentes distritos de Lima, utilizando concreto premezclado y cumpliendo con los estándares de calidad y especificaciones técnicas de cada obra.\n\nFotos del proyecto:\n• https://i.ibb.co/QvRY4JJc/2.png\n• https://i.ibb.co/MkXQdrm2/1.png\n• https://i.ibb.co/TxSr0P3b/3.png'
                 }
             ];
            
