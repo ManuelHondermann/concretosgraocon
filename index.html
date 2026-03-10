@@ -2497,7 +2497,7 @@
             </div>
         </section>
 
-        <!-- SECCIÓN PROYECTOS MEJORADA -->
+        <!-- SECCIÓN PROYECTOS MEJORADA CON LOS 8 ÍTEMS DEL PPT -->
         <section id="projects" class="page-content">
             <div class="container">
                 <div class="hero fade-in">
@@ -2517,13 +2517,14 @@
                         <button class="filter-btn active" data-filter="clubs">Clubs</button>
                         <button class="filter-btn" data-filter="paving">Pavimentación</button>
                         <button class="filter-btn" data-filter="pools">Piscinas</button>
-                        <button class="filter-btn" data-filter="recreational">Pista Recreacional</button>
+                        <button class="filter-btn" data-filter="recreational">Recreacional</button>
                         <button class="filter-btn" data-filter="sports">Deportivos</button>
                         <button class="filter-btn" data-filter="residential">Residencial</button>
+                        <button class="filter-btn" data-filter="education">Educación</button>
                     </div>
 
                     <div class="gallery-grid" id="galleryContainer">
-                        <!-- Galería se generará con JavaScript -->
+                        <!-- Galería se generará con JavaScript con los 8 items actualizados -->
                     </div>
                 </div>
             </div>
@@ -2856,8 +2857,8 @@
             </div>
            
             <div class="footer-bottom">
-                <p>&copy; <span id="currentYear">2024</span> GRAOCON S.A. - Todos los derechos reservados. | <strong>Concreto Premezclado Lima Perú</strong></p>
-                <p style="font-size: 0.85rem; margin-top: 12px; opacity: 0.9; line-height: 1.5;">
+                <p>&copy; <span id="currentYear">2026</span> GRAOCON S.A. - Todos los derechos reservados. | <strong>Concreto Premezclado Lima Perú</strong></p>
+                <p style="font-size: 0.85rem; margin-top: 12px; opacity: 0.9; line-height: 1.5; color: #ffffff;">
                     Servicio de <strong>concreto premezclado en Lima</strong>: Lurín, Pachacamac, Villa El Salvador, Surco, Miraflores, San Isidro, La Molina, San Borja, Santiago de Surco, Chorrillos, Barranco, Jesús María, Lince, San Miguel, Callao y todo Perú.
                 </p>
             </div>
@@ -2902,23 +2903,23 @@
             let currentGalleryIndex = 0;
             let filteredGalleryItems = [];
            
-            // --- DATOS DE LA GALERÍA ACTUALIZADOS SEGÚN SOLICITUD ---
+            // --- DATOS DE LA GALERÍA ACTUALIZADOS SEGÚN SOLICITUD (8 ítems con descripciones del PPT) ---
             const galleryItems = [
                 // 1. EDIFICACION CLUB DEL BOSQUE
                 { 
                     category: 'clubs', 
                     img: 'https://i.ibb.co/wbSgk80/2.png', 
-                    title: 'Edificación Club del Bosque', 
-                    desc: 'Proyecto integral en club exclusivo',
-                    fullDesc: 'Trabajos de concreto premezclado para instalaciones de alto nivel en Country Club El Bosque. Estructuras de alta calidad con acabados premium.'
+                    title: 'EDIFICACION CLUB DEL BOSQUE', 
+                    desc: 'Edificación – Club del Bosque',
+                    fullDesc: 'Ejecución de estructura de edificación parte de infraestructura en el Club del Bosque. El proyecto fue abastecido con concreto premezclado GRAOCON S.A. producido en nuestra planta concretera, garantizando control de calidad, resistencia según especificaciones técnicas y cumplimiento de los plazos establecidos.'
                 },
                 
                 // 2. CONSTRUCCION DE NICHOS JARDINES DE LA PAZ
                 { 
                     category: 'paving', 
                     img: 'https://i.ibb.co/Nggy5Rrw/camposanto-lurin-1.jpg', 
-                    title: 'Construcción de Nichos – Jardines de la Paz, Lurín', 
-                    desc: 'Ejecución de nichos en cementerio',
+                    title: 'CONSTRUCCION DE NICHOS JARDINES DE LA PAZ', 
+                    desc: 'Construcción de Nichos – Jardines de la Paz, Lurín',
                     fullDesc: 'Ejecución de nichos en el cementerio Jardines de la Paz, en Lurín, utilizando concreto premezclado de GRAOCON S.A., garantizando calidad, resistencia y cumplimiento de las especificaciones del proyecto.'
                 },
                 
@@ -2926,8 +2927,8 @@
                 { 
                     category: 'pools', 
                     img: 'https://i.ibb.co/23QJFzjP/4.jpg', 
-                    title: 'Piscina Recreacional – Pachacámac', 
-                    desc: 'Construcción para Inka Global S.A.C.',
+                    title: 'PISCINA RECREACIONAL', 
+                    desc: 'Piscina Recreacional – Pachacámac',
                     fullDesc: 'Construcción de piscina recreacional en Pachacámac para la empresa Inka Global S.A.C., utilizando concreto premezclado de GRAOCON S.A., garantizando calidad y resistencia según las especificaciones del proyecto.'
                 },
                 
@@ -2935,8 +2936,8 @@
                 { 
                     category: 'paving', 
                     img: 'https://i.ibb.co/xq4SnmSS/6.jpg', 
-                    title: 'Pavimentación de Concreto – Av. Magisterio, Villa El Salvador', 
-                    desc: 'Pavimentación en V.E.S.',
+                    title: 'PAVIMENTACION', 
+                    desc: 'Pavimentación de Concreto – Av. Magisterio, Villa El Salvador',
                     fullDesc: 'Ejecución de pavimentación de concreto en la Av. Magisterio, Villa El Salvador, utilizando concreto premezclado de GRAOCON S.A., cumpliendo con los estándares de calidad y especificaciones técnicas del proyecto.'
                 },
                 
@@ -2944,26 +2945,26 @@
                 { 
                     category: 'sports', 
                     img: 'https://i.ibb.co/Wvvx6XXB/Whats-App-Image-2026-01-30-at-4-05-44-PM.jpg', 
-                    title: 'Losa Deportiva – Colegio Maristas, SJM', 
-                    desc: 'Instalaciones educativas',
+                    title: 'LOSA DEPORTIVA COLEGIO MARISTAS', 
+                    desc: 'Losa Deportiva – Colegio Maristas, SJM',
                     fullDesc: 'Ejecución de losa deportiva en el Colegio Maristas, San Juan de Miraflores, desde movimiento de tierras hasta el vaciado de concreto, cumpliendo con los estándares de calidad del proyecto.'
                 },
                 
                 // 6. EFICACION UNIVERSIDAD NACIONAL AGRARIA LA MOLINA
                 { 
-                    category: 'sports', 
+                    category: 'education', 
                     img: 'https://i.ibb.co/JR7csw22/Whats-App-Image-2026-01-30-at-4-19-35-PM.jpg', 
-                    title: 'Edificación – Universidad Nacional Agraria La Molina', 
-                    desc: 'Infraestructura universitaria',
-                    fullDesc: 'Proyectos de construcción para la prestigiosa Universidad Nacional Agraria La Molina, utilizando concreto premezclado de alta calidad.'
+                    title: 'EDIFICACION UNIVERSIDAD NACIONAL AGRARIA LA MOLINA', 
+                    desc: 'Edificación – Universidad Nacional Agraria La Molina',
+                    fullDesc: 'Suministro de concreto premezclado y servicio de bombeo para la construcción del módulo de la Facultad de Zootecnia en la Universidad Nacional Agraria La Molina, cumpliendo con las especificaciones técnicas del proyecto.'
                 },
                 
                 // 7. ESTACIONAMIENTO COLEGIO ALPAYO
                 { 
-                    category: 'residential', 
+                    category: 'education', 
                     img: 'https://i.ibb.co/2L5jMxx/Whats-App-Image-2026-01-26-at-1-18-24-PM.jpg', 
-                    title: 'Estacionamiento – Colegio Alpayo, La Molina', 
-                    desc: 'Pavimento con concreto fibroreforzado',
+                    title: 'ESTACIONAMIENTO COLEGIO ALPAYO', 
+                    desc: 'Estacionamiento – Colegio Alpayo, La Molina',
                     fullDesc: 'Ejecución de estacionamiento en el Colegio Alpayo, La Molina, desde movimiento de tierras y nivelación hasta la colocación de concreto fibroreforzado, cumpliendo con las especificaciones del proyecto.'
                 },
                 
@@ -2971,8 +2972,8 @@
                 { 
                     category: 'residential', 
                     img: 'https://i.ibb.co/QvRY4JJc/2.png', 
-                    title: 'Construcción de Viviendas Multifamiliares – Lima Metropolitana', 
-                    desc: 'Proyectos residenciales',
+                    title: 'CONSTRUCCION DE VIVIENDAS MULTIFAMILIARES', 
+                    desc: 'Construcción de Viviendas Multifamiliares – Lima Metropolitana',
                     fullDesc: 'Ejecución de proyectos de viviendas multifamiliares en diferentes distritos de Lima, utilizando concreto premezclado y cumpliendo con los estándares de calidad y especificaciones técnicas de cada obra.'
                 }
             ];
@@ -2983,9 +2984,10 @@
                     'sports': 'Deportivos',
                     'paving': 'Pavimentación',
                     'pools': 'Piscinas',
-                    'recreational': 'Pista Recreacional',
+                    'recreational': 'Recreacional',
                     'clubs': 'Clubs',
-                    'residential': 'Residencial'
+                    'residential': 'Residencial',
+                    'education': 'Educación'
                 };
                 return categories[category] || category;
             }
@@ -3367,7 +3369,8 @@
             });
            
             // Actualizar año en footer
-            footerYear.textContent = new Date().getFullYear();
+            footerYear.textContent = new Date().getFullYear(); // Se actualizará automáticamente, pero forzamos a 2026 visualmente
+            footerYear.textContent = '2026';
            
             // Inicializar componentes
             initGallery();
