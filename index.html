@@ -2685,7 +2685,8 @@
                                 <div class="result-value">S/ <span id="finalCost">0.00</span></div>
                                
                                 <div style="margin-top: 25px;">
-                                    <p style="font-weight: 800; margin-bottom: 15px; font-size: 1rem;">¿Desea un presupuesto exacto?</p>
+                                    <!-- TEXTO CAMBIADO A BLANCO -->
+                                    <p style="font-weight: 800; margin-bottom: 15px; font-size: 1rem; color: #ffffff;">¿Desea un presupuesto exacto?</p>
                                     <div style="display: flex; flex-direction: column; gap: 12px;">
                                         <a href="https://wa.me/51927571365?text=Hola%20GRAOCON,%20quiero%20una%20cotización%20exacta%20para%20mi%20proyecto"
                                            target="_blank" class="btn"
@@ -2901,253 +2902,78 @@
             let currentGalleryIndex = 0;
             let filteredGalleryItems = [];
            
-            // Datos de la galería COMPLETA con TODAS las imágenes del documento (se mantiene igual)
+            // --- DATOS DE LA GALERÍA ACTUALIZADOS SEGÚN SOLICITUD ---
             const galleryItems = [
-                // COUNTRY CLUB EL BOSQUE (4 imágenes) - categoría: clubs
+                // 1. EDIFICACION CLUB DEL BOSQUE
                 { 
                     category: 'clubs', 
                     img: 'https://i.ibb.co/wbSgk80/2.png', 
-                    title: 'Country Club El Bosque', 
+                    title: 'Edificación Club del Bosque', 
                     desc: 'Proyecto integral en club exclusivo',
                     fullDesc: 'Trabajos de concreto premezclado para instalaciones de alto nivel en Country Club El Bosque. Estructuras de alta calidad con acabados premium.'
                 },
-                { 
-                    category: 'clubs', 
-                    img: 'https://i.ibb.co/BVJC1tZn/5138e7a4-84fd-4d40-b6e9-f9fcbe591bfb.png', 
-                    title: 'Country Club El Bosque', 
-                    desc: 'Estructuras y pavimentos de alta gama',
-                    fullDesc: 'Construcción de pavimentos y estructuras en áreas sociales y deportivas del Country Club El Bosque.'
-                },
-                { 
-                    category: 'clubs', 
-                    img: 'https://i.ibb.co/JWYWY084/4.jpg', 
-                    title: 'Country Club El Bosque', 
-                    desc: 'Detalles arquitectónicos en concreto',
-                    fullDesc: 'Elementos arquitectónicos especiales realizados con concreto premezclado de alta resistencia.'
-                },
-                { 
-                    category: 'clubs', 
-                    img: 'https://i.ibb.co/Y4qWPLvz/3.jpg', 
-                    title: 'Country Club El Bosque', 
-                    desc: 'Ampliación de instalaciones',
-                    fullDesc: 'Trabajos de ampliación y renovación de instalaciones deportivas y recreativas.'
-                },
                 
-                // JARDINES DE LA PAZ (5 imágenes) - categoría: paving
+                // 2. CONSTRUCCION DE NICHOS JARDINES DE LA PAZ
                 { 
                     category: 'paving', 
                     img: 'https://i.ibb.co/Nggy5Rrw/camposanto-lurin-1.jpg', 
-                    title: 'Jardines de la Paz', 
-                    desc: 'Pavimentación en camposanto',
-                    fullDesc: 'Trabajos de pavimentación y estructuras en el camposanto Jardines de la Paz en Lurín.'
-                },
-                { 
-                    category: 'paving', 
-                    img: 'https://i.ibb.co/LX49n3LQ/2.png', 
-                    title: 'Jardines de la Paz', 
-                    desc: 'Estructuras y caminos',
-                    fullDesc: 'Construcción de caminos y estructuras complementarias en áreas de memorial.'
-                },
-                { 
-                    category: 'paving', 
-                    img: 'https://i.ibb.co/VpN3nbtn/1.png', 
-                    title: 'Jardines de la Paz', 
-                    desc: 'Detalles de construcción',
-                    fullDesc: 'Detalles constructivos y acabados especiales en áreas de servicio.'
-                },
-                { 
-                    category: 'paving', 
-                    img: 'https://i.ibb.co/MDz9Ksf3/Whats-App-Image-2026-01-30-at-3-34-02-PM.jpg', 
-                    title: 'Jardines de la Paz', 
-                    desc: 'Vaciado de concreto en situ',
-                    fullDesc: 'Proceso de vaciado de concreto premezclado para estructuras específicas.'
-                },
-                { 
-                    category: 'paving', 
-                    img: 'https://i.ibb.co/5gkQj1YB/Whats-App-Image-2026-01-30-at-3-34-56-PM.jpg', 
-                    title: 'Jardines de la Paz', 
-                    desc: 'Trabajos de terminación',
-                    fullDesc: 'Fases finales de construcción y acabados en pavimentos.'
+                    title: 'Construcción de Nichos – Jardines de la Paz, Lurín', 
+                    desc: 'Ejecución de nichos en cementerio',
+                    fullDesc: 'Ejecución de nichos en el cementerio Jardines de la Paz, en Lurín, utilizando concreto premezclado de GRAOCON S.A., garantizando calidad, resistencia y cumplimiento de las especificaciones del proyecto.'
                 },
                 
-                // LOSAS (6 imágenes) - categoría: paving
-                { 
-                    category: 'paving', 
-                    img: 'https://i.ibb.co/xq4SnmSS/6.jpg', 
-                    title: 'Losas Estructurales', 
-                    desc: 'Losas de concreto reforzado',
-                    fullDesc: 'Construcción de losas estructurales de alta resistencia para diferentes tipos de edificaciones.'
-                },
-                { 
-                    category: 'paving', 
-                    img: 'https://i.ibb.co/PvHJd29Q/5.jpg', 
-                    title: 'Losas Industriales', 
-                    desc: 'Pisos industriales de concreto',
-                    fullDesc: 'Instalación de losas industriales con concreto de alta resistencia al desgaste.'
-                },
-                { 
-                    category: 'paving', 
-                    img: 'https://i.ibb.co/Nn1M2CZj/4.jpg', 
-                    title: 'Losas Arquitectónicas', 
-                    desc: 'Acabados especiales en losas',
-                    fullDesc: 'Losas con acabados arquitectónicos especiales para proyectos de alta gama.'
-                },
-                { 
-                    category: 'paving', 
-                    img: 'https://i.ibb.co/99JkDwSz/3.jpg', 
-                    title: 'Losas Deportivas', 
-                    desc: 'Superficies para actividades deportivas',
-                    fullDesc: 'Construcción de losas especiales para canchas deportivas y áreas de entrenamiento.'
-                },
-                { 
-                    category: 'paving', 
-                    img: 'https://i.ibb.co/RknwmSXT/2.jpg', 
-                    title: 'Losas Residenciales', 
-                    desc: 'Viviendas y edificios multifamiliares',
-                    fullDesc: 'Losas para proyectos residenciales con control de calidad estricto.'
-                },
-                { 
-                    category: 'paving', 
-                    img: 'https://i.ibb.co/kVYkf7yh/1.jpg', 
-                    title: 'Losas Comerciales', 
-                    desc: 'Centros comerciales y edificios de oficinas',
-                    fullDesc: 'Estructuras de concreto para edificaciones comerciales de gran envergadura.'
-                },
-                
-                // COLEGIO MATRISTA (5 imágenes) - categoría: sports
-                { 
-                    category: 'sports', 
-                    img: 'https://i.ibb.co/Wvvx6XXB/Whats-App-Image-2026-01-30-at-4-05-44-PM.jpg', 
-                    title: 'Colegio Matrista', 
-                    desc: 'Instalaciones educativas',
-                    fullDesc: 'Construcción de infraestructura educativa con concreto premezclado de calidad.'
-                },
-                { 
-                    category: 'sports', 
-                    img: 'https://i.ibb.co/gZrg174N/Whats-App-Image-2026-01-30-at-4-05-57-PM.jpg', 
-                    title: 'Colegio Matrista', 
-                    desc: 'Áreas deportivas escolares',
-                    fullDesc: 'Canchas y áreas deportivas para instituciones educativas.'
-                },
-                { 
-                    category: 'sports', 
-                    img: 'https://i.ibb.co/W4CZFqVv/Whats-App-Image-2026-01-30-at-4-06-19-PM.jpg', 
-                    title: 'Colegio Matrista', 
-                    desc: 'Pavimentos educativos',
-                    fullDesc: 'Pavimentación de patios y áreas comunes en instituciones educativas.'
-                },
-                { 
-                    category: 'sports', 
-                    img: 'https://i.ibb.co/nJ16F9R/Whats-App-Image-2026-01-30-at-4-06-36-PM.jpg', 
-                    title: 'Colegio Matrista', 
-                    desc: 'Estructuras escolares',
-                    fullDesc: 'Elementos estructurales para edificaciones educativas.'
-                },
-                { 
-                    category: 'sports', 
-                    img: 'https://i.ibb.co/7x8kVw6R/Whats-App-Image-2026-01-30-at-4-06-51-PM.jpg', 
-                    title: 'Colegio Matrista', 
-                    desc: 'Infraestructura completa',
-                    fullDesc: 'Proyecto integral de infraestructura educativa con concreto premezclado.'
-                },
-                
-                // PISCINA RECREACIONAL (4 imágenes) - categoría: pools
+                // 3. PISCINA RECREACIONAL
                 { 
                     category: 'pools', 
                     img: 'https://i.ibb.co/23QJFzjP/4.jpg', 
-                    title: 'Piscina Recreacional', 
-                    desc: 'Estructuras para piscinas',
-                    fullDesc: 'Construcción de estructuras de concreto para piscinas recreativas y deportivas.'
-                },
-                { 
-                    category: 'pools', 
-                    img: 'https://i.ibb.co/wZ54J77d/3.jpg', 
-                    title: 'Piscina Recreacional', 
-                    desc: 'Vasos de concreto para piscinas',
-                    fullDesc: 'Vaciado de vasos de piscina con concreto especial impermeable.'
-                },
-                { 
-                    category: 'pools', 
-                    img: 'https://i.ibb.co/Rk0VsFrP/2.jpg', 
-                    title: 'Piscina Recreacional', 
-                    desc: 'Acabados en áreas de piscina',
-                    fullDesc: 'Trabajos de terminación y acabados en áreas perimetrales de piscinas.'
-                },
-                { 
-                    category: 'pools', 
-                    img: 'https://i.ibb.co/svRJ7WwT/1.jpg', 
-                    title: 'Piscina Recreacional', 
-                    desc: 'Proyecto completo de piscina',
-                    fullDesc: 'Desarrollo integral de proyectos de piscinas desde cimentación hasta acabados.'
+                    title: 'Piscina Recreacional – Pachacámac', 
+                    desc: 'Construcción para Inka Global S.A.C.',
+                    fullDesc: 'Construcción de piscina recreacional en Pachacámac para la empresa Inka Global S.A.C., utilizando concreto premezclado de GRAOCON S.A., garantizando calidad y resistencia según las especificaciones del proyecto.'
                 },
                 
-                // REP PISTAS (4 imágenes) - categoría: recreational
+                // 4. PAVIMENTACION
                 { 
-                    category: 'recreational', 
-                    img: 'https://i.ibb.co/tT0WMrSr/4.png', 
-                    title: 'Pistas Recreacionales', 
-                    desc: 'Pistas para actividades deportivas',
-                    fullDesc: 'Construcción de pistas recreacionales con superficies de concreto especial.'
-                },
-                { 
-                    category: 'recreational', 
-                    img: 'https://i.ibb.co/Jwds5BT3/3.jpg', 
-                    title: 'Pistas Recreacionales', 
-                    desc: 'Superficies de entrenamiento',
-                    fullDesc: 'Pistas diseñadas para entrenamiento deportivo y actividades recreativas.'
-                },
-                { 
-                    category: 'recreational', 
-                    img: 'https://i.ibb.co/XfqyHK7K/1.jpg', 
-                    title: 'Pistas Recreacionales', 
-                    desc: 'Infraestructura deportiva',
-                    fullDesc: 'Desarrollo de infraestructura completa para complejos deportivos.'
-                },
-                { 
-                    category: 'recreational', 
-                    img: 'https://i.ibb.co/Kxy48C9P/Whats-App-Image-2026-01-30-at-4-14-39-PM.jpg', 
-                    title: 'Pistas Recreacionales', 
-                    desc: 'Detalles constructivos',
-                    fullDesc: 'Detalles técnicos y constructivos en pistas recreacionales profesionales.'
+                    category: 'paving', 
+                    img: 'https://i.ibb.co/xq4SnmSS/6.jpg', 
+                    title: 'Pavimentación de Concreto – Av. Magisterio, Villa El Salvador', 
+                    desc: 'Pavimentación en V.E.S.',
+                    fullDesc: 'Ejecución de pavimentación de concreto en la Av. Magisterio, Villa El Salvador, utilizando concreto premezclado de GRAOCON S.A., cumpliendo con los estándares de calidad y especificaciones técnicas del proyecto.'
                 },
                 
-                // UNIVERSIDAD NACIONAL AGRARIA LA MOLINA (2 imágenes) - categoría: sports
+                // 5. LOSA DEPORTIVA COLEGIO MARISTAS
+                { 
+                    category: 'sports', 
+                    img: 'https://i.ibb.co/Wvvx6XXB/Whats-App-Image-2026-01-30-at-4-05-44-PM.jpg', 
+                    title: 'Losa Deportiva – Colegio Maristas, SJM', 
+                    desc: 'Instalaciones educativas',
+                    fullDesc: 'Ejecución de losa deportiva en el Colegio Maristas, San Juan de Miraflores, desde movimiento de tierras hasta el vaciado de concreto, cumpliendo con los estándares de calidad del proyecto.'
+                },
+                
+                // 6. EFICACION UNIVERSIDAD NACIONAL AGRARIA LA MOLINA
                 { 
                     category: 'sports', 
                     img: 'https://i.ibb.co/JR7csw22/Whats-App-Image-2026-01-30-at-4-19-35-PM.jpg', 
-                    title: 'Universidad Nacional Agraria La Molina', 
+                    title: 'Edificación – Universidad Nacional Agraria La Molina', 
                     desc: 'Infraestructura universitaria',
-                    fullDesc: 'Proyectos de construcción para la prestigiosa Universidad Nacional Agraria La Molina.'
-                },
-                { 
-                    category: 'sports', 
-                    img: 'https://i.ibb.co/HDW6R8KJ/3.png', 
-                    title: 'Universidad Nacional Agraria La Molina', 
-                    desc: 'Instalaciones deportivas universitarias',
-                    fullDesc: 'Canchas y áreas deportivas para la comunidad universitaria.'
+                    fullDesc: 'Proyectos de construcción para la prestigiosa Universidad Nacional Agraria La Molina, utilizando concreto premezclado de alta calidad.'
                 },
                 
-                // VIVIENDA MULTIFAMILIAR (3 imágenes) - categoría: residential
+                // 7. ESTACIONAMIENTO COLEGIO ALPAYO
+                { 
+                    category: 'residential', 
+                    img: 'https://i.ibb.co/2L5jMxx/Whats-App-Image-2026-01-26-at-1-18-24-PM.jpg', 
+                    title: 'Estacionamiento – Colegio Alpayo, La Molina', 
+                    desc: 'Pavimento con concreto fibroreforzado',
+                    fullDesc: 'Ejecución de estacionamiento en el Colegio Alpayo, La Molina, desde movimiento de tierras y nivelación hasta la colocación de concreto fibroreforzado, cumpliendo con las especificaciones del proyecto.'
+                },
+                
+                // 8. CONSTRUCCION DE VIVIENDAS MULTIFAMILIARES
                 { 
                     category: 'residential', 
                     img: 'https://i.ibb.co/QvRY4JJc/2.png', 
-                    title: 'Vivienda Multifamiliar', 
+                    title: 'Construcción de Viviendas Multifamiliares – Lima Metropolitana', 
                     desc: 'Proyectos residenciales',
-                    fullDesc: 'Construcción de edificios multifamiliares con concreto premezclado de alta calidad.'
-                },
-                { 
-                    category: 'residential', 
-                    img: 'https://i.ibb.co/MkXQdrm2/1.png', 
-                    title: 'Vivienda Multifamiliar', 
-                    desc: 'Estructuras residenciales',
-                    fullDesc: 'Estructuras de concreto para proyectos de vivienda de mediana y gran escala.'
-                },
-                { 
-                    category: 'residential', 
-                    img: 'https://i.ibb.co/TxSr0P3b/3.png', 
-                    title: 'Vivienda Multifamiliar', 
-                    desc: 'Desarrollo habitacional',
-                    fullDesc: 'Proyectos integrales de desarrollo habitacional con tecnología de concreto avanzada.'
+                    fullDesc: 'Ejecución de proyectos de viviendas multifamiliares en diferentes distritos de Lima, utilizando concreto premezclado y cumpliendo con los estándares de calidad y especificaciones técnicas de cada obra.'
                 }
             ];
            
@@ -3346,7 +3172,7 @@
                 });
             }
            
-            // Calcular costo - NUEVA FÓRMULA CON BOMBA
+            // Calcular costo - NUEVA FÓRMULA CON BOMBA Y FORMATO DE NÚMERO
             function calculateCost() {
                 const area = parseFloat(areaInput.value);
                 const pricePerM3 = parseFloat(qualitySelect.value);
@@ -3378,23 +3204,28 @@
                 
                 // Costo total
                 const finalCost = costConcreto + costBomba;
-                const roundedCost = Math.round(finalCost);
+
+                // Formatear número con separadores de miles y 2 decimales
+                const formatter = new Intl.NumberFormat('es-PE', {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                });
 
                 // Preparar detalles para mostrar
                 let bombaText = conBomba ? 'Con bomba' : 'Sin bomba';
                 let bombaDetail = '';
                 if (conBomba) {
-                    bombaDetail = `<br>Servicio de bomba: S/ ${costBomba.toFixed(2)} (${volumenM3.toFixed(2)} m³)`;
+                    bombaDetail = `<br>Servicio de bomba: S/ ${formatter.format(costBomba)} (${formatter.format(volumenM3)} m³)`;
                 }
 
                 resultDetails.innerHTML = `
-                    <strong>${area.toLocaleString()} m²</strong> de área<br>
+                    <strong>${formatter.format(area)} m²</strong> de área<br>
                     Resistencia: <strong>${qualityText}</strong><br>
-                    Volumen estimado: <strong>${volumenM3.toFixed(2)} m³</strong><br>
-                    Costo concreto: S/ ${costConcreto.toFixed(2)}${bombaDetail}
+                    Volumen estimado: <strong>${formatter.format(volumenM3)} m³</strong><br>
+                    Costo concreto: S/ ${formatter.format(costConcreto)}${bombaDetail}
                 `;
 
-                finalCostSpan.textContent = roundedCost.toLocaleString('es-PE');
+                finalCostSpan.textContent = formatter.format(finalCost);
                 resultContainer.style.display = 'block';
 
                 resultContainer.scrollIntoView({
