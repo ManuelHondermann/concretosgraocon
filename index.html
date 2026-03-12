@@ -615,11 +615,11 @@
             text-align: left;
         }
         .nav-item .split-text .line1 {
-            font-size: 0.8rem; /* Reducido para móviles */
+            font-size: 0.8rem;
             font-weight: 600;
         }
         .nav-item .split-text .line2 {
-            font-size: 0.9rem; /* Reducido para móviles */
+            font-size: 0.9rem;
             font-weight: 800;
             letter-spacing: 0.3px;
         }
@@ -1099,7 +1099,7 @@
             transform: translateY(-2px);
         }
 
-        /* GRID DE PROYECTOS - ESTILO TARJETAS CON MINIATURAS VISIBLES EN HORIZONTAL */
+        /* GRID DE PROYECTOS - DISEÑO MEJORADO MÁS ATRACTIVO */
         .proyectos-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -1107,86 +1107,156 @@
             margin-top: 2rem;
         }
 
+        @media (min-width: 640px) {
+            .proyectos-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
         @media (min-width: 768px) {
             .proyectos-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(1, 1fr);
+                gap: 3rem;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .proyectos-grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        /* Tarjeta de proyecto rediseñada - más horizontal y simétrica */
+        .proyecto-card {
+            background: #fff;
+            border-radius: 24px;
+            box-shadow: var(--sombra-hover);
+            overflow: hidden;
+            transition: var(--transicion);
+            border: 1px solid rgba(200, 169, 81, 0.2);
+            display: flex;
+            flex-direction: column;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .proyecto-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+            border-color: var(--dorado);
+        }
+
+        /* Contenedor de imagen principal - ahora más grande y horizontal */
+        .proyecto-imagen-principal-container {
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        @media (min-width: 768px) {
+            .proyecto-imagen-principal-container {
+                height: 450px;
             }
         }
 
         @media (min-width: 1200px) {
-            .proyectos-grid {
-                grid-template-columns: repeat(3, 1fr);
+            .proyecto-imagen-principal-container {
+                height: 550px;
             }
-        }
-
-        .proyecto-card {
-            background: #fff;
-            border-radius: 20px;
-            box-shadow: var(--sombra-sutil);
-            overflow: hidden;
-            transition: var(--transicion);
-            border: 1px solid rgba(0,0,0,0.05);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .proyecto-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--sombra-hover);
         }
 
         .proyecto-imagen-principal {
             width: 100%;
-            height: 230px;
+            height: 100%;
             object-fit: cover;
-            border-bottom: 4px solid var(--dorado);
+            transition: transform 0.6s ease;
         }
 
+        .proyecto-card:hover .proyecto-imagen-principal {
+            transform: scale(1.05);
+        }
+
+        /* Contenido del proyecto */
         .proyecto-contenido {
-            padding: 1.5rem 1.5rem 1rem 1.5rem;
+            padding: 2rem 1.5rem 1rem 1.5rem;
             flex: 1;
         }
 
+        @media (min-width: 768px) {
+            .proyecto-contenido {
+                padding: 2.5rem 3rem 1.5rem 3rem;
+            }
+        }
+
         .proyecto-titulo {
-            font-size: 1.3rem;
+            font-size: 1.5rem;
             font-weight: 900;
             color: var(--verde-oscuro);
             margin-bottom: 0.5rem;
             line-height: 1.3;
         }
 
+        @media (min-width: 768px) {
+            .proyecto-titulo {
+                font-size: 2rem;
+            }
+        }
+
         .proyecto-descripcion {
             font-weight: 600;
             color: var(--verde-medio);
             margin-bottom: 1rem;
-            font-size: 1rem;
+            font-size: 1.1rem;
+        }
+
+        @media (min-width: 768px) {
+            .proyecto-descripcion {
+                font-size: 1.2rem;
+            }
         }
 
         .proyecto-detalle {
             color: var(--gris-texto-claro);
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            margin-bottom: 1.8rem;
             background: var(--gris-claro);
-            padding: 0.8rem 1rem;
-            border-radius: 12px;
-            border-left: 4px solid var(--dorado);
+            padding: 1rem 1.5rem;
+            border-radius: 16px;
+            border-left: 6px solid var(--dorado);
+            line-height: 1.7;
         }
 
-        /* mini galería de todas las fotos del proyecto - AHORA EN HORIZONTAL */
+        @media (min-width: 768px) {
+            .proyecto-detalle {
+                font-size: 1.05rem;
+                padding: 1.5rem 2rem;
+            }
+        }
+
+        /* mini galería horizontal mejorada - ahora más visible */
         .proyecto-mini-grid {
             display: flex;
             flex-wrap: nowrap;
             overflow-x: auto;
-            gap: 0.5rem;
-            margin-top: 0.5rem;
-            padding: 0 1.5rem 1.5rem 1.5rem;
+            gap: 1rem;
+            margin: 1.5rem 0 1.5rem 0;
+            padding: 0.5rem 1.5rem 1rem 1.5rem;
             scrollbar-width: thin;
             scrollbar-color: var(--dorado) var(--gris-medio);
             -webkit-overflow-scrolling: touch;
         }
 
+        @media (min-width: 768px) {
+            .proyecto-mini-grid {
+                gap: 1.5rem;
+                padding: 0.5rem 3rem 1.5rem 3rem;
+            }
+        }
+
         .proyecto-mini-grid::-webkit-scrollbar {
-            height: 6px;
+            height: 8px;
         }
 
         .proyecto-mini-grid::-webkit-scrollbar-track {
@@ -1200,41 +1270,63 @@
         }
 
         .proyecto-mini-img {
-            width: 80px;
-            height: 80px;
+            width: 120px;
+            height: 90px;
             object-fit: cover;
-            border-radius: 10px;
-            border: 2px solid var(--gris-medio);
-            transition: 0.2s;
+            border-radius: 12px;
+            border: 3px solid var(--gris-medio);
+            transition: 0.3s;
             cursor: pointer;
             flex-shrink: 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        @media (min-width: 768px) {
+            .proyecto-mini-img {
+                width: 180px;
+                height: 120px;
+            }
         }
 
         .proyecto-mini-img:hover {
             border-color: var(--dorado);
-            transform: scale(1.03);
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(200, 169, 81, 0.3);
         }
 
         .ver-mas-btn {
             background: var(--verde-oscuro);
             color: white;
             border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 30px;
+            padding: 0.8rem 1.5rem;
+            border-radius: 40px;
             font-weight: 700;
-            font-size: 0.85rem;
+            font-size: 1rem;
             cursor: pointer;
             width: fit-content;
-            margin: 0 1.5rem 1.5rem 1.5rem;
-            transition: 0.2s;
+            margin: 0 1.5rem 2rem 1.5rem;
+            transition: 0.3s;
             border: 2px solid var(--dorado);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        @media (min-width: 768px) {
+            .ver-mas-btn {
+                margin: 0 3rem 2.5rem 3rem;
+                padding: 1rem 2rem;
+                font-size: 1.1rem;
+            }
         }
 
         .ver-mas-btn:hover {
             background: var(--verde-medio);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(26, 93, 26, 0.3);
         }
 
-        /* MODAL DE LIGHTBOX MEJORADO CON GALERÍA DE MINIATURAS */
+        /* MODAL DE LIGHTBOX MEJORADO */
         .lightbox-modal {
             position: fixed;
             top: 0;
@@ -1262,9 +1354,9 @@
             max-width: 95%;
             max-height: 95%;
             background: #fff;
-            border-radius: 15px;
+            border-radius: 24px;
             overflow: hidden;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
             display: flex;
             flex-direction: column;
         }
@@ -1277,21 +1369,33 @@
         .lightbox-image {
             width: 100%;
             height: auto;
-            max-height: 40vh;
+            max-height: 50vh;
             object-fit: contain;
             display: block;
             background: #000;
         }
 
+        @media (min-width: 768px) {
+            .lightbox-image {
+                max-height: 60vh;
+            }
+        }
+
         .lightbox-info {
-            padding: 20px;
+            padding: 25px;
             background: #fff;
             overflow-y: auto;
             max-height: 40vh;
         }
 
+        @media (min-width: 768px) {
+            .lightbox-info {
+                padding: 30px;
+            }
+        }
+
         .lightbox-title {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             color: var(--verde-oscuro);
             margin-bottom: 12px;
             font-weight: 900;
@@ -1301,17 +1405,17 @@
             display: inline-block;
             background: linear-gradient(135deg, var(--verde-medio), var(--verde-oscuro));
             color: #fff;
-            padding: 6px 15px;
-            border-radius: 30px;
-            font-size: 0.8rem;
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-size: 0.9rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
         .lightbox-description {
-            font-size: 1rem;
+            font-size: 1.1rem;
             color: var(--gris-texto-claro);
             margin-bottom: 20px;
             line-height: 1.6;
@@ -1319,37 +1423,44 @@
         }
 
         .lightbox-full-description {
-            font-size: 0.95rem;
+            font-size: 1rem;
             color: #555;
-            line-height: 1.6;
+            line-height: 1.7;
             margin-bottom: 25px;
             background: #f8f9fa;
-            padding: 15px;
-            border-radius: 8px;
+            padding: 20px;
+            border-radius: 12px;
         }
 
-        /* Galería de miniaturas en el modal (horizontal también) */
+        /* Galería de miniaturas en el modal */
         .lightbox-thumbnails {
             display: flex;
             flex-wrap: nowrap;
             overflow-x: auto;
-            gap: 10px;
+            gap: 15px;
             margin: 20px 0;
-            padding: 10px;
+            padding: 15px;
             background: #f0f0f0;
-            border-radius: 8px;
+            border-radius: 12px;
             scrollbar-width: thin;
         }
 
         .thumb-item {
-            width: 80px;
+            width: 100px;
             height: 80px;
-            border-radius: 8px;
+            border-radius: 10px;
             overflow: hidden;
             cursor: pointer;
             border: 3px solid transparent;
             transition: all 0.2s ease;
             flex-shrink: 0;
+        }
+
+        @media (min-width: 768px) {
+            .thumb-item {
+                width: 120px;
+                height: 90px;
+            }
         }
 
         .thumb-item.active {
@@ -1365,16 +1476,16 @@
 
         .lightbox-close {
             position: absolute;
-            top: 10px;
-            right: 10px;
-            width: 40px;
-            height: 40px;
+            top: 15px;
+            right: 15px;
+            width: 45px;
+            height: 45px;
             background: rgba(255, 255, 255, 0.95);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: var(--verde-oscuro);
             cursor: pointer;
             z-index: 10;
@@ -1396,21 +1507,21 @@
             width: 100%;
             display: flex;
             justify-content: space-between;
-            padding: 0 10px;
+            padding: 0 15px;
             pointer-events: none;
             z-index: 5;
         }
 
         .lightbox-prev,
         .lightbox-next {
-            width: 45px;
-            height: 45px;
+            width: 50px;
+            height: 50px;
             background: rgba(255, 255, 255, 0.95);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: var(--verde-oscuro);
             cursor: pointer;
             pointer-events: all;
@@ -1486,7 +1597,7 @@
             opacity: 1;
         }
 
-        /* NUEVOS ESTILOS PARA LA CALCULADORA MEJORADA */
+        /* CALCULADORA MEJORADA */
         .calculator-container {
             background: var(--blanco);
             border-radius: 15px;
@@ -1572,7 +1683,7 @@
             width: 30px;
         }
 
-        /* Estilos para el control de área tipo rango + número */
+        /* Estilos para el control de área */
         .area-control {
             display: flex;
             flex-direction: column;
@@ -1637,17 +1748,6 @@
         input[type="range"]::-webkit-slider-thumb:hover {
             transform: scale(1.15);
             background: var(--dorado-claro);
-        }
-
-        input[type="range"]::-moz-range-thumb {
-            width: 25px;
-            height: 25px;
-            background: var(--dorado);
-            border-radius: 50%;
-            cursor: pointer;
-            border: 3px solid var(--blanco);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-            transition: var(--transicion);
         }
 
         .range-labels {
@@ -2559,7 +2659,7 @@
             </div>
         </section>
 
-        <!-- SECCIÓN PROYECTOS MEJORADA CON MINIATURAS VISIBLES EN HORIZONTAL Y CADA PROYECTO SEPARADO -->
+        <!-- SECCIÓN PROYECTOS MEJORADA CON DISEÑO HORIZONTAL MÁS ATRACTIVO -->
         <section id="projects" class="page-content">
             <div class="container">
                 <div class="hero fade-in">
@@ -2586,7 +2686,7 @@
                         <button class="filter-btn" data-filter="education">Educación</button>
                     </div>
 
-                    <!-- GRID DE PROYECTOS CON MINIATURAS VISIBLES EN HORIZONTAL -->
+                    <!-- GRID DE PROYECTOS CON DISEÑO MEJORADO -->
                     <div id="proyectosGridContainer" class="proyectos-grid"></div>
                 </div>
             </div>
@@ -2927,7 +3027,7 @@
         </div>
     </footer>
 
-    <!-- JAVASCRIPT MEJORADO CON MINIATURAS EN MODAL Y GALERÍA TIPO TARJETAS, CADA PROYECTO SEPARADO -->
+    <!-- JAVASCRIPT MEJORADO CON DISEÑO HORIZONTAL MÁS ATRACTIVO -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Elementos del DOM
@@ -3089,7 +3189,7 @@
                 return categories[category] || category;
             }
 
-            // Renderizar proyectos según categoría
+            // Renderizar proyectos según categoría - DISEÑO MEJORADO MÁS HORIZONTAL
             function renderProyectos(categoria) {
                 if (!proyectosGridContainer) return;
                 
@@ -3100,11 +3200,16 @@
                     const card = document.createElement('div');
                     card.className = 'proyecto-card';
 
-                    // imagen principal (primera)
+                    // Contenedor de imagen principal
+                    const imgContainer = document.createElement('div');
+                    imgContainer.className = 'proyecto-imagen-principal-container';
+                    
                     const imgPrincipal = document.createElement('img');
                     imgPrincipal.src = proyecto.imagenes[0];
                     imgPrincipal.alt = proyecto.titulo;
                     imgPrincipal.className = 'proyecto-imagen-principal';
+                    
+                    imgContainer.appendChild(imgPrincipal);
 
                     // contenido textual
                     const contenido = document.createElement('div');
@@ -3136,7 +3241,7 @@
                     verMasBtn.innerHTML = '<i class="fas fa-expand-alt"></i> Ver todas las fotos';
                     verMasBtn.addEventListener('click', () => abrirLightbox(proyecto, 0));
 
-                    card.appendChild(imgPrincipal);
+                    card.appendChild(imgContainer);
                     card.appendChild(contenido);
                     card.appendChild(miniGrid);
                     card.appendChild(verMasBtn);
