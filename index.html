@@ -2576,12 +2576,13 @@
                     <p class="section-subtitle">Proyectos que demuestran nuestra capacidad técnica y compromiso con la calidad</p>
                    
                     <div class="gallery-filters">
-                        <button class="filter-btn active" data-filter="clubs">Clubs</button>
+                        <button class="filter-btn active" data-filter="club-del-bosque">Club del Bosque</button>
                         <button class="filter-btn" data-filter="paving">Pavimentación</button>
+                        <button class="filter-btn" data-filter="jardines-de-la-paz">Jardines de la Paz</button>
                         <button class="filter-btn" data-filter="pools">Piscinas</button>
-                        <button class="filter-btn" data-filter="recreational">Recreacional</button>
                         <button class="filter-btn" data-filter="sports">Deportivos</button>
                         <button class="filter-btn" data-filter="residential">Residencial</button>
+                        <button class="filter-btn" data-filter="unalma">UNALM</button>
                         <button class="filter-btn" data-filter="education">Educación</button>
                     </div>
 
@@ -2965,13 +2966,14 @@
             let currentProject = null;
             let currentImageIndex = 0;
            
-            // ---------- DATOS DE PROYECTOS (9 proyectos separados - Jardines de la Paz y Pavimentación ahora son dos proyectos distintos) ----------
+            // ---------- DATOS DE PROYECTOS: AHORA CADA PROYECTO ES UN ÍTEM SEPARADO ----------
             const proyectosData = [
+                // Club del Bosque (antes Clubs)
                 {
                     titulo: "EDIFICACION CLUB DEL BOSQUE",
                     descripcion: "Edificación – Club del Bosque",
                     detalle: "Ejecución de estructura de edificación parte de infraestructura en el Club del Bosque. El proyecto fue abastecido con concreto premezclado GRAOCON S.A. producido en nuestra planta concretera, garantizando control de calidad, resistencia según especificaciones técnicas y cumplimiento de los plazos establecidos.",
-                    categoria: "clubs",
+                    categoria: "club-del-bosque",
                     imagenes: [
                         "https://i.ibb.co/wbSgk80/2.png",
                         "https://i.ibb.co/BVJC1tZn/5138e7a4-84fd-4d40-b6e9-f9fcbe591bfb.png",
@@ -2979,31 +2981,7 @@
                         "https://i.ibb.co/Y4qWPLvz/3.jpg"
                     ]
                 },
-                {
-                    titulo: "CONSTRUCCION DE NICHOS JARDINES DE LA PAZ",
-                    descripcion: "Construcción de Nichos – Jardines de la Paz, Lurín",
-                    detalle: "Ejecución de nichos en el cementerio Jardines de la Paz, en Lurín, utilizando concreto premezclado de GRAOCON S.A., garantizando calidad, resistencia y cumplimiento de las especificaciones del proyecto.",
-                    categoria: "paving",
-                    imagenes: [
-                        "https://i.ibb.co/Nggy5Rrw/camposanto-lurin-1.jpg",
-                        "https://i.ibb.co/LX49n3LQ/2.png",
-                        "https://i.ibb.co/VpN3nbtn/1.png",
-                        "https://i.ibb.co/MDz9Ksf3/Whats-App-Image-2026-01-30-at-3-34-02-PM.jpg",
-                        "https://i.ibb.co/5gkQj1YB/Whats-App-Image-2026-01-30-at-3-34-56-PM.jpg"
-                    ]
-                },
-                {
-                    titulo: "PISCINA RECREACIONAL",
-                    descripcion: "Piscina Recreacional – Pachacámac",
-                    detalle: "Construcción de piscina recreacional en Pachacámac para la empresa Inka Global S.A.C., utilizando concreto premezclado de GRAOCON S.A., garantizando calidad y resistencia según las especificaciones del proyecto.",
-                    categoria: "pools",
-                    imagenes: [
-                        "https://i.ibb.co/23QJFzjP/4.jpg",
-                        "https://i.ibb.co/wZ54J77d/3.jpg",
-                        "https://i.ibb.co/Rk0VsFrP/2.jpg",
-                        "https://i.ibb.co/svRJ7WwT/1.jpg"
-                    ]
-                },
+                // Pavimentación: ahora dos proyectos separados
                 {
                     titulo: "PAVIMENTACION AV. MAGISTERIO",
                     descripcion: "Pavimentación de Concreto – Av. Magisterio, Villa El Salvador",
@@ -3018,6 +2996,34 @@
                         "https://i.ibb.co/kVYkf7yh/1.jpg"
                     ]
                 },
+                // Jardines de la Paz (nuevo filtro)
+                {
+                    titulo: "CONSTRUCCION DE NICHOS JARDINES DE LA PAZ",
+                    descripcion: "Construcción de Nichos – Jardines de la Paz, Lurín",
+                    detalle: "Ejecución de nichos en el cementerio Jardines de la Paz, en Lurín, utilizando concreto premezclado de GRAOCON S.A., garantizando calidad, resistencia y cumplimiento de las especificaciones del proyecto.",
+                    categoria: "jardines-de-la-paz",
+                    imagenes: [
+                        "https://i.ibb.co/Nggy5Rrw/camposanto-lurin-1.jpg",
+                        "https://i.ibb.co/LX49n3LQ/2.png",
+                        "https://i.ibb.co/VpN3nbtn/1.png",
+                        "https://i.ibb.co/MDz9Ksf3/Whats-App-Image-2026-01-30-at-3-34-02-PM.jpg",
+                        "https://i.ibb.co/5gkQj1YB/Whats-App-Image-2026-01-30-at-3-34-56-PM.jpg"
+                    ]
+                },
+                // Piscinas (1)
+                {
+                    titulo: "PISCINA RECREACIONAL",
+                    descripcion: "Piscina Recreacional – Pachacámac",
+                    detalle: "Construcción de piscina recreacional en Pachacámac para la empresa Inka Global S.A.C., utilizando concreto premezclado de GRAOCON S.A., garantizando calidad y resistencia según las especificaciones del proyecto.",
+                    categoria: "pools",
+                    imagenes: [
+                        "https://i.ibb.co/23QJFzjP/4.jpg",
+                        "https://i.ibb.co/wZ54J77d/3.jpg",
+                        "https://i.ibb.co/Rk0VsFrP/2.jpg",
+                        "https://i.ibb.co/svRJ7WwT/1.jpg"
+                    ]
+                },
+                // Deportivos (1)
                 {
                     titulo: "LOSA DEPORTIVA COLEGIO MARISTAS",
                     descripcion: "Losa Deportiva – Colegio Maristas, SJM",
@@ -3031,11 +3037,12 @@
                         "https://i.ibb.co/7x8kVw6R/Whats-App-Image-2026-01-30-at-4-06-51-PM.jpg"
                     ]
                 },
+                // Educación: dos proyectos
                 {
                     titulo: "EDIFICACION UNIVERSIDAD NACIONAL AGRARIA LA MOLINA",
                     descripcion: "Edificación – Universidad Nacional Agraria La Molina",
                     detalle: "Suministro de concreto premezclado y servicio de bombeo para la construcción del módulo de la Facultad de Zootecnia en la Universidad Nacional Agraria La Molina, cumpliendo con las especificaciones técnicas del proyecto.",
-                    categoria: "education",
+                    categoria: "unalma",
                     imagenes: [
                         "https://i.ibb.co/JR7csw22/Whats-App-Image-2026-01-30-at-4-19-35-PM.jpg",
                         "https://i.ibb.co/HDW6R8KJ/3.png"
@@ -3053,6 +3060,7 @@
                         "https://i.ibb.co/ZRGd6CFN/Whats-App-Image-2026-03-09-at-10-29-19-PM-1.jpg"
                     ]
                 },
+                // Residencial (1)
                 {
                     titulo: "CONSTRUCCION DE VIVIENDAS MULTIFAMILIARES",
                     descripcion: "Construcción de Viviendas Multifamiliares – Lima Metropolitana",
@@ -3069,12 +3077,13 @@
             // Función para obtener nombre de categoría legible
             function getCategoryName(category) {
                 const categories = {
-                    'clubs': 'Clubs',
+                    'club-del-bosque': 'Club del Bosque',
                     'paving': 'Pavimentación',
+                    'jardines-de-la-paz': 'Jardines de la Paz',
                     'pools': 'Piscinas',
-                    'recreational': 'Recreacional',
                     'sports': 'Deportivos',
                     'residential': 'Residencial',
+                    'unalma': 'UNALM',
                     'education': 'Educación'
                 };
                 return categories[category] || category;
@@ -3211,7 +3220,7 @@
                    
                     // Si es la página de proyectos, recargar con filtro activo
                     if (pageId === 'projects') {
-                        const activeFilter = document.querySelector('.filter-btn.active')?.dataset.filter || 'clubs';
+                        const activeFilter = document.querySelector('.filter-btn.active')?.dataset.filter || 'club-del-bosque';
                         renderProyectos(activeFilter);
                     }
                    
@@ -3466,8 +3475,8 @@
             // Actualizar año en footer
             footerYear.textContent = new Date().getFullYear();
            
-            // Render inicial de proyectos (clubs)
-            renderProyectos('clubs');
+            // Render inicial de proyectos (club-del-bosque)
+            renderProyectos('club-del-bosque');
            
             // Inicializar componentes
             initAnimations();
